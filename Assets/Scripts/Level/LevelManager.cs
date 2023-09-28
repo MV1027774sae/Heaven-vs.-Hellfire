@@ -286,8 +286,21 @@ public class LevelManager : MonoBehaviour
                 charM.players[i].score = 0;
                 charM.players[i].hasCharacter = false;
             }
-
-            SceneManager.LoadSceneAsync("select");
+            if (charM.solo)
+            {
+                if (vPlayer == charM.players[0])
+                {
+                    MySceneManager.GetInstance().LoadNextOnProgression();
+                }
+                else
+                {
+                    MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "game_over");
+                }
+            }
+            else
+            {
+                MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "select");
+            }
         }
     }
 

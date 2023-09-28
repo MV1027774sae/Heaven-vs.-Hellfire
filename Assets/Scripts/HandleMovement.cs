@@ -31,6 +31,7 @@ public class HandleMovement : MonoBehaviour
         if (!states.dontMove)
         {
             HorizontalMovement();
+            Jump();
         }
     }
 

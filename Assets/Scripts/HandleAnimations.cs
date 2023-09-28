@@ -89,6 +89,7 @@ public class HandleAnimations : MonoBehaviour
     public void JumpAnim()
     {
         anim.SetBool("Attack1", false);
+        anim.SetBool("Attack2", false);
         anim.SetBool("Jump", true);
         StartCoroutine(CloseBoolInAnim("Jump"));
     }

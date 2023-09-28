@@ -67,6 +67,10 @@ public class HandleDamageColliders : MonoBehaviour
 
     public void CloseColliders()
     {
-
+        for (int i = 0; i <damageCollidersLeft.Length; i++)
+        {
+            damageCollidersLeft[i].SetActive(false);
+            damageCollidersRight[i].SetActive(false);
+        }
     }
 }

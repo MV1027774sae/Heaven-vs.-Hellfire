@@ -95,7 +95,6 @@ public class StateManager : MonoBehaviour
         gettingHit = false;
         currentlyAttacking = false;
         dontMove = false;
-
     }
 
     public void CloseMovementCollider(int index)

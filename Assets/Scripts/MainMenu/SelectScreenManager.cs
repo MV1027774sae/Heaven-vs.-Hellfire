@@ -40,6 +40,8 @@ public class SelectScreenManager : MonoBehaviour
         charM = CharacterManager.GetInstance();
         numberOfPlayers = charM.numberOfUsers;
 
+        charM.solo = (numberOfPlayers == 1);
+
         //and we create the grid
         charGrid = new PortraitInfo[maxX, maxY];
 
@@ -141,7 +143,7 @@ public class SelectScreenManager : MonoBehaviour
             }
         }
 
-        float horizontal = Input.GetAxis(" Horizontal" + playerId);
+        float horizontal = Input.GetAxis("Horizontal" + playerId);
 
         if (horizontal != 0)
         {
@@ -196,7 +198,7 @@ public class SelectScreenManager : MonoBehaviour
     IEnumerator LoadLevel()
     {
         //if any of the players is an AI, then assign a random character to the prefab
-        for (int i =0; i < charM.players.Count; i++)
+        for (int i = 0; i < charM.players.Count; i++)
         {
             if (charM.players[i].playerType == PlayerBase.PlayerType.ai)
             {
@@ -213,7 +215,17 @@ public class SelectScreenManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2); //after 2 seconds load the level
-        SceneManager.LoadSceneAsync("level", LoadSceneMode.Single);
+        //SceneManager.LoadSceneAsync("level", LoadSceneMode.Single);
+
+        if (charM.solo)
+        {
+            MySceneManager.GetInstance().CreateProgression();
+            MySceneManager.GetInstance().LoadNextOnProgression();
+        }
+        else
+        {
+            MySceneManager.GetInstance().RequestLevelLoad(SceneType.prog, "level_1");
+        }
     }
 
     void HandleSelectorPosition(PlayerInterfaces pl)

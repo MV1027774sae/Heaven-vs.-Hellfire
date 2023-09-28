@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
+    public bool solo;
     public int numberOfUsers;
     public List<PlayerBase> players = new List<PlayerBase>(); //the list with all our players and 
 
@@ -60,6 +61,22 @@ public class CharacterManager : MonoBehaviour
         return retVal;
     }
 
+    public int ReturnCharacterInt(GameObject prefab)
+    {
+        int retVal = 0;
+
+        for (int i = 0; i < characterList.Count; i++)
+        {
+            if (characterList[i].prefab == prefab)
+            {
+                retVal = i;
+                break;
+            }
+        }
+
+        return retVal;
+    }
+
     public static CharacterManager instance;
     public static CharacterManager GetInstance()
     {
@@ -79,7 +96,6 @@ public class CharacterBase
     public string charId;
     public GameObject prefab;
 }
-
 
 [System.Serializable]
 public class PlayerBase
