@@ -1,27 +1,83 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StateManager : MonoBehaviour
 {
+    public float health = 100;
+    
+    [SerializeField] private float hitInvulTimeL = 0.3f;
+    [SerializeField] private float hitInvulTimeH = 0.3f;
+    [SerializeField] private float heavyKnockbackX = 1f;
+    [SerializeField] private float heavyKnockbackY = 0.5f;
+
+    public float horizontal;
+    public float vertical;
+    public bool attackL;
+    public bool attackM;
+    public bool attackH;
+    public bool attackS;
+    public bool crouch;
+
+    public bool canAttack;
+    public bool gettingHit;
+    public bool currentlyAttacking;
+
+    public bool dontMove;
+    public bool onGround;
+    public bool lookRight;
+
+    public Slider healthSlider;
+    private SpriteRenderer sRenderer;
+
+    [HideInInspector]
+    public HandleDamageColliders handleDC;
+    [HideInInspector]
+    public HandleAnimations handleAnim;
+    [HideInInspector]
+    public HandleMovement handleMovement;
+
+    public GameObject[] movementColliders;
+
     void Start()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        handleDC = GetComponent<HandleDamageColliders>();
+        handleAnim = GetComponent<HandleAnimations>();
+        handleMovement = GetComponent<HandleMovement>();
+        sRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
-        
+        sRenderer.flipX = lookRight;
+
+        onGround = isOnGround();
+
+        if (healthSlider != null)
+        {
+            healthSlider.value = health * 0.01f;
+        }
+
+        if (health <= 0)
+        {
+            if (LevelManager.GetInstance().countdown)
+            {
+                LevelManager.GetInstance().EndTurnFunction();
+
+                handleAnim.anim.Player("Dead");
+            }
+        }
     }
 
     private bool isOnGround()
     {
+        bool retVal = false;
 
+        LayerMask layer = ~(1 << gameObject.layer | 1 << 3);
+        retVal = Physics2D.Raycast(transform.position, -Vector2.up, 0.1f, layer);
+
+        return retVal;
     }
 
     public void ResetStateInputs()
@@ -51,7 +107,23 @@ public class StateManager : MonoBehaviour
 
     public void TakeDamage(float damage, HandleDamageColliders.DamageType damageType)
     {
+        if (!gettingHit)
+        {
+            switch (damageType)
+            {
+                case HandleDamageColliders.DamageType.light:
+                    StartCoroutine(CloseImmortality(hitInvulTimeL));
+                    break;
+                case HandleDamageColliders.DamageType.heavy:
+                    handleMovement.AddVelocityOnCharacter(
+                        ((!lookRight) ? Vector3.right * heavyKnockbackX : Vector3.right * -heavyKnockbackX) + Vector3.up, heavyKnockbackY);
+                    StartCoroutine(CloseImmortality(hitInvulTimeH));
+                    break;
+            }
 
+            health -= damage;
+            gettingHit = true;
+        }
     }
 
     IEnumerator CloseImmortality (float timer)
