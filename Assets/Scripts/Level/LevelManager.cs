@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public Transform[] spawnPositions; //the positions characters will spawn on
 
+    CameraManager camM;
     CharacterManager charM;
     LevelUI levelUI; //we store ui elements here for ease of access
 
@@ -24,6 +25,7 @@ public class LevelManager : MonoBehaviour
         //get the references from the singletons
         charM = CharacterManager.GetInstance();
         levelUI = LevelUI.GetInstance();
+        camM = CameraManager.GetInstance();
 
         levelUI.AnnouncerTextLine1.gameObject.SetActive(false);
         levelUI.AnnouncerTextLine2.gameObject.SetActive(false);
@@ -84,6 +86,7 @@ public class LevelManager : MonoBehaviour
         //then initialise the turn
         yield return InitTurn();
     }
+
     IEnumerator CreatePlayers()
     {
         //go to all the players we have n our list
@@ -97,6 +100,8 @@ public class LevelManager : MonoBehaviour
             charM.players[i].playerStates = go.GetComponent<StateManager>();
 
             charM.players[i].playerStates.healthSlider = levelUI.healthSliders[i];
+
+            camM.players.Add(go.transform);
         }
 
         yield return null;
@@ -166,6 +171,16 @@ public class LevelManager : MonoBehaviour
                 InputHandler ih = charM.players[i].playerStates.gameObject.GetComponent<InputHandler>();
                 ih.playerInput = charM.players[i].inputId;
                 ih.enabled = true;
+            }
+
+            //if it's an AI character
+            if (charM.players[i].playerType == PlayerBase.PlayerType.ai)
+            {
+                AICharacter ai = charM.players[i].playerStates.gameObject.GetComponent<AICharacter>();
+                ai.enabled = true;
+
+                //assign the enemy states to be the one from the opposite player
+                ai.enStates = charM.returnOppositePlayer(charM.players[i]).playerStates;
             }
         }
 

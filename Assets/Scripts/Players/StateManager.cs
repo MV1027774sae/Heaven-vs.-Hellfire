@@ -40,12 +40,15 @@ public class StateManager : MonoBehaviour
 
     public GameObject[] movementColliders;
 
+    private ParticleSystem blood;
+
     void Start()
     {
         handleDC = GetComponent<HandleDamageColliders>();
         handleAnim = GetComponent<HandleAnimations>();
         handleMovement = GetComponent<HandleMovement>();
         sRenderer = GetComponentInChildren<SpriteRenderer>();
+        blood = GetComponentInChildren<ParticleSystem>();
     }
 
     private void FixedUpdate()
@@ -65,7 +68,7 @@ public class StateManager : MonoBehaviour
             {
                 LevelManager.GetInstance().EndTurnFunction();
 
-                handleAnim.anim.Player("Dead");
+                handleAnim.anim.Play("Dead");
             }
         }
     }
@@ -119,6 +122,11 @@ public class StateManager : MonoBehaviour
                         ((!lookRight) ? Vector3.right * heavyKnockbackX : Vector3.right * -heavyKnockbackX) + Vector3.up, heavyKnockbackY);
                     StartCoroutine(CloseImmortality(hitInvulTimeH));
                     break;
+            }
+
+            if (blood != null)
+            {
+                blood.Emit(30);
             }
 
             health -= damage;

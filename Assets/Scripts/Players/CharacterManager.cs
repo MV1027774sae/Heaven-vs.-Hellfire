@@ -33,11 +33,27 @@ public class CharacterManager : MonoBehaviour
     {
         PlayerBase retVal = null;
 
-        for ( int i = 0;i < states.players.Count; i++)
+        for ( int i = 0;i < /*states.*/players.Count; i++)
         {
             if (players[i].playerStates == states)
             {
-                retVal = states.players[i];
+                retVal = /*states.*/players[i];
+            }
+        }
+
+        return retVal;
+    }
+
+    public PlayerBase returnOppositePlayer(PlayerBase pl)
+    {
+        PlayerBase retVal = null;
+
+        for (int i = 0; i < players.Count; i++)
+        {
+            if (players[i] != pl)
+            {
+                retVal = players[i];
+                break;
             }
         }
 
