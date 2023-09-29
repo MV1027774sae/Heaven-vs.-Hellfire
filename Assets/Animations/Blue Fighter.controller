@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 1
-  dcType: 0
+  dcType: 1
   attackStartUp: 0
 --- !u!114 &4937923648594202315
 MonoBehaviour:

@@ -13,6 +13,9 @@ public class SelectScreenManager : MonoBehaviour
     public int maxX; //how many portraits we have on the X and Y NOTE: this is hardcoded!
     public int maxY;
     PortraitInfo[,] charGrid; //the grid we are making to select entries
+    private int maxRow;
+    private int maxCollum;
+    List<PortraitInfo> portraitList = new List<PortraitInfo>();
 
     public GameObject portraitCanvas; //the canvas that holds all the portraits
 
@@ -20,6 +23,8 @@ public class SelectScreenManager : MonoBehaviour
     public bool bothPlayersSelected;
 
     CharacterManager charM;
+
+    GameObject portraitPrefab;
 
     #region Singleton
     public static SelectScreenManager instance;
@@ -40,26 +45,63 @@ public class SelectScreenManager : MonoBehaviour
         charM = CharacterManager.GetInstance();
         numberOfPlayers = charM.numberOfUsers;
 
+        portraitPrefab = Resources.Load("portraitPrefab") as GameObject;
+        CreatePortraits();
+
         charM.solo = (numberOfPlayers == 1);
 
-        //and we create the grid
-        charGrid = new PortraitInfo[maxX, maxY];
+        ////and we create the grid
+        //charGrid = new PortraitInfo[maxX, maxY];
 
+        //int x = 0;
+        //int y = 0;
+
+        //portraitPrefabs = portraitCanvas.GetComponentsInChildren<PortraitInfo>();
+
+        ////we need to go into all our portraits
+        //for (int i = 0; i < portraitPrefabs.Length; i++)
+        //{
+        //    //and assign a grid position
+        //    portraitPrefabs[i].posX = x;
+        //    portraitPrefabs[i].posY = y;
+
+        //    charGrid[x, y] = portraitPrefabs[i];
+
+        //    if (x <  maxX - 1)
+        //    {
+        //        x++;
+        //    }
+        //    else
+        //    {
+        //        x = 0;
+        //        y++;
+        //    }
+        //}
+    }
+
+    void CreatePortraits()
+    {
+        GridLayoutGroup group = portraitCanvas.GetComponent<GridLayoutGroup>();
+
+        maxRow = group.constraintCount;
         int x = 0;
         int y = 0;
 
-        portraitPrefabs = portraitCanvas.GetComponentsInChildren<PortraitInfo>();
-
-        //we need to go into all our portraits
-        for (int i = 0; i < portraitPrefabs.Length; i++)
+        for (int i = 0; i < charM.characterList.Count; i++)
         {
-            //and assign a grid position
-            portraitPrefabs[i].posX = x;
-            portraitPrefabs[i].posY = y;
+            CharacterBase c = charM.characterList[i];
 
-            charGrid[x, y] = portraitPrefabs[i];
+            GameObject go = Instantiate(portraitPrefab) as GameObject;
+            go.transform.SetParent(portraitCanvas.transform);
 
-            if (x <  maxX - 1)
+            PortraitInfo p = go.GetComponent<PortraitInfo>();
+            p.img.sprite = c.icon;
+            p.characterId = c.charId;
+            p.posX = x;
+            p.posY = y;
+            portraitList.Add(p);
+
+            if (x < maxRow - 1)
             {
                 x++;
             }
@@ -68,10 +110,11 @@ public class SelectScreenManager : MonoBehaviour
                 x = 0;
                 y++;
             }
+
+            maxCollum = y;
         }
     }
 
-    
     void Update()
     {
         if (!loadLevel)
@@ -132,11 +175,11 @@ public class SelectScreenManager : MonoBehaviour
             {
                 if (vertical > 0)
                 {
-                    pl.activeY = (pl.activeY > 0) ? pl.activeY - 1 : maxY - 1;
+                    pl.activeY = (pl.activeY > 0) ? pl.activeY - 1 : maxCollum;
                 }
                 else
                 {
-                    pl.activeY = (pl.activeY < maxY - 1) ? pl.activeY + 1 : 0;
+                    pl.activeY = (pl.activeY < maxCollum) ? pl.activeY + 1 : 0;
                 }
 
                 pl.hitInputOnce = true;
@@ -151,11 +194,11 @@ public class SelectScreenManager : MonoBehaviour
             {
                 if (horizontal > 0)
                 {
-                    pl.activeX = (pl.activeX > 0) ? pl.activeX - 1 : maxX - 1;
+                    pl.activeX = (pl.activeX > 0) ? pl.activeX - 1 : maxRow - 1;
                 }
                 else
                 {
-                    pl.activeX = (pl.activeX < maxX - 1) ? pl.activeX + 1 : 0;
+                    pl.activeX = (pl.activeX < maxRow - 1) ? pl.activeX + 1 : 0;
                 }
 
                 pl.timerToReset = 0;
@@ -232,13 +275,18 @@ public class SelectScreenManager : MonoBehaviour
     {
         pl.selector.SetActive(true); //enable the selector
 
-        pl.activePortrait = charGrid[pl.activeX, pl.activeY]; //find the active portrait
+        PortraitInfo pi = ReturnPortrait(pl.activeX, pl.activeY); //find the active portrait
 
-        //and place the selector over it's position
-        Vector2 selectorPosition = pl.activePortrait.transform.localPosition;
-        selectorPosition = selectorPosition + new Vector2(portraitCanvas.transform.localPosition.x, portraitCanvas.transform.localPosition.y);
+        if (pl != null)
+        {
+            pl.activePortrait = pi; //find the active portrait
 
-        pl.selector.transform.localPosition = selectorPosition;
+            //and place the selector over it's position
+            Vector2 selectorPosition = pl.activePortrait.transform.localPosition;
+
+            selectorPosition = selectorPosition + new Vector2(portraitCanvas.transform.localPosition.x, portraitCanvas.transform.localPosition.y);
+            pl.selector.transform.localPosition = selectorPosition;
+        }
     }
 
     void HandleCharacterPreview(PlayerInterfaces pl)
@@ -265,6 +313,20 @@ public class SelectScreenManager : MonoBehaviour
                 pl.createdCharacter.GetComponent<StateManager>().lookRight = false;
             }
         }
+    }
+
+    PortraitInfo ReturnPortrait(int x, int y)
+    {
+        PortraitInfo r = null;
+        for (int i = 0; i < portraitList.Count; i++)
+        {
+            if (portraitList[i].posX == x && portraitList[i].posY == y)
+            {
+                r = portraitList[i];
+            }
+        }
+
+        return r;
     }
 
     [System.Serializable]

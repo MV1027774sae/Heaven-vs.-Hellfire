@@ -95,6 +95,7 @@ public class CharacterBase
 {
     public string charId;
     public GameObject prefab;
+    public Sprite icon;
 }
 
 [System.Serializable]

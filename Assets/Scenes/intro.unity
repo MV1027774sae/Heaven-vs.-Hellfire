@@ -728,6 +728,18 @@ PrefabInstance:
       value: Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
+      propertyPath: characterList.Array.data[0].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ffd7d870681cc844901fce683842b38, type: 3}
+    - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
+      propertyPath: characterList.Array.data[1].icon
+      value: 
+      objectReference: {fileID: 21300002, guid: eb02da2c0f7af964ab040f96dfb69dc2, type: 3}
+    - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
+      propertyPath: characterList.Array.data[2].icon
+      value: 
+      objectReference: {fileID: 21300026, guid: 6c86bf41bc6883d488e310c6dc7cc4f3, type: 3}
+    - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: players.Array.data[1].playerType
       value: 0
       objectReference: {fileID: 0}
