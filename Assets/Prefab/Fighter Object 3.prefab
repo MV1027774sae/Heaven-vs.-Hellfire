@@ -195,7 +195,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ea7846aab311b8645bea35bc8c2449e1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -231,9 +231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e33c8c94cfe3a4db4f1ab66cac6d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
-  hitInvulTimeL: 0.3
-  hitInvulTimeH: 0.3
+  health: 100
+  hitInvulTimeL: 0.1
+  hitInvulTimeH: 0.1
   heavyKnockbackX: 1
   heavyKnockbackY: 0.5
   horizontal: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  damage: 30
+  damage: 10
 --- !u!1 &160892
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  damage: 30
+  damage: 10
 --- !u!1 &198674
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  damage: 30
+  damage: 10
 --- !u!1 &199000
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,4 +980,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  damage: 30
+  damage: 10

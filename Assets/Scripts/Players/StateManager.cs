@@ -7,8 +7,8 @@ public class StateManager : MonoBehaviour
 {
     public float health = 100;
     
-    [SerializeField] private float hitInvulTimeL = 0.3f;
-    [SerializeField] private float hitInvulTimeH = 0.3f;
+    [SerializeField] private float hitInvulTimeL = 0.01f;
+    [SerializeField] private float hitInvulTimeH = 0.01f;
     [SerializeField] private float heavyKnockbackX = 1f;
     [SerializeField] private float heavyKnockbackY = 0.5f;
 
