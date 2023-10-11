@@ -9,7 +9,7 @@ public class AICharacter : MonoBehaviour
     StateManager states;
     public StateManager enStates;
 
-    public float changeStateToTolerance = 3f; //how close is considered close combat
+    public float changeStateTolerance = 3f; //how close is considered close combat
 
     public float normalRate = 1; //how fast will the AI decide state will cycle on the normal state
     private float nrmTimer;
@@ -61,7 +61,7 @@ public class AICharacter : MonoBehaviour
     void Start()
     {
         states = GetComponent<StateManager>();
-        //pc = GetComponent<PlayerControls>();
+        AISnapshots.GetInstance().RequestAISnapshot(this);
     }
 
     void Update()
@@ -249,7 +249,7 @@ public class AICharacter : MonoBehaviour
         float distance = Vector3.Distance(transform.position, enStates.transform.position);
 
         //compare it with our tolerance
-        if (distance < changeStateToTolerance)
+        if (distance < changeStateTolerance)
         {
             //if we are not in the process of resetting the AI, then change the state
             if (aiState != AIState.resetAI)

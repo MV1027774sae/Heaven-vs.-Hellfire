@@ -39,9 +39,23 @@ public class HandleMovement : MonoBehaviour
     {
         actualSpeed = this.maxSpeed;
 
-        if (states.onGround && !states.currentlyAttacking)
+        if (states.onGround && !states.currentlyAttacking && !states.blocking)
         {
             rb.AddForce(new Vector2((states.horizontal * actualSpeed) - rb.velocity.x * this.acceleration, 0));
+
+            if (states.onGround && states.lookRight && states.horizontal < 0)
+            {
+                states.guard = true;
+            }
+            else if (states.onGround && !states.lookRight && states.horizontal > 0)
+            {
+                states.guard = true;
+            }
+            else if (!states.onGround || states.horizontal == 0)
+            {
+                states.guard = false;
+            }
+                
         }
 
         //in case there's sliding

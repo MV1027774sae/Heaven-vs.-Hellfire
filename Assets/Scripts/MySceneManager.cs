@@ -10,7 +10,7 @@ public class MySceneManager : MonoBehaviour
     public List<MainScenes> mainScenes = new List<MainScenes>();
 
     private bool waitToLoad;
-    private int progIndex;
+    public int progIndex;
     public List<SoloProgression> progression = new List<SoloProgression>();
 
     CharacterManager charM;
@@ -23,6 +23,7 @@ public class MySceneManager : MonoBehaviour
     public void CreateProgression()
     {
         progression.Clear();
+        progIndex = 0;
 
         List<int> usedCharacters = new List<int>();
 

@@ -34,11 +34,12 @@ public class CharacterManager : MonoBehaviour
     {
         PlayerBase retVal = null;
 
-        for ( int i = 0;i < /*states.*/players.Count; i++)
+        for (int i = 0; i < players.Count; i++)
         {
             if (players[i].playerStates == states)
             {
-                retVal = /*states.*/players[i];
+                retVal = players[i];
+                break;
             }
         }
 

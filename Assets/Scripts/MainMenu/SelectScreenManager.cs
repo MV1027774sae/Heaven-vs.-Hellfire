@@ -95,7 +95,7 @@ public class SelectScreenManager : MonoBehaviour
             go.transform.SetParent(portraitCanvas.transform);
 
             PortraitInfo p = go.GetComponent<PortraitInfo>();
-            p.img.sprite = c.icon;
+            //p.img.sprite = c.icon; //TODO: creates error, find a fix
             p.characterId = c.charId;
             p.posX = x;
             p.posY = y;
@@ -277,7 +277,7 @@ public class SelectScreenManager : MonoBehaviour
 
         PortraitInfo pi = ReturnPortrait(pl.activeX, pl.activeY); //find the active portrait
 
-        if (pl != null)
+        if (pi != null)
         {
             pl.activePortrait = pi; //find the active portrait
 
@@ -338,7 +338,8 @@ public class SelectScreenManager : MonoBehaviour
         public Transform charVisPos; //the visualisation position for player 1
         public GameObject createdCharacter; //the created character for player 1
 
-        public int activeX; //the active X and Y entries for player 1
+        //the active X and Y entries for player 1
+        public int activeX;
         public int activeY;
 
         //variables for smoothing out input

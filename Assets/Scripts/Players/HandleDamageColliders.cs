@@ -8,18 +8,21 @@ public class HandleDamageColliders : MonoBehaviour
 
     public GameObject[] damageCollidersLeft;
     public GameObject[] damageCollidersRight;
+    [SerializeField] private GameObject fireballObject;
 
     public enum DamageType
     {
         light,
-        //medium,
-        heavy
+        medium,
+        heavy,
+        projectile
     }
 
     public enum DCtype
     {
         high,
-        low
+        low,
+        fireball
     }
 
     StateManager states;
@@ -42,6 +45,9 @@ public class HandleDamageColliders : MonoBehaviour
                 case DCtype.high:
                     StartCoroutine(OpenCollider(damageCollidersLeft, 1, delay, damageType));
                     break;
+                case DCtype.fireball:
+                    StartCoroutine(CreateFireball(damageCollidersLeft, 2, delay, damageType, fireballObject, -3));
+                    break;
             }
         }
         else
@@ -53,6 +59,9 @@ public class HandleDamageColliders : MonoBehaviour
                     break;
                 case DCtype.high:
                     StartCoroutine(OpenCollider(damageCollidersRight, 1, delay, damageType));
+                    break;
+                case DCtype.fireball:
+                    StartCoroutine(CreateFireball(damageCollidersRight, 2, delay, damageType, fireballObject, 3));
                     break;
             }
         }
@@ -72,5 +81,12 @@ public class HandleDamageColliders : MonoBehaviour
             damageCollidersLeft[i].SetActive(false);
             damageCollidersRight[i].SetActive(false);
         }
+    }
+
+    IEnumerator CreateFireball(GameObject[] array, int index, float delay, DamageType damageType, GameObject fireball, float velocity)
+    {
+        yield return new WaitForSeconds(delay);
+        Rigidbody2D fball = Instantiate(fireball, array[index].transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+        fball.velocity = new Vector2(velocity, 0);
     }
 }

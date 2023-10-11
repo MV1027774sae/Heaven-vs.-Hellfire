@@ -17,6 +17,7 @@ public class OpenDamageCollider : StateMachineBehaviour
             states = animator.transform.GetComponentInParent<StateManager>();
         }
 
+        states.currentlyAttacking = true;
         states.handleDC.OpenCollider(dcType, attackStartUp, damageType);
     }
 
@@ -33,6 +34,7 @@ public class OpenDamageCollider : StateMachineBehaviour
             states = animator.transform.GetComponentInParent<StateManager>();
         }
 
+        states.currentlyAttacking = false;
         states.handleDC.CloseColliders();
     }
 

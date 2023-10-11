@@ -8,7 +8,7 @@ public class HandleAnimations : MonoBehaviour
     StateManager states;
 
     public float attackRate = 0.3f;
-    public AttackBase[] attacks = new AttackBase[2];
+    public AttackBase[] attacks = new AttackBase[4];
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class HandleAnimations : MonoBehaviour
         anim.SetBool("TakesHit", states.gettingHit);
         anim.SetBool("OnAir", !states.onGround);
         anim.SetBool("Crouch", states.crouch);
+        anim.SetBool("IsBlocking", states.blocking);
 
         float movement = Mathf.Abs(states.horizontal);
         anim.SetFloat("Movement", movement);
@@ -62,7 +63,7 @@ public class HandleAnimations : MonoBehaviour
                 }
             }
 
-            if (states.attackH)
+            if (states.attackM)
             {
                 attacks[1].attack = true;
                 attacks[1].attackTimer = 0;
@@ -80,16 +81,58 @@ public class HandleAnimations : MonoBehaviour
                     attacks[1].timesPressed = 0;
                 }
             }
+
+            if (states.attackH)
+            {
+                attacks[2].attack = true;
+                attacks[2].attackTimer = 0;
+                attacks[2].timesPressed++;
+            }
+
+            if (attacks[2].attack)
+            {
+                attacks[2].attackTimer += Time.deltaTime;
+
+                if (attacks[2].attackTimer > attackRate || attacks[0].timesPressed >= 3)
+                {
+                    attacks[2].attackTimer = 0;
+                    attacks[2].attack = false;
+                    attacks[2].timesPressed = 0;
+                }
+            }
+
+            if (states.attackS)
+            {
+                attacks[3].attack = true;
+                attacks[3].attackTimer = 0;
+                attacks[3].timesPressed++;
+            }
+
+            if (attacks[3].attack)
+            {
+                attacks[3].attackTimer += Time.deltaTime;
+
+                if (attacks[3].attackTimer > attackRate || attacks[0].timesPressed >= 3)
+                {
+                    attacks[3].attackTimer = 0;
+                    attacks[3].attack = false;
+                    attacks[3].timesPressed = 0;
+                }
+            }
         }
 
-        anim.SetBool("Attack1", attacks[0].attack);
-        anim.SetBool("Attack2", attacks[1].attack);
+        anim.SetBool("AttackL", attacks[0].attack);
+        anim.SetBool("AttackM", attacks[1].attack);
+        anim.SetBool("AttackH", attacks[2].attack);
+        anim.SetBool("AttackS", attacks[3].attack);
     }
 
     public void JumpAnim()
     {
-        anim.SetBool("Attack1", false);
-        anim.SetBool("Attack2", false);
+        anim.SetBool("AttackL", false);
+        anim.SetBool("AttackM", false);
+        anim.SetBool("AttackH", false);
+        anim.SetBool("AttackS", false);
         anim.SetBool("Jump", true);
         StartCoroutine(CloseBoolInAnim("Jump"));
     }

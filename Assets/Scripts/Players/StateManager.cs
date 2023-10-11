@@ -19,6 +19,10 @@ public class StateManager : MonoBehaviour
     public bool attackH;
     public bool attackS;
     public bool crouch;
+    public bool guard;
+
+    public bool blocking;
+    public float blockChip = 0.15f;
 
     public bool canAttack;
     public bool gettingHit;
@@ -95,6 +99,8 @@ public class StateManager : MonoBehaviour
         gettingHit = false;
         currentlyAttacking = false;
         dontMove = false;
+        guard = false;
+        blocking = false;
     }
 
     public void CloseMovementCollider(int index)
@@ -109,7 +115,7 @@ public class StateManager : MonoBehaviour
 
     public void TakeDamage(float damage, HandleDamageColliders.DamageType damageType)
     {
-        if (!gettingHit)
+        if (!gettingHit && !guard)
         {
             switch (damageType)
             {
@@ -131,11 +137,31 @@ public class StateManager : MonoBehaviour
             health -= damage;
             gettingHit = true;
         }
+        else if (!gettingHit && guard)
+        {
+            switch (damageType)
+            {
+                case HandleDamageColliders.DamageType.light:
+                    StartCoroutine(CloseImmortality(hitInvulTimeL));
+                    break;
+                case HandleDamageColliders.DamageType.heavy:
+                    StartCoroutine(CloseImmortality(hitInvulTimeH));
+                    break;
+            }
+
+            blocking = true;
+
+            health -= (damage * blockChip);
+            //gettingHit = true;
+        }
     }
 
     IEnumerator CloseImmortality (float timer)
     {
+        dontMove = true;
         yield return new WaitForSeconds(timer);
         gettingHit = false;
+        blocking = false;
+        dontMove = false;
     }
 }

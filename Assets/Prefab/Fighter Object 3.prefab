@@ -213,7 +213,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9387b77d1bd27e4f8b45ff6299c8faf, type: 3}
   m_Name: 
@@ -243,6 +243,9 @@ MonoBehaviour:
   attackH: 0
   attackS: 0
   crouch: 0
+  guard: 0
+  blocking: 0
+  blockChip: 0.15
   canAttack: 1
   gettingHit: 0
   currentlyAttacking: 0
@@ -294,6 +297,12 @@ MonoBehaviour:
   - attack: 0
     attackTimer: 0
     timesPressed: 0
+  - attack: 0
+    attackTimer: 0
+    timesPressed: 0
+  - attack: 0
+    attackTimer: 0
+    timesPressed: 0
 --- !u!114 &1960225304879133146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +321,7 @@ MonoBehaviour:
   damageCollidersRight:
   - {fileID: 190602}
   - {fileID: 199000}
+  fireballObject: {fileID: 7271635010030940169, guid: 6098e3a1c00d0d3469d4ad10991f7246, type: 3}
 --- !u!114 &-4518374076536543443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enStates: {fileID: 0}
-  changeStateToTolerance: 3
+  changeStateTolerance: 3
   normalRate: 1
   closeRate: 0.5
   blockingRate: 1.5
