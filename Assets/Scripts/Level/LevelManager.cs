@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
 
     //variables for the countdown timer
     public bool countdown;
-    public int maxTurnTimer = 30;
+    public int maxTurnTimer = 99;
     private int currentTimer;
     private float internalTimer;
 

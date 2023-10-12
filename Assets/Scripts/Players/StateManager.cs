@@ -7,8 +7,9 @@ public class StateManager : MonoBehaviour
 {
     public float health = 100;
     
-    [SerializeField] private float hitInvulTimeL = 0.01f;
-    [SerializeField] private float hitInvulTimeH = 0.01f;
+    [SerializeField] private float hitInvulTimeL = 0.1f;
+    [SerializeField] private float hitInvulTimeM = 0.15f;
+    [SerializeField] private float hitInvulTimeH = 0.2f;
     [SerializeField] private float heavyKnockbackX = 1f;
     [SerializeField] private float heavyKnockbackY = 0.5f;
 
@@ -122,10 +123,16 @@ public class StateManager : MonoBehaviour
                 case HandleDamageColliders.DamageType.light:
                     StartCoroutine(CloseImmortality(hitInvulTimeL));
                     break;
+                case HandleDamageColliders.DamageType.medium:
+                    StartCoroutine(CloseImmortality(hitInvulTimeM));
+                    break;
                 case HandleDamageColliders.DamageType.heavy:
                     handleMovement.AddVelocityOnCharacter(
                         ((!lookRight) ? Vector3.right * heavyKnockbackX : Vector3.right * -heavyKnockbackX) + Vector3.up, heavyKnockbackY);
                     StartCoroutine(CloseImmortality(hitInvulTimeH));
+                    break;
+                case HandleDamageColliders.DamageType.projectile:
+                    StartCoroutine(CloseImmortality(hitInvulTimeL));
                     break;
             }
 
@@ -144,15 +151,20 @@ public class StateManager : MonoBehaviour
                 case HandleDamageColliders.DamageType.light:
                     StartCoroutine(CloseImmortality(hitInvulTimeL));
                     break;
+                case HandleDamageColliders.DamageType.medium:
+                    StartCoroutine(CloseImmortality(hitInvulTimeM));
+                    break;
                 case HandleDamageColliders.DamageType.heavy:
                     StartCoroutine(CloseImmortality(hitInvulTimeH));
+                    break;
+                case HandleDamageColliders.DamageType.projectile:
+                    StartCoroutine(CloseImmortality(hitInvulTimeL));
                     break;
             }
 
             blocking = true;
 
             health -= (damage * blockChip);
-            //gettingHit = true;
         }
     }
 

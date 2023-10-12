@@ -101,7 +101,7 @@ public class HandleAnimations : MonoBehaviour
                 }
             }
 
-            if (states.attackS)
+            if (states.attackS && states.horizontal == 0)
             {
                 attacks[3].attack = true;
                 attacks[3].attackTimer = 0;

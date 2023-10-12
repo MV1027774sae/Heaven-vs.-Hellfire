@@ -16,8 +16,8 @@ public class CameraManager : MonoBehaviour
     public float orthoMin = 2;
     public float orthoMax = 6;
 
-    private float targetZ;
-    public float zMin = 5;
+    [SerializeField] private float targetZ;
+    public float zMin = 2;
     public float zMax = 10;
 
     private Camera cam;
@@ -66,14 +66,14 @@ public class CameraManager : MonoBehaviour
 
                 if (Mathf.Abs(targetZ) < Mathf.Abs(zMin))
                 {
-                    targetZ = zMin;
+                    targetZ = -zMin;
                 }
                 if (Mathf.Abs(targetZ) > Mathf.Abs(zMax))
                 {
-                    targetZ = zMax;
+                    targetZ = -zMax;
                 }
 
-                cam.transform.localPosition = new Vector3(0, 0.5f, targetZ);
+                cam.transform.localPosition = new Vector3(0, 1f, targetZ - 0.5f);
                 
                 break;
         }
