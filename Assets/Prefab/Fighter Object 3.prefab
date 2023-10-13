@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   hitInvulTimeL: 0.1
+  hitInvulTimeM: 0.15
   hitInvulTimeH: 0.1
   heavyKnockbackX: 1
   heavyKnockbackY: 0.5
@@ -1137,14 +1138,6 @@ PrefabInstance:
     - target: {fileID: 1073431503570944278, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2463880366182657644, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
-      propertyPath: lengthInSec
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2463880366182657644, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6952141005031502698, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
       propertyPath: m_Name
