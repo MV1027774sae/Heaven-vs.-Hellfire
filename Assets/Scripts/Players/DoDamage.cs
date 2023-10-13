@@ -7,8 +7,7 @@ public class DoDamage : MonoBehaviour
     StateManager states;
 
     public HandleDamageColliders.DamageType damageType;
-
-    [SerializeField] private float damage = 30;
+    public float damage;
 
     void Start()
     {
@@ -23,10 +22,7 @@ public class DoDamage : MonoBehaviour
 
             if (oState != states)
             {
-                if (!oState.currentlyAttacking) //remove?
-                {
-                    oState.TakeDamage(damage, damageType);
-                }
+                oState.TakeDamage(damage, damageType);
             }
         }
     }

@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 3
   dcType: 2
+  damage: 0
   attackStartUp: 0
 --- !u!114 &-6193845965320976828
 MonoBehaviour:
@@ -78,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   dcType: 1
+  damage: 0
   attackStartUp: 0
 --- !u!1101 &-5629052993300875486
 AnimatorStateTransition:
@@ -246,7 +248,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 03ff9693050cc984cacc5c8ae59a6a06, type: 2}
+  m_Motion: {fileID: 7400000, guid: de323be7f8b1c464ebb83f45938b3b00, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -348,6 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   dcType: 0
+  damage: 7
   attackStartUp: 0.2
 --- !u!1101 &-1386272189366907874
 AnimatorStateTransition:
@@ -413,6 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   dcType: 0
+  damage: 7
   attackStartUp: 0.2
 --- !u!1102 &-216783348348379466
 AnimatorState:
@@ -457,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 1
   dcType: 0
+  damage: 13
   attackStartUp: 0.25
 --- !u!91 &9100000
 AnimatorController:
@@ -1037,11 +1042,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.9
+  m_ExitTime: 0
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -1064,7 +1069,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.2
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1388,7 +1393,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 03ff9693050cc984cacc5c8ae59a6a06, type: 2}
+  m_Motion: {fileID: 7400000, guid: de323be7f8b1c464ebb83f45938b3b00, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: Mirror
@@ -1750,6 +1755,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 584264186788390614}
     m_Position: {x: 650, y: 20, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 3473753179140253602}
+    m_Position: {x: 820, y: -50, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8177324710416255560}
+    m_Position: {x: 890, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110147856}
@@ -1815,6 +1826,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &3473753179140253602
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Punch A hitboxes
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: de323be7f8b1c464ebb83f45938b3b00, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &3583377772899731903
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1876,6 +1913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 1
   dcType: 1
+  damage: 0
   attackStartUp: 0
 --- !u!114 &4688024857805621819
 MonoBehaviour:
@@ -1891,6 +1929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 1
   dcType: 0
+  damage: 12
   attackStartUp: 0.42
 --- !u!114 &4937923648594202315
 MonoBehaviour:
@@ -1906,6 +1945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 1
   dcType: 0
+  damage: 10
   attackStartUp: 0.25
 --- !u!114 &5042380290037863700
 MonoBehaviour:
@@ -1921,6 +1961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 2
   dcType: 0
+  damage: 15
   attackStartUp: 0.33
 --- !u!114 &5965448420508326311
 MonoBehaviour:
@@ -1936,6 +1977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 2
   dcType: 0
+  damage: 15
   attackStartUp: 0.3
 --- !u!1101 &6257730697197280433
 AnimatorStateTransition:
@@ -2061,6 +2103,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &8177324710416255560
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Punch B hitboxes
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 3e056de191cbfbd488f6b5b2477e0618, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!114 &8978742512888329899
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2075,4 +2143,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 1
   dcType: 0
+  damage: 10
   attackStartUp: 0.25

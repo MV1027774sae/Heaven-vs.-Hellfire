@@ -118,6 +118,9 @@ public class StateManager : MonoBehaviour
     {
         if (!gettingHit && !guard)
         {
+            health -= damage;
+            gettingHit = true;
+
             switch (damageType)
             {
                 case HandleDamageColliders.DamageType.light:
@@ -140,12 +143,12 @@ public class StateManager : MonoBehaviour
             {
                 blood.Emit(30);
             }
-
-            health -= damage;
-            gettingHit = true;
         }
         else if (!gettingHit && guard)
         {
+            blocking = true;
+            health -= (damage * blockChip);
+            
             switch (damageType)
             {
                 case HandleDamageColliders.DamageType.light:
@@ -161,10 +164,6 @@ public class StateManager : MonoBehaviour
                     StartCoroutine(CloseImmortality(hitInvulTimeL));
                     break;
             }
-
-            blocking = true;
-
-            health -= (damage * blockChip);
         }
     }
 
