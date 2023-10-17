@@ -12,6 +12,8 @@ public class Dash : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] StateManager stateManagerScripts;
+    [SerializeField] InputHandler inputHandlerScript;
+
 
     //Check if the key is press twice
     public bool keyPressed = false;
@@ -26,15 +28,26 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDashing)
+        //Player 1???
+        if (Input.GetKeyDown(KeyCode.Y) && canDash && inputHandlerScript.playerInput == "") //Press Y twice to dash
         {
-            return;
-        }
-        if (Input.GetKeyDown(KeyCode.Y) && canDash) //Press Y twice to dash
-        {
-            if(keyPressed)
+            if (keyPressed)
             {
                 StartCoroutine(Dashing());
+                keyPressed = false;
+            }
+            else
+            {
+                keyPressed = true;
+                Invoke("ResetKeyPressed", doublePressTime); //Reset the key when press twice
+            }
+        }
+        //Player 2???
+        else if (Input.GetKeyDown(KeyCode.I) && canDash && inputHandlerScript.playerInput == "1")
+        {
+            if (keyPressed)
+            {
+                StartCoroutine(Dashing2());
                 keyPressed = false;
             }
             else
@@ -78,6 +91,41 @@ public class Dash : MonoBehaviour
         else //Same goes to here
         {
             if (Input.GetKey(KeyCode.D) && stateManagerScripts.onGround == false)
+            {
+                rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-transform.localScale.x * dashingPower, 0f);
+            }
+        }
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
+    }
+
+    IEnumerator Dashing2() //Call the dash function for player 2
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f; 
+        if (stateManagerScripts.lookRight)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow) && stateManagerScripts.onGround == false) 
+            {
+                rb.velocity = new Vector2(-transform.localScale.x * dashingPower, 0f);
+            }
+            else 
+            {
+                rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+            }
+        }
+        else 
+        {
+            if (Input.GetKey(KeyCode.RightArrow) && stateManagerScripts.onGround == false)
             {
                 rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
             }

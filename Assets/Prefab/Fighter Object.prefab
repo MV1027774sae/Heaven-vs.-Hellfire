@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9387b77d1bd27e4f8b45ff6299c8faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: 
+  playerInput: 1
 --- !u!114 &4487232534679234226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,10 +377,12 @@ MonoBehaviour:
   canDash: 1
   isDashing: 0
   dashTime: 0.15
-  dashingPower: 5
+  dashingPower: 3.5
   dashCoolDown: 1
   rb: {fileID: 5080066}
   stateManagerScripts: {fileID: 4487232534679234226}
+  inputHandlerScript: {fileID: 3122741501040341871}
+  keyPressed: 0
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0
