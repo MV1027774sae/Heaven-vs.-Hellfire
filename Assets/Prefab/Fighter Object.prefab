@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 2998755641541233771}
   - component: {fileID: 4106399419613270158}
   - component: {fileID: -2174979549159554893}
-  - component: {fileID: 5844581857754873815}
+  - component: {fileID: 3722776222074022954}
   m_Layer: 8
   m_Name: Fighter Object
   m_TagString: Untagged
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9387b77d1bd27e4f8b45ff6299c8faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: 1
+  playerInput: 
 --- !u!114 &4487232534679234226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
   stateManagerScripts: {fileID: 4487232534679234226}
   inputHandlerScript: {fileID: 3122741501040341871}
   keyPressed: 0
---- !u!114 &5844581857754873815
+--- !u!114 &3722776222074022954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,8 +397,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfHit: 0
-  comboHit: 0
-  lastCheckedNumber: -5
   stateManagerScript: {fileID: 4487232534679234226}
   coolDown: 2
 --- !u!1 &130414

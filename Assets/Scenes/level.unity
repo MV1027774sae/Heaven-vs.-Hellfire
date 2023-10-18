@@ -1094,6 +1094,7 @@ MonoBehaviour:
   players: []
   orthoMin: 2
   orthoMax: 6
+  targetZ: 0
   zMin: 5
   zMax: 10
   cType: 0
