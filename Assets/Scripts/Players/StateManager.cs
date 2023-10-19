@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,6 +35,7 @@ public class StateManager : MonoBehaviour
     public bool lookRight;
 
     public Slider healthSlider;
+    public TextMeshProUGUI comboCounter;
     private SpriteRenderer sRenderer;
 
     [HideInInspector]

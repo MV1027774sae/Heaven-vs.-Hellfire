@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class LevelUI : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class LevelUI : MonoBehaviour {
     public Text LevelTimer;
 
     public Slider[] healthSliders;
+    public TextMeshProUGUI[] comboCounters;
 
     public GameObject[] winIndicatorGrids;
     public GameObject winIndicator;
