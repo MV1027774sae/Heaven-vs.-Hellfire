@@ -12,6 +12,7 @@ public class InputHandler : MonoBehaviour
     private bool attack2;
     private bool attack3;
     private bool attack4;
+    private bool dash;
 
     StateManager states;
 
