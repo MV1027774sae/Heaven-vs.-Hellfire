@@ -43,7 +43,7 @@ public class Dash : MonoBehaviour
             }
         }
         //Player 2???
-        else if (Input.GetKeyDown(KeyCode.I) && canDash && inputHandlerScript.playerInput == "1")
+        else if (Input.GetKeyDown(KeyCode.Keypad1) && canDash && inputHandlerScript.playerInput == "1")
         {
             if (keyPressed)
             {

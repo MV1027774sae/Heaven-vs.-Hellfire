@@ -2243,7 +2243,7 @@ GameObject:
   - component: {fileID: 1672665060}
   - component: {fileID: 1672665059}
   m_Layer: 5
-  m_Name: P1 Controls - Text (TMP) (1)
+  m_Name: P2 Controls - Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2293,17 +2293,17 @@ MonoBehaviour:
 
     Arrow Key - movement
 
-    O - light attack
+    [5] - light attack
 
-    P
+    [6]
     - medium attack
 
-    ; - heavy attack
+    [2] - heavy attack
 
-    L - special attack
+    [3] - special attack
 
-    I + LArrow
-    Key or RArrow Key to dash
+    [1] +
+    LArrow Key or RArrow Key to dash
 
     Walk backwards to block'
   m_isRightToLeft: 0

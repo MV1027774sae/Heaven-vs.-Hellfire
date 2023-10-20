@@ -14,6 +14,7 @@ public class StateManager : MonoBehaviour
     [SerializeField] private float heavyKnockbackX = 1f;
     [SerializeField] private float heavyKnockbackY = 0.5f;
 
+    [Header("Character Control and Movement")]
     public float horizontal;
     public float vertical;
     public bool attackL;
@@ -34,8 +35,11 @@ public class StateManager : MonoBehaviour
     public bool onGround;
     public bool lookRight;
 
+    [Header("Level UI")]
     public Slider healthSlider;
     public TextMeshProUGUI comboCounter;
+
+    [Header("Sprite Render")]
     private SpriteRenderer sRenderer;
 
     [HideInInspector]
@@ -45,8 +49,8 @@ public class StateManager : MonoBehaviour
     [HideInInspector]
     public HandleMovement handleMovement;
 
+    [Header("Grab Reference from others")]
     public GameObject[] movementColliders;
-
     private ParticleSystem blood;
 
     void Start()
@@ -77,6 +81,11 @@ public class StateManager : MonoBehaviour
 
                 handleAnim.anim.Play("Dead");
             }
+        }
+
+        if(gettingHit == true)
+        {
+            comboCounter.enabled = true;
         }
     }
 

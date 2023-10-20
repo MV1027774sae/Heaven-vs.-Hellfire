@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class CombotHitDisplay : MonoBehaviour
 {
+    public bool startDisplay = true;
+
     [SerializeField] int numberOfHit = 0;
     [SerializeField] float coolDown = 1.5f;
-    public TextMeshProUGUI countUI;
-
     [SerializeField] StateManager stateManagerScript;
+
+    private TextMeshProUGUI countUI;
+
 
     private void Start()
     {
@@ -29,18 +32,14 @@ public class CombotHitDisplay : MonoBehaviour
         {
             numberOfHit += 1;
             coolDown = 1.5f;
-            StartCoroutine(ResetBoolean());
+            countUI.enabled = true;
         }
 
         else if (coolDown <= 0)
         {
             numberOfHit = 0;
             coolDown = 1.5f;
+            countUI.enabled = false;
         }
-    }
-
-    private IEnumerator ResetBoolean()
-    {
-        yield return new WaitForSeconds(0.25f);
     }
 }

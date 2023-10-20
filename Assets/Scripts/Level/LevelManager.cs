@@ -96,7 +96,7 @@ public class LevelManager : MonoBehaviour
             GameObject go = Instantiate(
                 charM.players[i].playerPrefab, spawnPositions[i].position, Quaternion.identity) as GameObject;
 
-            //and assign the needed references
+            //and assign the needed references && AND IT"S IMPORTANT!!!!
             charM.players[i].playerStates = go.GetComponent<StateManager>();
 
             charM.players[i].playerStates.healthSlider = levelUI.healthSliders[i];
