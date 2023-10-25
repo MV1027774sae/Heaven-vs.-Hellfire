@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: -2174979549159554893}
   - component: {fileID: 3722776222074022954}
   - component: {fileID: 7158859846787389583}
+  - component: {fileID: 4010729596907488183}
   m_Layer: 8
   m_Name: Fighter Object
   m_TagString: Untagged
@@ -277,11 +278,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf79958d2f7bf449bdce25602227740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInput: {fileID: 7158859846787389583}
   acceleration: 30
   airAcceleration: 15
   maxSpeed: 60
   jumpSpeed: 5
   jumpDuration: 5
+  justJumped: 0
+  actualSpeed: 0
+  useController: 0
 --- !u!114 &7141144232840224319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,13 +414,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: d242fc3c66636ac47ac04b6629bef08d, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -426,12 +431,70 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4010729596907488183}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 83e3ebdf-b2dd-45fd-a9db-889c4db45843
+    m_ActionName: Player Control/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4010729596907488183}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 75d5fd47-3141-46e1-b9c7-d1d5a4755f2e
+    m_ActionName: Player Control/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0e2baa09-f214-4223-9b53-03592e94c351
+    m_ActionName: Player Control/Attack[/Keyboard/r,/Keyboard/t,/Keyboard/g,/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc7c7d65-752a-43f3-a9ff-254eb40e0f9a
+    m_ActionName: Player Control/Dash[/Keyboard/y]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Control
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4010729596907488183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c3a794ec357a34d8b9dae4aec31e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5080066}
+  states: {fileID: 4487232534679234226}
+  handleMovement: {fileID: 6686616553206487278}
+  anim: {fileID: 7141144232840224319}
+  speed: 3
+  jumpForce: 5
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0
