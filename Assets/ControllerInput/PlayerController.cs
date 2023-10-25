@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] StateManager states;
     [SerializeField] HandleMovement handleMovement;
+
     [SerializeField] HandleAnimations anim;
+    public Animator animate;
 
     public float speed;
     private float horizontal;
@@ -19,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-
+        animate = GetComponentInChildren<Animator>();
     }
 
     //Help moving
@@ -30,6 +32,8 @@ public class PlayerController : MonoBehaviour
         if (states.onGround && !states.currentlyAttacking && !states.blocking)
         {
             rb.AddForce(new Vector2((horizontal * speed) - rb.velocity.x * handleMovement.acceleration, 0));
+            float movement = Mathf.Abs(horizontal);
+            animate.SetFloat("Movement", movement);
 
             if (states.onGround && states.lookRight && horizontal < 0)
             {

@@ -38,14 +38,10 @@ public class HandleMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(inputHandler.playerInput == "")
+        if(inputHandler.playerInput == "" && useController == true)
         {
-            useController = true;
-            if (useController == true)
-            {
-                playerController.enabled = true;
-                playerInput.enabled = true;
-            }
+            playerController.enabled = true;
+            playerInput.enabled = true;
         }
         else
         {
