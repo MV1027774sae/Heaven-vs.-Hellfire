@@ -145,7 +145,7 @@ public class LevelManager : MonoBehaviour
         //start with the announcer text
 
         levelUI.AnnouncerTextLine1.gameObject.SetActive(true);
-        levelUI.AnnouncerTextLine1.text = "Turn " + currentTurn;
+        levelUI.AnnouncerTextLine1.text = "Round " + currentTurn;
         levelUI.AnnouncerTextLine1.color = Color.white;
 
         yield return new WaitForSeconds(2);

@@ -21,7 +21,8 @@ public class CombotHitDisplay : MonoBehaviour
 
     private void Update()
     {
-        countUI.text = numberOfHit.ToString();
+        if (countUI != null)
+            countUI.text = numberOfHit.ToString();
     }
 
     // Update is called once per frame
@@ -32,14 +33,16 @@ public class CombotHitDisplay : MonoBehaviour
         {
             numberOfHit += 1;
             coolDown = 1.5f;
-            countUI.enabled = true;
+            if (countUI != null)
+                countUI.enabled = true;
         }
 
         else if (coolDown <= 0)
         {
             numberOfHit = 0;
             coolDown = 1.5f;
-            countUI.enabled = false;
+            if (countUI != null)
+                countUI.enabled = false;
         }
     }
 }
