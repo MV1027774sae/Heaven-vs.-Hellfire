@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.VersionControl.Asset;
 
 
 public class PlayerController : MonoBehaviour
