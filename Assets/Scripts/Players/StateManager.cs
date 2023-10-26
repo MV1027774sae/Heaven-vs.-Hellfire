@@ -41,6 +41,7 @@ public class StateManager : MonoBehaviour
 
     [Header("Sprite Render")]
     private SpriteRenderer sRenderer;
+    [SerializeField] private GameObject hitboxHolder;
 
     [HideInInspector]
     public HandleDamageColliders handleDC;
@@ -64,7 +65,15 @@ public class StateManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        sRenderer.flipX = lookRight;
+        if (!currentlyAttacking)
+        {
+            sRenderer.flipX = lookRight;
+
+            if (!lookRight)
+                hitboxHolder.transform.localScale = new Vector3(-1, 1, 1);
+            else if (lookRight)
+                hitboxHolder.transform.localScale = new Vector3(1, 1, 1);
+        }
 
         onGround = isOnGround();
 
@@ -129,6 +138,9 @@ public class StateManager : MonoBehaviour
     {
         if (!gettingHit && !guard)
         {
+            health -= damage;
+            gettingHit = true;
+
             switch (damageType)
             {
                 case HandleDamageColliders.DamageType.light:
@@ -151,12 +163,12 @@ public class StateManager : MonoBehaviour
             {
                 blood.Emit(30);
             }
-
-            health -= damage;
-            gettingHit = true;
         }
         else if (!gettingHit && guard)
         {
+            blocking = true;
+            health -= (damage * blockChip);
+            
             switch (damageType)
             {
                 case HandleDamageColliders.DamageType.light:
@@ -172,10 +184,6 @@ public class StateManager : MonoBehaviour
                     StartCoroutine(CloseImmortality(hitInvulTimeL));
                     break;
             }
-
-            blocking = true;
-
-            health -= (damage * blockChip);
         }
     }
 

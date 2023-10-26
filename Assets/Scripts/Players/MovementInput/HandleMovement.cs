@@ -28,7 +28,7 @@ public class HandleMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!states.dontMove)
+        if (!states.dontMove && !states.gettingHit)
         {
             HorizontalMovement();
             Jump();
