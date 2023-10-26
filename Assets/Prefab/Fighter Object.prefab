@@ -260,6 +260,7 @@ MonoBehaviour:
   onGround: 1
   lookRight: 1
   healthSlider: {fileID: 0}
+  comboCounter: {fileID: 0}
   hitboxHolder: {fileID: 5345070992298493943}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
@@ -1573,7 +1574,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}

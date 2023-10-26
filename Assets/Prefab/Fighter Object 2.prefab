@@ -175,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 126410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.72, y: -3.559, z: -0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -260,6 +260,7 @@ MonoBehaviour:
   onGround: 1
   lookRight: 1
   healthSlider: {fileID: 0}
+  comboCounter: {fileID: 0}
   hitboxHolder: {fileID: 1810237776482963809}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
@@ -287,6 +288,8 @@ MonoBehaviour:
   jumpDuration: 5
   justJumped: 0
   actualSpeed: 0
+  canVariableJump: 0
+  jmpTimer: 0
   useController: 0
 --- !u!114 &2628208073592948534
 MonoBehaviour:
@@ -426,6 +429,7 @@ MonoBehaviour:
   states: {fileID: 235292988716683039}
   handleMovement: {fileID: 947529306107236815}
   anim: {fileID: 2628208073592948534}
+  animate: {fileID: 0}
   speed: 0
   jumpForce: 5
 --- !u!114 &3653665151043160303
@@ -1191,8 +1195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810237776482963809}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.72, y: 3.559, z: 0.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1267,10 +1271,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.29997072, y: -0.27499992}
-      - {x: 0.29997072, y: 0.075}
-      - {x: 0, y: 0.0749707}
-      - {x: 0.000029300001, y: -0.27499992}
+    - - {x: 0.3199706, y: 0.0499997}
+      - {x: 0.3199706, y: 0.2999997}
+      - {x: 0.0199999, y: 0.29997042}
+      - {x: 0.0200292, y: 0.0499997}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1352,7 +1356,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
