@@ -157,6 +157,8 @@ GameObject:
   - component: {fileID: -4518374076536543443}
   - component: {fileID: -8624680699530626691}
   - component: {fileID: 7853526650017059575}
+  - component: {fileID: 5106540561818263905}
+  - component: {fileID: -8044100921939971663}
   m_Layer: 8
   m_Name: Fighter Object 3
   m_TagString: Untagged
@@ -173,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 126410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.72, y: -3.559, z: -0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -258,6 +260,7 @@ MonoBehaviour:
   onGround: 1
   lookRight: 1
   healthSlider: {fileID: 0}
+  comboCounter: {fileID: 0}
   hitboxHolder: {fileID: 5971914407477310134}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
@@ -277,11 +280,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf79958d2f7bf449bdce25602227740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInput: {fileID: -8044100921939971663}
   acceleration: 30
   airAcceleration: 15
   maxSpeed: 60
   jumpSpeed: 5
   jumpDuration: 5
+  justJumped: 0
+  actualSpeed: 0
+  canVariableJump: 0
+  jmpTimer: 0
+  useController: 0
 --- !u!114 &7312437295067410981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,9 +409,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4e302a690a7664d8788edde5ed8bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startDisplay: 1
   numberOfHit: 0
-  stateManagerScript: {fileID: 3642481131539211878}
   coolDown: 2
+  stateManagerScript: {fileID: 3642481131539211878}
+--- !u!114 &5106540561818263905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c3a794ec357a34d8b9dae4aec31e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5080066}
+  states: {fileID: 3642481131539211878}
+  handleMovement: {fileID: 4032762511251676932}
+  anim: {fileID: 7312437295067410981}
+  animate: {fileID: 0}
+  speed: 0
+  jumpForce: 5
+--- !u!114 &-8044100921939971663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: d242fc3c66636ac47ac04b6629bef08d, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5106540561818263905}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 83e3ebdf-b2dd-45fd-a9db-889c4db45843
+    m_ActionName: Player Control/Jump[/Keyboard/w,/XInputControllerWindows/dpad/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5106540561818263905}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 75d5fd47-3141-46e1-b9c7-d1d5a4755f2e
+    m_ActionName: Player Control/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/dpad]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0e2baa09-f214-4223-9b53-03592e94c351
+    m_ActionName: Player Control/Attack[/Keyboard/r,/Keyboard/t,/Keyboard/g,/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc7c7d65-752a-43f3-a9ff-254eb40e0f9a
+    m_ActionName: Player Control/Dash[/Keyboard/y]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player Control
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1262,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1391,8 +1490,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5971914407477310134}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.72, y: 3.559, z: 0.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

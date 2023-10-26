@@ -1,28 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HandleMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     StateManager states;
     HandleAnimations anim;
+    InputHandler inputHandler;
+
+    //Controller Support
+    PlayerController playerController;
+    [SerializeField] PlayerInput playerInput;
 
     public float acceleration = 30;
     public float airAcceleration = 15;
     public float maxSpeed = 60;
     public float jumpSpeed = 5;
     public float jumpDuration = 5;
-    private float actualSpeed;
-    private bool justJumped;
-    private bool canVariableJump;
-    private float jmpTimer;
+    public bool justJumped;
+    public float actualSpeed;
+    public bool canVariableJump;
+    public float jmpTimer;
+
+    public bool useController;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         states = GetComponent<StateManager>();
         anim = GetComponent<HandleAnimations>();
+        inputHandler = GetComponent<InputHandler>();
+        playerController = GetComponent<PlayerController>();
         rb.freezeRotation = true;
     }
 
@@ -35,7 +45,7 @@ public class HandleMovement : MonoBehaviour
         }
     }
 
-    private void HorizontalMovement()
+    public void HorizontalMovement()
     {
         actualSpeed = this.maxSpeed;
 
@@ -54,8 +64,7 @@ public class HandleMovement : MonoBehaviour
             else if (!states.onGround || states.horizontal == 0)
             {
                 states.guard = false;
-            }
-                
+            }  
         }
 
         //in case there's sliding
@@ -65,7 +74,7 @@ public class HandleMovement : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         if (states.vertical > 0)
         {

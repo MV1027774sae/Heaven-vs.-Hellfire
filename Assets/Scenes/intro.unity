@@ -2305,19 +2305,20 @@ MonoBehaviour:
 
     Arrow Key - movement
 
-    [5] - light attack
+    Numpad [5] - light attack
 
-    [6]
-    - medium attack
+    Numpad
+    [6] - medium attack
 
-    [2] - heavy attack
+    Numpad [2] - heavy attack
 
-    [3] - special attack
+    Numpad [3] - special
+    attack
 
-    [1] +
-    LArrow Key or RArrow Key to dash
+    Numpad [1] + LArrow Key or RArrow Key to dash
 
-    Walk backwards to block'
+    Walk backwards
+    to block'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
