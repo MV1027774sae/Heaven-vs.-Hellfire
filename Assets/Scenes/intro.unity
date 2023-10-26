@@ -804,6 +804,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 126410, guid: 7caa66545a9f808499f1f1e0e274cfc8, type: 3}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
+      propertyPath: progIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -813,11 +817,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.data[0]
-      value: level_1
+      value: level_4
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.data[1]
       value: level_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
+      propertyPath: levels.Array.data[2]
+      value: level_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
+      propertyPath: levels.Array.data[3]
+      value: level_1
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: mainScenes.Array.size
@@ -1645,7 +1657,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 03633634717a26f4bbcaf686c8e25065, type: 2}
+  - {fileID: 2100000, guid: 4fe6bf74f31d6534cb62566cbf5e1769, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

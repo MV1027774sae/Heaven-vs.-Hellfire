@@ -267,7 +267,8 @@ public class SelectScreenManager : MonoBehaviour
         }
         else
         {
-            MySceneManager.GetInstance().RequestLevelLoad(SceneType.prog, "level_1");
+            //MySceneManager.GetInstance().RequestLevelLoad(SceneType.prog, "level_1");
+            MySceneManager.GetInstance().RequestLevelLoad(SceneType.prog, MySceneManager.GetInstance().levels[Random.Range(0,2)]);
         }
     }
 
