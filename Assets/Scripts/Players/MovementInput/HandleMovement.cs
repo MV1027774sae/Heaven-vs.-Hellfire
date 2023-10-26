@@ -38,18 +38,7 @@ public class HandleMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(inputHandler.playerInput == "" && useController == true)
-        {
-            playerController.enabled = true;
-            playerInput.enabled = true;
-        }
-        else
-        {
-            playerInput.enabled = false;
-            playerController.enabled = false;
-        }
-
-        if (!states.dontMove)
+        if (!states.dontMove && !states.gettingHit)
         {
             HorizontalMovement();
             Jump();
