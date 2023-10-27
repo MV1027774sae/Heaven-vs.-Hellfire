@@ -49,6 +49,7 @@ public class StateManager : MonoBehaviour
     public HandleAnimations handleAnim;
     [HideInInspector]
     public HandleMovement handleMovement;
+    AudioManager audioManager;
 
     [Header("Grab Reference from others")]
     public GameObject[] movementColliders;
@@ -59,6 +60,7 @@ public class StateManager : MonoBehaviour
         handleDC = GetComponent<HandleDamageColliders>();
         handleAnim = GetComponent<HandleAnimations>();
         handleMovement = GetComponent<HandleMovement>();
+        audioManager = GetComponent<AudioManager>();
         sRenderer = GetComponentInChildren<SpriteRenderer>();
         blood = GetComponentInChildren<ParticleSystem>();
     }
@@ -163,6 +165,8 @@ public class StateManager : MonoBehaviour
             {
                 blood.Emit(30);
             }
+
+            audioManager.PlayGruntSFX();
         }
         else if (!gettingHit && guard)
         {

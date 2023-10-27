@@ -9,9 +9,12 @@ public class DoDamage : MonoBehaviour
     public HandleDamageColliders.DamageType damageType;
     public float damage;
 
+    AudioManager audioManager;
+
     void Start()
     {
         states = GetComponentInParent<StateManager>();
+        audioManager = GetComponentInParent<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +26,26 @@ public class DoDamage : MonoBehaviour
             if (oState != states)
             {
                 oState.TakeDamage(damage, damageType);
+
+                switch (damageType)
+                {
+                    case HandleDamageColliders.DamageType.light:
+                        oState.gameObject.GetComponentInParent<AudioSource>().
+                            PlayOneShot(audioManager.lightHitSFX[Random.Range(0, audioManager.lightHitSFX.Length)]);
+                        break;
+                    case HandleDamageColliders.DamageType.medium:
+                        oState.gameObject.GetComponentInParent<AudioSource>().
+                            PlayOneShot(audioManager.lightHitSFX[Random.Range(0, audioManager.lightHitSFX.Length)]);
+                        break;
+                    case HandleDamageColliders.DamageType.heavy:
+                        oState.gameObject.GetComponentInParent<AudioSource>().
+                            PlayOneShot(audioManager.heavyHitSFX[Random.Range(0, audioManager.heavyHitSFX.Length)]);
+                        break;
+                    case HandleDamageColliders.DamageType.projectile:
+                        oState.gameObject.GetComponentInParent<AudioSource>().
+                            PlayOneShot(audioManager.lightHitSFX[Random.Range(0, audioManager.heavyHitSFX.Length)]);
+                        break;
+                }
             }
         }
     }

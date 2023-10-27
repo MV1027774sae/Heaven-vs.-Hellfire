@@ -29,10 +29,12 @@ public class HandleDamageColliders : MonoBehaviour
     }
 
     StateManager states;
+    AudioManager audioManager;
 
     void Start()
     {
         states = GetComponent<StateManager>();
+        audioManager = GetComponent<AudioManager>();
         CloseColliders();
     }
 
