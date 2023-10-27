@@ -29,7 +29,7 @@ public class Dash : MonoBehaviour
     void Update()
     {
         //Player 1???
-        if (Input.GetKeyDown(KeyCode.Y) && canDash && inputHandlerScript.playerInput == "") //Press Y twice to dash
+        if (stateManagerScripts.horizontal != 0 && canDash && inputHandlerScript.playerInput == "") //Press Y twice to dash
         {
             if (keyPressed)
             {
@@ -43,7 +43,7 @@ public class Dash : MonoBehaviour
             }
         }
         //Player 2???
-        else if (Input.GetKeyDown(KeyCode.Keypad1) && canDash && inputHandlerScript.playerInput == "1")
+        else if (stateManagerScripts.horizontal != 0 && canDash && inputHandlerScript.playerInput == "1")
         {
             if (keyPressed)
             {
