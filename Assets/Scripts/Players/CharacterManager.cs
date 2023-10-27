@@ -114,6 +114,7 @@ public class PlayerBase
     {
         user, //a real human
         ai, //computer controlled
-        simulation //for multiplayer over network
+        simulation, //for multiplayer over network
+        dummy //test subjects
     }
 }

@@ -6,6 +6,7 @@ public class ButtonRef : MonoBehaviour {
 
     public GameObject selectIndicator;
 
+    public bool isTurtorial;
     public bool selected;
 
     void Start()

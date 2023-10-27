@@ -14,6 +14,8 @@ public class IntroSceneManager : MonoBehaviour
     public GameObject menuObj;
     public ButtonRef[] menuOptions;
 
+    [SerializeField] bool checkIfTheObjectHaveBoolean;
+
     void Start()
     {
         menuObj.SetActive(false);
@@ -78,6 +80,10 @@ public class IntroSceneManager : MonoBehaviour
                 //and if we hit space again
                 if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
                 {
+                    if(activeElement == 2)
+                    {
+                        Debug.Log("TUrtorial!");
+                    }
                     //then load the level
                     Debug.Log("load");
                     loadingLevel = true;
@@ -110,6 +116,13 @@ public class IntroSceneManager : MonoBehaviour
         HandleSelectedOption();
         yield return new WaitForSeconds(0.6f);
 
-        MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "select");
+        if (activeElement == 2)
+        {
+            MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "turtorial_level");
+        }
+        else
+        {
+            MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "select");
+        }
     }
 }
