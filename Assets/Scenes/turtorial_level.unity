@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterManager
       objectReference: {fileID: 0}
+    - target: {fileID: 108232, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 475202, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -280,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.size
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: players.Array.data[0].inputId
@@ -324,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 21300026, guid: 6c86bf41bc6883d488e310c6dc7cc4f3, type: 3}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: players.Array.data[1].playerType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[0].charId
@@ -531,6 +535,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e33c8c94cfe3a4db4f1ab66cac6d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &448549088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448549075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b09ee6eb129944588c58b7166bbb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1842630919}
+  stateManager: {fileID: 448549076}
 --- !u!1 &575029077
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.81
+      value: -2.86
       objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -956,6 +974,10 @@ PrefabInstance:
     - target: {fileID: 412580, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080066, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_Mass
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 235292988716683039, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: health
@@ -1390,7 +1412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1268539485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,7 +1430,7 @@ MonoBehaviour:
   - {fileID: 1247651103}
   maxTurns: 2
   countdown: 0
-  maxTurnTimer: 30
+  maxTurnTimer: 9999
 --- !u!4 &1268539486
 Transform:
   m_ObjectHideFlags: 0
@@ -2279,7 +2301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.88
+      value: -2.93
       objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2328,7 +2350,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 448549088}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
 --- !u!1 &1644803002
 GameObject:
