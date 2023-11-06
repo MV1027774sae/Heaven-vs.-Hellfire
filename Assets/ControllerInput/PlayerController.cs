@@ -1,33 +1,42 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
+
 
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Grabing other component")]
     public Rigidbody2D rb;
     [SerializeField] StateManager states;
     [SerializeField] HandleMovement handleMovement;
+    private PlayerInputAction playerInput;
 
+    [Header("Animation")]
     [SerializeField] HandleAnimations anim;
     public Animator animate;
 
+    [Header("Movement Speed and Jump")]
     public float speed;
     private float horizontal;
 
     public float jumpForce = 5.0f; // Adjust this value as needed.
+    public bool isCrouch = false;
     private bool isJumping = false;
+
 
 
     void Awake()
     {
         animate = GetComponentInChildren<Animator>();
+        playerInput = new PlayerInputAction();
+        speed = 143f;
     }
 
-    //Help moving
+    //Help/Updating moving
     private void FixedUpdate()
     {
-        speed = 143f;
-
+        //Copy and Paste from HandleMovement Script
         if (states.onGround && !states.currentlyAttacking && !states.blocking)
         {
             rb.AddForce(new Vector2((horizontal * speed) - rb.velocity.x * handleMovement.acceleration, 0));
@@ -53,9 +62,20 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+
+        if(isCrouch)
+        {
+            states.crouch= true;
+            speed = 70f;
+        }
+        else
+        {
+            states.crouch = false;
+            speed = 143f;
+        }
     }
 
-    //Call Jumping
+    //Call Jumping Method
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -67,8 +87,29 @@ public class PlayerController : MonoBehaviour
     //Call Moving
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("Moving");
         horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    private void OnEnable()
+    {
+        playerInput.Enable();
+        playerInput.PlayerControl.Crouch.performed += OnCrouchPerform;
+        playerInput.PlayerControl.Crouch.canceled += OnCrouchCancelled;
+
+    }
+    private void OnDisable()
+    {
+        playerInput.Disable();
+        playerInput.PlayerControl.Crouch.performed -= OnCrouchPerform;
+        playerInput.PlayerControl.Crouch.canceled -= OnCrouchCancelled;
+    }
+    private void OnCrouchPerform(InputAction.CallbackContext value)
+    {
+        isCrouch = true;
+    }
+    private void OnCrouchCancelled(InputAction.CallbackContext value)
+    {
+        isCrouch = false;
     }
 
     //Help Jumping and Check if the character hit ground

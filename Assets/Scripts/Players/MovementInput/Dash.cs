@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
+    [Header("Dashing")]
     public bool canDash = true;
     [SerializeField] bool isDashing;
     [SerializeField] float dashTime = 0.2f;
     [SerializeField] float dashingPower = 10f;
     [SerializeField] float dashCoolDown = 1f;
 
+    [Header("Grabing other component")]
     [SerializeField] Rigidbody2D rb;
     [SerializeField] StateManager stateManagerScripts;
     [SerializeField] InputHandler inputHandlerScript;
 
 
+    [Header("Check if key press twice")]
     //Check if the key is press twice
     public bool keyPressed = false;
     private float doublePressTime = 0.5f;
@@ -29,7 +32,7 @@ public class Dash : MonoBehaviour
     void Update()
     {
         //Player 1???
-        if (stateManagerScripts.horizontal != 0 && canDash && inputHandlerScript.playerInput == "") //Press Y twice to dash
+        if (stateManagerScripts.horizontal != 0 && canDash && inputHandlerScript.playerInput == "") //Press horizontal input twice twice to dash
         {
             if (keyPressed)
             {
