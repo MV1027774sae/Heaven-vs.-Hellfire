@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
+        //Checking if the method activate the condition then adjust speed and crouch
         if(isCrouch)
         {
             states.crouch= true;
@@ -90,6 +91,40 @@ public class PlayerController : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
     }
 
+    public void OnAttackLight(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            states.attackL = true;
+            Debug.Log("ATTACK!");
+        }
+    }
+    public void OnAttackMedium(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            states.attackM = true;
+            Debug.Log("ATTACK MEDIUAM!");
+        }
+    }
+    public void OnAttackHeavy(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            states.attackH = true;
+            Debug.Log("ATTACK HEAVY!");
+        }
+    }
+    public void OnAttackSpecial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            states.attackS = true;
+            Debug.Log("ATTACK SPEACIAL!");
+        }
+    }
+
+    //This method function Crouch
     private void OnEnable()
     {
         playerInput.Enable();
