@@ -285,9 +285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 4
-  source: {fileID: 0}
-  projectileHitSFX: {fileID: 0}
-  projectileMissSFX: {fileID: 0}
+  source: {fileID: 7631142427796583622}
+  projectileHitSFX: {fileID: 8300000, guid: ae24cab9903296c458a9f738fd07c1c8, type: 3}
+  projectileMissSFX: {fileID: 8300000, guid: bd2d8fb0dd4b4f94e9b70e79c0fe02b9, type: 3}
+  triggerFireball: 0
 --- !u!82 &7631142427796583622
 AudioSource:
   m_ObjectHideFlags: 0

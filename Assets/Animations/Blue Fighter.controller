@@ -106,8 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   dcType: 0
-  damage: 8
-  hitStunFrames: 0
+  damage: 6
+  hitStunFrames: 14
   attackStartUpFrames: 0
 --- !u!1101 &-5629052993300875486
 AnimatorStateTransition:
@@ -379,7 +379,7 @@ MonoBehaviour:
   damageType: 0
   dcType: 0
   damage: 7
-  hitStunFrames: 0
+  hitStunFrames: 18
   attackStartUpFrames: 0
 --- !u!1102 &-1878820416079275343
 AnimatorState:
@@ -520,7 +520,7 @@ MonoBehaviour:
   damageType: 1
   dcType: 0
   damage: 13
-  hitStunFrames: 0
+  hitStunFrames: 18
   attackStartUpFrames: 0
 --- !u!91 &9100000
 AnimatorController:
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   damageType: 1
   dcType: 0
   damage: 12
-  hitStunFrames: 0
+  hitStunFrames: 26
   attackStartUpFrames: 0
 --- !u!114 &4937923648594202315
 MonoBehaviour:
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   damageType: 1
   dcType: 0
   damage: 10
-  hitStunFrames: 0
+  hitStunFrames: 18
   attackStartUpFrames: 0
 --- !u!114 &5042380290037863700
 MonoBehaviour:
@@ -2066,7 +2066,7 @@ MonoBehaviour:
   damageType: 2
   dcType: 0
   damage: 15
-  hitStunFrames: 0
+  hitStunFrames: 30
   attackStartUpFrames: 0
 --- !u!114 &5965448420508326311
 MonoBehaviour:
@@ -2083,7 +2083,7 @@ MonoBehaviour:
   damageType: 2
   dcType: 0
   damage: 15
-  hitStunFrames: 0
+  hitStunFrames: 26
   attackStartUpFrames: 0
 --- !u!1101 &6257730697197280433
 AnimatorStateTransition:
@@ -2227,5 +2227,5 @@ MonoBehaviour:
   damageType: 1
   dcType: 0
   damage: 10
-  hitStunFrames: 0
+  hitStunFrames: 18
   attackStartUpFrames: 0
