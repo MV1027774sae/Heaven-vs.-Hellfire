@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
     public AudioSource source;
 
     public AudioClip[] attackSFX;
@@ -22,7 +21,7 @@ public class AudioManager : MonoBehaviour
         source.PlayOneShot(lightHitSFX[Random.Range(0, lightHitSFX.Length)]);
     }
 
-    public void PlayHeaveyHitSFX()
+    public void PlayHeavyHitSFX()
     {
         source.PlayOneShot(heavyHitSFX[Random.Range(0, heavyHitSFX.Length)]);
     }

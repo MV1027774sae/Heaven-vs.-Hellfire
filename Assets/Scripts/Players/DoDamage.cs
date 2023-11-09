@@ -8,6 +8,7 @@ public class DoDamage : MonoBehaviour
 
     public HandleDamageColliders.DamageType damageType;
     public float damage;
+    public float hitStun;
 
     AudioManager audioManager;
 
@@ -25,7 +26,7 @@ public class DoDamage : MonoBehaviour
 
             if (oState != states)
             {
-                oState.TakeDamage(damage, damageType);
+                oState.TakeDamage(damage, damageType, hitStun);
 
                 switch (damageType)
                 {
@@ -42,8 +43,8 @@ public class DoDamage : MonoBehaviour
                             PlayOneShot(audioManager.heavyHitSFX[Random.Range(0, audioManager.heavyHitSFX.Length)]);
                         break;
                     case HandleDamageColliders.DamageType.projectile:
-                        oState.gameObject.GetComponentInParent<AudioSource>().
-                            PlayOneShot(audioManager.lightHitSFX[Random.Range(0, audioManager.heavyHitSFX.Length)]);
+                        //oState.gameObject.GetComponentInParent<AudioSource>().
+                        //    PlayOneShot(audioManager.lightHitSFX[Random.Range(0, audioManager.heavyHitSFX.Length)]);
                         break;
                 }
             }
