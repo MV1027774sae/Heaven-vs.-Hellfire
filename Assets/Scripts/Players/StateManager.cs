@@ -12,8 +12,8 @@ public class StateManager : MonoBehaviour
     [SerializeField] private float hitInvulTimeL = 0.1f;
     [SerializeField] private float hitInvulTimeM = 0.15f;
     [SerializeField] private float hitInvulTimeH = 0.2f;
-    [SerializeField] private float heavyKnockbackX = 1f;
-    [SerializeField] private float heavyKnockbackY = 0.5f;
+    [SerializeField] private float hitPushBack = 1f;
+    [SerializeField] private float hitVerticalLaunch = 0.5f;
 
     [Header("Character Control and Movement")]
     public float horizontal;
@@ -52,6 +52,7 @@ public class StateManager : MonoBehaviour
     public HandleAnimations handleAnim;
     [HideInInspector]
     public HandleMovement handleMovement;
+    AudioManager audioManager;
 
     [Header("Grab Reference from others")]
     public GameObject[] movementColliders;
@@ -62,6 +63,7 @@ public class StateManager : MonoBehaviour
         handleDC = GetComponent<HandleDamageColliders>();
         handleAnim = GetComponent<HandleAnimations>();
         handleMovement = GetComponent<HandleMovement>();
+        audioManager = GetComponent<AudioManager>();
         sRenderer = GetComponentInChildren<SpriteRenderer>();
         blood = GetComponentInChildren<ParticleSystem>();
     }
@@ -147,7 +149,7 @@ public class StateManager : MonoBehaviour
         movementColliders[index].SetActive(true);
     }
 
-    public void TakeDamage(float damage, HandleDamageColliders.DamageType damageType)
+    public void TakeDamage(float damage, HandleDamageColliders.DamageType damageType, float hitStun)
     {
         if (!gettingHit && !guard)
         {
@@ -158,18 +160,18 @@ public class StateManager : MonoBehaviour
             switch (damageType)
             {
                 case HandleDamageColliders.DamageType.light:
-                    StartCoroutine(CloseImmortality(hitInvulTimeL));
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
                 case HandleDamageColliders.DamageType.medium:
-                    StartCoroutine(CloseImmortality(hitInvulTimeM));
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
                 case HandleDamageColliders.DamageType.heavy:
                     handleMovement.AddVelocityOnCharacter(
-                        ((!lookRight) ? Vector3.right * heavyKnockbackX : Vector3.right * -heavyKnockbackX) + Vector3.up, heavyKnockbackY);
-                    StartCoroutine(CloseImmortality(hitInvulTimeH));
+                        ((!lookRight) ? Vector3.right * hitPushBack : Vector3.right * -hitPushBack) + Vector3.up, hitVerticalLaunch);
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
                 case HandleDamageColliders.DamageType.projectile:
-                    StartCoroutine(CloseImmortality(hitInvulTimeL));
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
             }
 
@@ -177,6 +179,8 @@ public class StateManager : MonoBehaviour
             {
                 blood.Emit(30);
             }
+
+            audioManager.PlayGruntSFX();
         }
         else if (!gettingHit && guard)
         {
@@ -186,16 +190,16 @@ public class StateManager : MonoBehaviour
             switch (damageType)
             {
                 case HandleDamageColliders.DamageType.light:
-                    StartCoroutine(CloseImmortality(hitInvulTimeL));
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
                 case HandleDamageColliders.DamageType.medium:
-                    StartCoroutine(CloseImmortality(hitInvulTimeM));
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
                 case HandleDamageColliders.DamageType.heavy:
-                    StartCoroutine(CloseImmortality(hitInvulTimeH));
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
                 case HandleDamageColliders.DamageType.projectile:
-                    StartCoroutine(CloseImmortality(hitInvulTimeL));
+                    StartCoroutine(CloseImmortality(hitStun));
                     break;
             }
         }
@@ -204,7 +208,9 @@ public class StateManager : MonoBehaviour
     IEnumerator CloseImmortality (float timer)
     {
         dontMove = true;
+        //gameObject.GetComponentInChildren<Animator>().speed = timer;
         yield return new WaitForSeconds(timer);
+        //gameObject.GetComponentInChildren<Animator>().speed = 1;
         gettingHit = false;
         blocking = false;
         dontMove = false;

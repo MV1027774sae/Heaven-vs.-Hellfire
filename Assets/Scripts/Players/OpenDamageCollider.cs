@@ -8,7 +8,8 @@ public class OpenDamageCollider : StateMachineBehaviour
     public HandleDamageColliders.DamageType damageType;
     public HandleDamageColliders.DCtype dcType;
     public float damage;
-    public float attackStartUp;
+    public float hitStunFrames;
+    public float attackStartUpFrames;
 
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -19,7 +20,7 @@ public class OpenDamageCollider : StateMachineBehaviour
         }
 
         states.currentlyAttacking = true;
-        states.handleDC.OpenCollider(dcType, damage, attackStartUp, damageType);
+        states.handleDC.OpenCollider(dcType, damage, attackStartUpFrames, damageType, hitStunFrames);
     }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
