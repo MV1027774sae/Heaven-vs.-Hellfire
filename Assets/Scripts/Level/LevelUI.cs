@@ -11,6 +11,7 @@ public class LevelUI : MonoBehaviour {
 
     public Slider[] healthSliders;
     public TextMeshProUGUI[] comboCounters;
+    public Slider[] energySliders;
 
 
     public GameObject[] winIndicatorGrids;

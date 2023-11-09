@@ -101,6 +101,7 @@ public class LevelManager : MonoBehaviour
 
             charM.players[i].playerStates.healthSlider = levelUI.healthSliders[i];
             charM.players[i].playerStates.comboCounter = levelUI.comboCounters[i];
+            charM.players[i].playerStates.energySlider = levelUI.energySliders[i];
 
             camM.players.Add(go.transform);
         }
@@ -133,6 +134,7 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < charM.players.Count; i++)
         {
             charM.players[i].playerStates.health = 100;
+            charM.players[i].playerStates.energy = 0;
             charM.players[i].playerStates.handleAnim.anim.Play("Locomotion");
             charM.players[i].playerStates.transform.position = spawnPositions[i].position;
         }

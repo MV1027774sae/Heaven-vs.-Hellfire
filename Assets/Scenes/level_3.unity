@@ -1186,6 +1186,8 @@ MonoBehaviour:
   healthSliders:
   - {fileID: 2027495332}
   - {fileID: 1829263316}
+  comboCounters: []
+  energySliders: []
   winIndicatorGrids:
   - {fileID: 1137917083}
   - {fileID: 1644803002}

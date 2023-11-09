@@ -7,7 +7,7 @@ public class CombotHitDisplay : MonoBehaviour
 {
     public bool startDisplay = true;
 
-    [SerializeField] int numberOfHit = 0;
+    public int numberOfHit = 0;
     [SerializeField] float coolDown = 1.5f;
     [SerializeField] StateManager stateManagerScript;
 

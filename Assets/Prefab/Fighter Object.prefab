@@ -261,6 +261,7 @@ MonoBehaviour:
   lookRight: 1
   healthSlider: {fileID: 0}
   comboCounter: {fileID: 0}
+  energySlider: {fileID: 0}
   hitboxHolder: {fileID: 5345070992298493943}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
@@ -432,6 +433,7 @@ MonoBehaviour:
   animate: {fileID: 9561098}
   speed: 3
   jumpForce: 5
+  isCrouch: 0
 --- !u!114 &7158859846787389583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,12 +493,28 @@ MonoBehaviour:
     m_ActionName: Player Control/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 0e2baa09-f214-4223-9b53-03592e94c351
-    m_ActionName: Player Control/Attack[/Keyboard/r,/Keyboard/t,/Keyboard/g,/Keyboard/f]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: fc7c7d65-752a-43f3-a9ff-254eb40e0f9a
     m_ActionName: Player Control/Dash[/Keyboard/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bbc24e5f-5ec4-4bd4-bc05-7b7a0c11a713
+    m_ActionName: Player Control/Crouch[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3fffc1c2-092e-43d7-b67c-79ab8709037b
+    m_ActionName: Player Control/AttackL[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4c89067c-8faa-4bd8-879f-537b5be02e7f
+    m_ActionName: Player Control/AttackM[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 904308e6-bf0b-48b4-85e3-67427ce4757c
+    m_ActionName: Player Control/AttackH[/Keyboard/g]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 16d9f091-edb0-421d-b2b2-26ea2b4358a6
+    m_ActionName: Player Control/AttackS[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Control

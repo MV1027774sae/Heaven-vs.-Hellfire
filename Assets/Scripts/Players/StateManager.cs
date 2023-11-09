@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StateManager : MonoBehaviour
 {
     public float health = 100;
+    public float energy = 100;
     
     [SerializeField] private float hitInvulTimeL = 0.1f;
     [SerializeField] private float hitInvulTimeM = 0.15f;
@@ -38,6 +39,8 @@ public class StateManager : MonoBehaviour
     [Header("Level UI")]
     public Slider healthSlider;
     public TextMeshProUGUI comboCounter;
+    public Slider energySlider;
+
 
     [Header("Sprite Render")]
     private SpriteRenderer sRenderer;
@@ -80,6 +83,7 @@ public class StateManager : MonoBehaviour
         if (healthSlider != null)
         {
             healthSlider.value = health * 0.01f;
+            energySlider.value = energy * 0.01f;
         }
 
         if (health <= 0)
@@ -90,6 +94,15 @@ public class StateManager : MonoBehaviour
 
                 handleAnim.anim.Play("Dead");
             }
+        }
+
+        if(energy >= 100)
+        {
+            energy = 100;
+        }
+        else if(energy <= 0)
+        {
+            energy = 0;
         }
 
         if(gettingHit == true)
@@ -138,6 +151,7 @@ public class StateManager : MonoBehaviour
     {
         if (!gettingHit && !guard)
         {
+            energy += 15;
             health -= damage;
             gettingHit = true;
 
