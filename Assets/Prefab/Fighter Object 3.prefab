@@ -240,11 +240,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  energy: 100
   hitInvulTimeL: 0.1
   hitInvulTimeM: 0.15
   hitInvulTimeH: 0.1
-  heavyKnockbackX: 1
-  heavyKnockbackY: 0.5
+  hitPushBack: 1
+  hitVerticalLaunch: 0.5
   horizontal: 0
   vertical: 0
   attackL: 0
@@ -432,7 +433,7 @@ MonoBehaviour:
   states: {fileID: 3642481131539211878}
   handleMovement: {fileID: 4032762511251676932}
   anim: {fileID: 7312437295067410981}
-  animate: {fileID: 0}
+  animate: {fileID: 9561098}
   speed: 0
   jumpForce: 5
   isCrouch: 0
@@ -905,6 +906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   damage: 10
+  hitStun: 0
 --- !u!1 &160892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   damage: 10
+  hitStun: 0
 --- !u!1 &198674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,6 +1191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   damage: 10
+  hitStun: 0
 --- !u!1 &199000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   damage: 10
+  hitStun: 0
 --- !u!1 &180142106712703713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   damage: 0
+  hitStun: 0
 --- !u!1001 &678576234112797809
 PrefabInstance:
   m_ObjectHideFlags: 0
