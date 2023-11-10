@@ -1601,6 +1601,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1395543117126939725, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: startDisplay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 126410, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_Name
       value: Fighter Object 2
@@ -2780,7 +2784,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1494963061}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f27706ed946aff244839f3804cc70289, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2849,7 +2853,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1494963061}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f27706ed946aff244839f3804cc70289, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2894,7 +2898,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1494963061}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f27706ed946aff244839f3804cc70289, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3175,6 +3179,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2174979549159554893, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
+      propertyPath: dashTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
       propertyPath: m_Name
       value: Fighter Object
@@ -3243,6 +3251,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 2027495332}
+    - target: {fileID: 6686616553206487278, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
+      propertyPath: jumpSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7158859846787389583, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3486,7 +3498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1612038845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4026,7 +4038,7 @@ RectTransform:
   m_Father: {fileID: 1420196864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.699997, y: 0.000012397766}
   m_SizeDelta: {x: 0.1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4265,7 +4277,7 @@ RectTransform:
   m_Father: {fileID: 874649282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -4.699997, y: 0.000012397766}
   m_SizeDelta: {x: 0.1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

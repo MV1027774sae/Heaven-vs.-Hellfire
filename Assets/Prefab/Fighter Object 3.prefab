@@ -288,7 +288,7 @@ MonoBehaviour:
   acceleration: 30
   airAcceleration: 15
   maxSpeed: 60
-  jumpSpeed: 5
+  jumpSpeed: 4.5
   jumpDuration: 5
   justJumped: 0
   actualSpeed: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   canDash: 1
   isDashing: 0
   dashTime: 0.15
-  dashingPower: 3.5
+  dashingPower: 4
   dashCoolDown: 1
   rb: {fileID: 5080066}
   stateManagerScripts: {fileID: 3642481131539211878}
