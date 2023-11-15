@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
@@ -19,10 +20,20 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Speed and Jump")]
     public float speed;
     private float horizontal;
-
     public float jumpForce = 5.0f; // Adjust this value as needed.
-    public bool isCrouch = false;
     private bool isJumping = false;
+
+    [Header("Dashing")]
+    public bool canDash = true;
+    public bool keyPressed = false;
+    [SerializeField] bool isDashing;
+    [SerializeField] float dashTime = 0.2f;
+    [SerializeField] float dashingPower = 10f;
+    [SerializeField] float dashCoolDown = 1f;
+
+
+    [Header("Crouch")]
+    public bool isCrouch = false;
 
 
 
@@ -73,6 +84,11 @@ public class PlayerController : MonoBehaviour
         {
             states.crouch = false;
             speed = 143f;
+        }
+
+        if (isDashing)
+        {
+            return;
         }
     }
 
@@ -165,5 +181,64 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+    }
+
+    public void OnDashFoward(InputAction.CallbackContext value)
+    {
+        if (keyPressed && states.currentlyAttacking == false && states.crouch == false && states.onGround == false && canDash == true)
+        {
+            StartCoroutine(DashingFoward());
+        }
+        else
+        {
+            keyPressed = true;
+        }
+    }
+
+    public void OnDashBackward(InputAction.CallbackContext value)
+    {
+        if (keyPressed && states.currentlyAttacking == false && states.crouch == false && states.onGround == false && canDash == true)
+        {
+            StartCoroutine(DashingBackward());
+        }
+        else
+        {
+            keyPressed = true;
+        }
+    }
+
+    IEnumerator DashingFoward() //Call the dash function
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f; //Set character gravity to zero.
+
+        rb.velocity = Vector2.right * dashingPower;
+
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
+        keyPressed = true;
+    }
+
+    IEnumerator DashingBackward() //Call the dash function
+    {
+        keyPressed = false;
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f; //Set character gravity to zero.
+
+        rb.velocity = Vector2.left * dashingPower;
+
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
+        keyPressed = true;
     }
 }

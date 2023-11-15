@@ -46,15 +46,6 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Dash"",
-                    ""type"": ""Button"",
-                    ""id"": ""fc7c7d65-752a-43f3-a9ff-254eb40e0f9a"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Crouch"",
                     ""type"": ""Button"",
                     ""id"": ""bbc24e5f-5ec4-4bd4-bc05-7b7a0c11a713"",
@@ -94,6 +85,24 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""name"": ""AttackS"",
                     ""type"": ""Button"",
                     ""id"": ""16d9f091-edb0-421d-b2b2-26ea2b4358a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dask Foward"",
+                    ""type"": ""Button"",
+                    ""id"": ""6a57da08-7ee1-4e3f-9c24-a9bf80989d21"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash Backward"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd13e8b8-87e9-42c9-8ab7-e72ec5cb11a9"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -191,17 +200,6 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""98ffcac5-9dd8-476b-b2c7-0f4da24b9046"",
-                    ""path"": ""<Keyboard>/y"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Dash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""df086ecd-624e-48bc-bd0d-de39c77789ca"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
@@ -214,7 +212,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e0c0117b-f8f5-4c32-8771-9487cbeb0d75"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -309,6 +307,28 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""action"": ""AttackL"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56295047-2d92-4055-a757-50c63f042cc0"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dask Foward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ac0fc65-f4a7-4dc1-b8b7-b9e91a0bee63"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash Backward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -319,12 +339,13 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         m_PlayerControl = asset.FindActionMap("Player Control", throwIfNotFound: true);
         m_PlayerControl_JumpPress = m_PlayerControl.FindAction("Jump (Press)", throwIfNotFound: true);
         m_PlayerControl_MovementPress = m_PlayerControl.FindAction("Movement (Press)", throwIfNotFound: true);
-        m_PlayerControl_Dash = m_PlayerControl.FindAction("Dash", throwIfNotFound: true);
         m_PlayerControl_Crouch = m_PlayerControl.FindAction("Crouch", throwIfNotFound: true);
         m_PlayerControl_AttackL = m_PlayerControl.FindAction("AttackL", throwIfNotFound: true);
         m_PlayerControl_AttackM = m_PlayerControl.FindAction("AttackM", throwIfNotFound: true);
         m_PlayerControl_AttackH = m_PlayerControl.FindAction("AttackH", throwIfNotFound: true);
         m_PlayerControl_AttackS = m_PlayerControl.FindAction("AttackS", throwIfNotFound: true);
+        m_PlayerControl_DaskFoward = m_PlayerControl.FindAction("Dask Foward", throwIfNotFound: true);
+        m_PlayerControl_DashBackward = m_PlayerControl.FindAction("Dash Backward", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -388,24 +409,26 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
     private List<IPlayerControlActions> m_PlayerControlActionsCallbackInterfaces = new List<IPlayerControlActions>();
     private readonly InputAction m_PlayerControl_JumpPress;
     private readonly InputAction m_PlayerControl_MovementPress;
-    private readonly InputAction m_PlayerControl_Dash;
     private readonly InputAction m_PlayerControl_Crouch;
     private readonly InputAction m_PlayerControl_AttackL;
     private readonly InputAction m_PlayerControl_AttackM;
     private readonly InputAction m_PlayerControl_AttackH;
     private readonly InputAction m_PlayerControl_AttackS;
+    private readonly InputAction m_PlayerControl_DaskFoward;
+    private readonly InputAction m_PlayerControl_DashBackward;
     public struct PlayerControlActions
     {
         private @PlayerInputAction m_Wrapper;
         public PlayerControlActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @JumpPress => m_Wrapper.m_PlayerControl_JumpPress;
         public InputAction @MovementPress => m_Wrapper.m_PlayerControl_MovementPress;
-        public InputAction @Dash => m_Wrapper.m_PlayerControl_Dash;
         public InputAction @Crouch => m_Wrapper.m_PlayerControl_Crouch;
         public InputAction @AttackL => m_Wrapper.m_PlayerControl_AttackL;
         public InputAction @AttackM => m_Wrapper.m_PlayerControl_AttackM;
         public InputAction @AttackH => m_Wrapper.m_PlayerControl_AttackH;
         public InputAction @AttackS => m_Wrapper.m_PlayerControl_AttackS;
+        public InputAction @DaskFoward => m_Wrapper.m_PlayerControl_DaskFoward;
+        public InputAction @DashBackward => m_Wrapper.m_PlayerControl_DashBackward;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -421,9 +444,6 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @MovementPress.started += instance.OnMovementPress;
             @MovementPress.performed += instance.OnMovementPress;
             @MovementPress.canceled += instance.OnMovementPress;
-            @Dash.started += instance.OnDash;
-            @Dash.performed += instance.OnDash;
-            @Dash.canceled += instance.OnDash;
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
@@ -439,6 +459,12 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @AttackS.started += instance.OnAttackS;
             @AttackS.performed += instance.OnAttackS;
             @AttackS.canceled += instance.OnAttackS;
+            @DaskFoward.started += instance.OnDaskFoward;
+            @DaskFoward.performed += instance.OnDaskFoward;
+            @DaskFoward.canceled += instance.OnDaskFoward;
+            @DashBackward.started += instance.OnDashBackward;
+            @DashBackward.performed += instance.OnDashBackward;
+            @DashBackward.canceled += instance.OnDashBackward;
         }
 
         private void UnregisterCallbacks(IPlayerControlActions instance)
@@ -449,9 +475,6 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @MovementPress.started -= instance.OnMovementPress;
             @MovementPress.performed -= instance.OnMovementPress;
             @MovementPress.canceled -= instance.OnMovementPress;
-            @Dash.started -= instance.OnDash;
-            @Dash.performed -= instance.OnDash;
-            @Dash.canceled -= instance.OnDash;
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
@@ -467,6 +490,12 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @AttackS.started -= instance.OnAttackS;
             @AttackS.performed -= instance.OnAttackS;
             @AttackS.canceled -= instance.OnAttackS;
+            @DaskFoward.started -= instance.OnDaskFoward;
+            @DaskFoward.performed -= instance.OnDaskFoward;
+            @DaskFoward.canceled -= instance.OnDaskFoward;
+            @DashBackward.started -= instance.OnDashBackward;
+            @DashBackward.performed -= instance.OnDashBackward;
+            @DashBackward.canceled -= instance.OnDashBackward;
         }
 
         public void RemoveCallbacks(IPlayerControlActions instance)
@@ -488,11 +517,12 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
     {
         void OnJumpPress(InputAction.CallbackContext context);
         void OnMovementPress(InputAction.CallbackContext context);
-        void OnDash(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnAttackL(InputAction.CallbackContext context);
         void OnAttackM(InputAction.CallbackContext context);
         void OnAttackH(InputAction.CallbackContext context);
         void OnAttackS(InputAction.CallbackContext context);
+        void OnDaskFoward(InputAction.CallbackContext context);
+        void OnDashBackward(InputAction.CallbackContext context);
     }
 }

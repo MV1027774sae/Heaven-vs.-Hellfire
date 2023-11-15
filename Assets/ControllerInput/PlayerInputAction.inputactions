@@ -24,15 +24,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Dash",
-                    "type": "Button",
-                    "id": "fc7c7d65-752a-43f3-a9ff-254eb40e0f9a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Crouch",
                     "type": "Button",
                     "id": "bbc24e5f-5ec4-4bd4-bc05-7b7a0c11a713",
@@ -72,6 +63,24 @@
                     "name": "AttackS",
                     "type": "Button",
                     "id": "16d9f091-edb0-421d-b2b2-26ea2b4358a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dask Foward",
+                    "type": "Button",
+                    "id": "6a57da08-7ee1-4e3f-9c24-a9bf80989d21",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash Backward",
+                    "type": "Button",
+                    "id": "fd13e8b8-87e9-42c9-8ab7-e72ec5cb11a9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -169,17 +178,6 @@
                 },
                 {
                     "name": "",
-                    "id": "98ffcac5-9dd8-476b-b2c7-0f4da24b9046",
-                    "path": "<Keyboard>/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "df086ecd-624e-48bc-bd0d-de39c77789ca",
                     "path": "<Keyboard>/s",
                     "interactions": "",
@@ -192,7 +190,7 @@
                 {
                     "name": "",
                     "id": "e0c0117b-f8f5-4c32-8771-9487cbeb0d75",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -285,6 +283,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "AttackL",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56295047-2d92-4055-a757-50c63f042cc0",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dask Foward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ac0fc65-f4a7-4dc1-b8b7-b9e91a0bee63",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash Backward",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

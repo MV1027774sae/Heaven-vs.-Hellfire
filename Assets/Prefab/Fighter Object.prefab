@@ -270,6 +270,7 @@ MonoBehaviour:
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
   handleMovement: {fileID: 0}
+  comboHitSript: {fileID: 0}
   movementColliders:
   - {fileID: 130414}
   - {fileID: 131368}
@@ -433,10 +434,17 @@ MonoBehaviour:
   rb: {fileID: 5080066}
   states: {fileID: 4487232534679234226}
   handleMovement: {fileID: 6686616553206487278}
+  playerDash: {fileID: -2174979549159554893}
   anim: {fileID: 7141144232840224319}
   animate: {fileID: 9561098}
   speed: 3
   jumpForce: 5
+  canDash: 1
+  keyPressed: 0
+  isDashing: 0
+  dashTime: 0.2
+  dashingPower: 10
+  dashCoolDown: 1
   isCrouch: 0
 --- !u!114 &7158859846787389583
 MonoBehaviour:
