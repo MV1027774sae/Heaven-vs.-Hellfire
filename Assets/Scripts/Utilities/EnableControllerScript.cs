@@ -18,12 +18,12 @@ public class EnableControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(detectControllerScript.isConnect && inputHandlerScript.playerInput == "")
+        if(detectControllerScript.isConnect && inputHandlerScript.playerInput == "" && inputHandlerScript.enabled == true)
         {
             playerControllerScript.enabled = true;
             playerInput.enabled = true;
         }
-        else
+        else if (inputHandlerScript.enabled == false)
         {
             playerControllerScript.enabled = false;
             playerInput.enabled = false;

@@ -438,11 +438,12 @@ MonoBehaviour:
   animate: {fileID: 9561098}
   speed: 0
   jumpForce: 5
+  isJumping: 0
   canDash: 1
   keyPressed: 0
   isDashing: 0
-  dashTime: 0.2
-  dashingPower: 10
+  dashTime: 0.05
+  dashingPower: 4.5
   dashCoolDown: 1
   isCrouch: 0
 --- !u!114 &3653665151043160303

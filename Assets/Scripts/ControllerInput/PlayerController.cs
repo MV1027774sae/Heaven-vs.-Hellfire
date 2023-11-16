@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private float horizontal;
     public float jumpForce = 5.0f; // Adjust this value as needed.
-    private bool isJumping = false;
+    public bool isJumping = false;
 
     [Header("Dashing")]
     public bool canDash = true;
@@ -164,18 +164,14 @@ public class PlayerController : MonoBehaviour
     //Help Jumping and Check if the character hit ground
     private void Jump()
     {
-        if(!isJumping)
+        if(states.onGround)
         {
             Debug.Log("Jumping");
             anim.JumpAnim();
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isJumping = true;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
+        else if (!states.onGround)
         {
             isJumping = false;
         }
