@@ -23,11 +23,10 @@ public class EnableControllerScript : MonoBehaviour
             playerControllerScript.enabled = true;
             playerInput.enabled = true;
         }
-        else if (inputHandlerScript.enabled == false)
+        else if (detectControllerScript.isConnect == false || inputHandlerScript.enabled == false)
         {
             playerControllerScript.enabled = false;
             playerInput.enabled = false;
         }
-
     }
 }
