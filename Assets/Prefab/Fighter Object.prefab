@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 7158859846787389583}
   - component: {fileID: 574517405309715859}
   - component: {fileID: 1347967345695505956}
+  - component: {fileID: 1378092439662807880}
   m_Layer: 8
   m_Name: Fighter Object
   m_TagString: Untagged
@@ -434,7 +435,6 @@ MonoBehaviour:
   rb: {fileID: 5080066}
   states: {fileID: 4487232534679234226}
   handleMovement: {fileID: 6686616553206487278}
-  playerDash: {fileID: -2174979549159554893}
   anim: {fileID: 7141144232840224319}
   animate: {fileID: 9561098}
   speed: 3
@@ -505,10 +505,6 @@ MonoBehaviour:
     m_ActionName: Player Control/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: fc7c7d65-752a-43f3-a9ff-254eb40e0f9a
-    m_ActionName: Player Control/Dash[/Keyboard/y]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: bbc24e5f-5ec4-4bd4-bc05-7b7a0c11a713
     m_ActionName: Player Control/Crouch[/Keyboard/s]
   - m_PersistentCalls:
@@ -527,6 +523,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 16d9f091-edb0-421d-b2b2-26ea2b4358a6
     m_ActionName: Player Control/AttackS[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a57da08-7ee1-4e3f-9c24-a9bf80989d21
+    m_ActionName: Player Control/Dask Foward
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd13e8b8-87e9-42c9-8ab7-e72ec5cb11a9
+    m_ActionName: Player Control/Dash Backward
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Control
@@ -655,6 +659,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a5179104e206c5d4a9bf434b3ab6af6f, type: 3}
   - {fileID: 8300000, guid: 0b37ec8960b2349459642bc65bbe5644, type: 3}
   - {fileID: 8300000, guid: 0d5a481ef93e22b46b17a664b958e7c3, type: 3}
+--- !u!114 &1378092439662807880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9215393f5ac2da4c9e7192d7f411140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectControllerScript: {fileID: 11400000, guid: 824dace6701cfea4babaab1b1ca639bf, type: 2}
+  playerControllerScript: {fileID: 4010729596907488183}
+  inputHandlerScript: {fileID: 3122741501040341871}
+  playerInput: {fileID: 7158859846787389583}
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0

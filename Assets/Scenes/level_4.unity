@@ -3278,7 +3278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292.6516, y: -206.45093}
+  m_AnchoredPosition: {x: -292.6516, y: -200.7}
   m_SizeDelta: {x: 477.2719, y: 47.0357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976937324
@@ -3301,7 +3301,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (Esc) Back to Menu
+  m_text: '(P) To Pause
+
+    (Esc) Back to Menu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3364,7 +3366,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -33.677155}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6560,6 +6562,7 @@ GameObject:
   - component: {fileID: 2092617312}
   - component: {fileID: 2092617315}
   - component: {fileID: 2092617316}
+  - component: {fileID: 2092617317}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -6641,6 +6644,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b8ba463b6dd544a97ad8e1da4ec389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2092617317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092617311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71e3697d3262664db4d64e927f9e0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!1 &2094866944
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 
-
-
 public class PlayerController : MonoBehaviour
 {
     [Header("Grabing other component")]

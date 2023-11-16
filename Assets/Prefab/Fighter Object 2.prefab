@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 3653665151043160303}
   - component: {fileID: 8990151126917739424}
   - component: {fileID: 2988697938815921403}
+  - component: {fileID: -4597327952707411026}
   m_Layer: 8
   m_Name: Fighter Object 2
   m_TagString: Untagged
@@ -433,7 +434,6 @@ MonoBehaviour:
   rb: {fileID: 5080066}
   states: {fileID: 235292988716683039}
   handleMovement: {fileID: 947529306107236815}
-  playerDash: {fileID: -6571989216834617782}
   anim: {fileID: 2628208073592948534}
   animate: {fileID: 9561098}
   speed: 0
@@ -503,29 +503,117 @@ MonoBehaviour:
     m_ActionId: 75d5fd47-3141-46e1-b9c7-d1d5a4755f2e
     m_ActionName: Player Control/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/dpad]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fc7c7d65-752a-43f3-a9ff-254eb40e0f9a
-    m_ActionName: Player Control/Dash[/Keyboard/y]
-  - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 126410}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: bbc24e5f-5ec4-4bd4-bc05-7b7a0c11a713
     m_ActionName: Player Control/Crouch[/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1712898892469279006}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnAttackLight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3fffc1c2-092e-43d7-b67c-79ab8709037b
     m_ActionName: Player Control/AttackL[/Keyboard/r]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1712898892469279006}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnAttackMedium
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4c89067c-8faa-4bd8-879f-537b5be02e7f
     m_ActionName: Player Control/AttackM[/Keyboard/t]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1712898892469279006}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnAttackHeavy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 904308e6-bf0b-48b4-85e3-67427ce4757c
     m_ActionName: Player Control/AttackH[/Keyboard/g]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1712898892469279006}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnAttackSpecial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 16d9f091-edb0-421d-b2b2-26ea2b4358a6
     m_ActionName: Player Control/AttackS[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1712898892469279006}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDashFoward
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6a57da08-7ee1-4e3f-9c24-a9bf80989d21
+    m_ActionName: Player Control/Dask Foward
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1712898892469279006}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDashBackward
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fd13e8b8-87e9-42c9-8ab7-e72ec5cb11a9
+    m_ActionName: Player Control/Dash Backward
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Control
@@ -654,6 +742,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a5179104e206c5d4a9bf434b3ab6af6f, type: 3}
   - {fileID: 8300000, guid: 0b37ec8960b2349459642bc65bbe5644, type: 3}
   - {fileID: 8300000, guid: 0d5a481ef93e22b46b17a664b958e7c3, type: 3}
+--- !u!114 &-4597327952707411026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9215393f5ac2da4c9e7192d7f411140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectControllerScript: {fileID: 11400000, guid: 824dace6701cfea4babaab1b1ca639bf, type: 2}
+  playerControllerScript: {fileID: 1712898892469279006}
+  inputHandlerScript: {fileID: 6875337871150722125}
+  playerInput: {fileID: 3653665151043160303}
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0

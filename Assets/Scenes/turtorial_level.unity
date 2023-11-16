@@ -1394,6 +1394,8 @@ GameObject:
   - component: {fileID: 790783045}
   - component: {fileID: 790783044}
   - component: {fileID: 790783047}
+  - component: {fileID: 790783048}
+  - component: {fileID: 790783049}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1463,6 +1465,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b8ba463b6dd544a97ad8e1da4ec389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &790783048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790783043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71e3697d3262664db4d64e927f9e0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+--- !u!114 &790783049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790783043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b2d603bc963b3409e5c02ae16ed686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connected: 0
 --- !u!1 &818697006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,11 +1715,71 @@ PrefabInstance:
       objectReference: {fileID: 1829263316}
     - target: {fileID: 1712898892469279006, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: bbc24e5f-5ec4-4bd4-bc05-7b7a0c11a713
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 3fffc1c2-092e-43d7-b67c-79ab8709037b
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 4c89067c-8faa-4bd8-879f-537b5be02e7f
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: 904308e6-bf0b-48b4-85e3-67427ce4757c
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
+      value: 16d9f091-edb0-421d-b2b2-26ea2b4358a6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
+      value: 6a57da08-7ee1-4e3f-9c24-a9bf80989d21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
+      value: fd13e8b8-87e9-42c9-8ab7-e72ec5cb11a9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Player Control/Crouch[/Keyboard/s]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Player Control/AttackL[/Keyboard/r]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Player Control/AttackM[/Keyboard/t]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: Player Control/AttackH[/Keyboard/g]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
+      value: Player Control/AttackS[/Keyboard/f]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
+      value: Player Control/Dask Foward
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
+      value: Player Control/Dash Backward
       objectReference: {fileID: 0}
     - target: {fileID: 6875337871150722125, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_Enabled
@@ -3077,7 +3165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -702.3641, y: -474.20212}
+  m_AnchoredPosition: {x: -702.3641, y: -459}
   m_SizeDelta: {x: 477.2719, y: 89.5958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546192643
@@ -3101,6 +3189,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: '(I) Toggle Controls panel
+
+    (P) To Pause
 
     (Esc) Back to Menu'
   m_isRightToLeft: 0
@@ -3165,7 +3255,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -29.125668}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
