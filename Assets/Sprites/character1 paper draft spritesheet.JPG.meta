@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: f7bc11a4cbd75654982f2d236e5e0eb7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 666
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1873
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75827e56228aed848976d90af794307e
+      internalID: 285988534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1873
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faba31c9c50da93468cce2c7a68b923f
+      internalID: -1012799141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1877
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bff3a53a6e1d8246a742265e0a3e1d8
+      internalID: 660077825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1873
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45d3bdf51de18f499f60a1eb78b456e
+      internalID: 2121362225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1873
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22e7364722d6c440b481f397f193233
+      internalID: -2063460977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1873
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06abc2b4cc97f7d42a6121580b0c0c8b
+      internalID: -453123402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1383
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a1678013c8f9244a206ec3c3a2ec6c
+      internalID: -1092717277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1383
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4663ffd98d709fb4292b9b249d77aa2d
+      internalID: 2092456111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1383
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbce1377f91a314db7bdd0f4ff49081
+      internalID: 1611955975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1383
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297591610f216e54585ee201b55ba5f0
+      internalID: 1924722608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1383
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abde5b18da73dc4a83cd4de432b2458
+      internalID: -214562800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1383
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6eea2978dfbf14098391dd2e20a762
+      internalID: 1152739726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 893
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84308304ad4a8246b6efcb86ae7987c
+      internalID: -27090635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 893
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e84d9d048e77f4d85e0cc6a8929f66
+      internalID: 1494014518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 893
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c303e33786f4248aa689d7ea4f8861
+      internalID: 208725974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 893
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d336f4d47945445b3bd147546dcd60
+      internalID: -997182502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 893
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75130291f6e340c4aad285a89a202e8a
+      internalID: -2130357201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 893
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c547e074ac04b94092b053ce6f2a12e
+      internalID: 1818047785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 403
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7eafba6fdb25004fb6dbcaf1f67e0d5
+      internalID: -1408121265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 403
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2916f2689708434a96d6ce608392c81
+      internalID: 2069670646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 403
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0dbe6049036a9543a15b4072287814d
+      internalID: -1017583758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 403
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1074b29cb82b42344974ee605bfc8659
+      internalID: 766625191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 403
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5a8ddc42fe6e746bd75c7c7b6f57d6
+      internalID: 673665574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 403
+        width: 490
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca76ad349c3a6cd4f90a83d1a01e483c
+      internalID: -1570784996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      character1 paper draft spritesheet_0: 285988534
+      character1 paper draft spritesheet_1: -1012799141
+      character1 paper draft spritesheet_10: -214562800
+      character1 paper draft spritesheet_11: 1152739726
+      character1 paper draft spritesheet_12: -27090635
+      character1 paper draft spritesheet_13: 1494014518
+      character1 paper draft spritesheet_14: 208725974
+      character1 paper draft spritesheet_15: -997182502
+      character1 paper draft spritesheet_16: -2130357201
+      character1 paper draft spritesheet_17: 1818047785
+      character1 paper draft spritesheet_18: -1408121265
+      character1 paper draft spritesheet_19: 2069670646
+      character1 paper draft spritesheet_2: 660077825
+      character1 paper draft spritesheet_20: -1017583758
+      character1 paper draft spritesheet_21: 766625191
+      character1 paper draft spritesheet_22: 673665574
+      character1 paper draft spritesheet_23: -1570784996
+      character1 paper draft spritesheet_3: 2121362225
+      character1 paper draft spritesheet_4: -2063460977
+      character1 paper draft spritesheet_5: -453123402
+      character1 paper draft spritesheet_6: -1092717277
+      character1 paper draft spritesheet_7: 2092456111
+      character1 paper draft spritesheet_8: 1611955975
+      character1 paper draft spritesheet_9: 1924722608
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
