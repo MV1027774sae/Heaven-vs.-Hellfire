@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ControllerDetect
   m_EditorClassIdentifier: 
   isConnect: 1
+  gameStopped: 1
