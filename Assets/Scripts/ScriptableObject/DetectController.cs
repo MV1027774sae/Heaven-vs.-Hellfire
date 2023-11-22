@@ -6,5 +6,4 @@ using UnityEngine;
 public class DetectController : ScriptableObject
 {
     public bool isConnect = false;
-    public bool gameStopped = false;
 }
