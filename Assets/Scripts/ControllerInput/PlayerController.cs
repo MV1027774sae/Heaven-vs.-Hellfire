@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             states.attackM = true;
-            Debug.Log("ATTACK MEDIUAM!");
+            Debug.Log("ATTACK MEDIUM!");
         }
     }
     public void OnAttackHeavy(InputAction.CallbackContext context)
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             states.attackS = true;
-            Debug.Log("ATTACK SPEACIAL!");
+            Debug.Log("ATTACK SPECIAL!");
         }
     }
 
