@@ -43,7 +43,7 @@ public class StateManager : MonoBehaviour
 
 
     [Header("Sprite Render")]
-    private SpriteRenderer sRenderer;
+    [SerializeField] private SpriteRenderer sRenderer;
     [SerializeField] private GameObject hitboxHolder;
 
     [HideInInspector]

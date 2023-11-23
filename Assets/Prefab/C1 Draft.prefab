@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 1347967345695505956}
   - component: {fileID: 1378092439662807880}
   - component: {fileID: 3736969296441133281}
+  - component: {fileID: 1673574895726461913}
   m_Layer: 8
   m_Name: C1 Draft
   m_TagString: Untagged
@@ -268,6 +269,7 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   comboCounter: {fileID: 0}
   energySlider: {fileID: 0}
+  sRenderer: {fileID: 0}
   hitboxHolder: {fileID: 5345070992298493943}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
@@ -801,6 +803,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1673574895726461913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83aa5c4d1ae0fcd43bd8588d80017960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0
