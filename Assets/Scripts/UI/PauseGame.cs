@@ -5,7 +5,10 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour
 {
     [SerializeField] bool isPaused;
-    // Update is called once per frame
+
+    [SerializeField] GameObject leaderboardPanel;
+    //[SerializeField] GameObject gamePausePanel;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) && !isPaused)
@@ -17,6 +20,17 @@ public class PauseGame : MonoBehaviour
         {
             Time.timeScale = 1;
             isPaused = false;
+        }
+
+        if(isPaused)
+        {
+            leaderboardPanel.SetActive(true);
+            //gamePausePanel.SetActive(true);
+        }
+        else
+        {
+            leaderboardPanel.SetActive(false);
+            //gamePausePanel.SetActive(false);
         }
     }
 }
