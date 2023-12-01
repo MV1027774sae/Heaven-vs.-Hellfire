@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using GameAnalyticsSDK;
+using GameAnalyticsSDK.Events;
+using UnityEngine.InputSystem;
 
 public class StateManager : MonoBehaviour
 {
@@ -60,8 +63,16 @@ public class StateManager : MonoBehaviour
     public GameObject[] movementColliders;
     private ParticleSystem blood;
 
+    [Header("Analytics To Track")]
+    [SerializeField] private int numberOfTimesHit = 0;
+    [SerializeField] private float totalDamageTaken = 0;
+    [SerializeField] private int playerID = 0;
+
+    InputHandler inputHandler;
+
     void Start()
     {
+        GameAnalytics.Initialize();
         handleDC = GetComponent<HandleDamageColliders>();
         handleAnim = GetComponent<HandleAnimations>();
         handleMovement = GetComponent<HandleMovement>();
@@ -69,6 +80,8 @@ public class StateManager : MonoBehaviour
         sRenderer = GetComponentInChildren<SpriteRenderer>();
         blood = GetComponentInChildren<ParticleSystem>();
         comboHitSript = GetComponent<CombotHitDisplay>();
+        inputHandler = GetComponent<InputHandler>();
+        int.TryParse(inputHandler.playerInput, out playerID);
     }
 
     private void FixedUpdate()
@@ -185,6 +198,10 @@ public class StateManager : MonoBehaviour
             }
 
             audioManager.PlayGruntSFX();
+
+            numberOfTimesHit ++;
+            Debug.Log("Player " + (playerID + 1) + " hit the other player " + numberOfTimesHit + " times!");
+            GameAnalytics.NewDesignEvent("Player " + (playerID + 1) + " Lands Hit", numberOfTimesHit);
         }
         else if (!gettingHit && guard)
         {
@@ -207,6 +224,10 @@ public class StateManager : MonoBehaviour
                     break;
             }
         }
+
+        totalDamageTaken += damage;
+
+        GameAnalytics.NewDesignEvent("Total Damage Taken By Player " + (playerID + 1), totalDamageTaken);
     }
 
     IEnumerator CloseImmortality (float timer)

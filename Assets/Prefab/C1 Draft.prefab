@@ -278,6 +278,9 @@ MonoBehaviour:
   movementColliders:
   - {fileID: 130414}
   - {fileID: 131368}
+  numberOfTimesHit: 0
+  totalDamageTaken: 0
+  playerID: 0
 --- !u!114 &6686616553206487278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1652,10 +1655,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.29997072, y: -0.27499992}
-      - {x: 0.29997072, y: 0.075}
-      - {x: 0, y: 0.0749707}
-      - {x: 0.000029300001, y: -0.27499992}
+    - - {x: 0.1799707, y: 0.035}
+      - {x: 0.1799707, y: 0.385}
+      - {x: -0.02, y: 0.3849707}
+      - {x: -0.0199707, y: 0.035}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
