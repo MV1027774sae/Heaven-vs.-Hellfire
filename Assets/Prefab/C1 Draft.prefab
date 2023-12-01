@@ -269,7 +269,7 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   comboCounter: {fileID: 0}
   energySlider: {fileID: 0}
-  sRenderer: {fileID: 0}
+  sRenderer: {fileID: 3736969296441133281}
   hitboxHolder: {fileID: 5345070992298493943}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
@@ -343,7 +343,7 @@ MonoBehaviour:
   damageCollidersLeft:
   - {fileID: 5345070992298493943}
   - {fileID: 198674}
-  - {fileID: 1318118745823031731}
+  - {fileID: 4298979370160194036}
   damageCollidersRight:
   - {fileID: 5345070992298493943}
   - {fileID: 199000}
@@ -441,7 +441,7 @@ MonoBehaviour:
   anim: {fileID: 7141144232840224319}
   animate: {fileID: 0}
   speed: 3
-  jumpForce: 5
+  jumpForce: 4.5
   isJumping: 0
   canDash: 1
   keyPressed: 0

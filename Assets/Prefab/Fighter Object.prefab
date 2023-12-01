@@ -267,6 +267,7 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   comboCounter: {fileID: 0}
   energySlider: {fileID: 0}
+  sRenderer: {fileID: 0}
   hitboxHolder: {fileID: 5345070992298493943}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
@@ -438,7 +439,7 @@ MonoBehaviour:
   anim: {fileID: 7141144232840224319}
   animate: {fileID: 9561098}
   speed: 3
-  jumpForce: 5
+  jumpForce: 4.5
   isJumping: 0
   canDash: 1
   keyPressed: 0

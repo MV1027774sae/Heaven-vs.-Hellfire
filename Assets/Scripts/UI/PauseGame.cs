@@ -25,12 +25,15 @@ public class PauseGame : MonoBehaviour
         if(isPaused)
         {
             leaderboardPanel.SetActive(true);
-            //gamePausePanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
         }
         else
         {
             leaderboardPanel.SetActive(false);
-            //gamePausePanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }
