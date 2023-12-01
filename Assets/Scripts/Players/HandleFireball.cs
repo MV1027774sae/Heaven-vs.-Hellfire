@@ -24,7 +24,7 @@ public class HandleFireball : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //StartCoroutine(FireballHit());
-        DestroySelf();
+        StartCoroutine(TempDestroySelf());
     }
 
     private void DestroySelf()
@@ -42,8 +42,8 @@ public class HandleFireball : MonoBehaviour
 
     IEnumerator TempDestroySelf()
     {
-        source.PlayOneShot(projectileHitSFX);
-        yield return new WaitForSeconds(0.3f);
+        //source.PlayOneShot(projectileHitSFX);
+        yield return new WaitForSeconds(0.1f);
         DestroySelf();
     }
 

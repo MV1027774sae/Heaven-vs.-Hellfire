@@ -43,7 +43,7 @@ public class StateManager : MonoBehaviour
 
 
     [Header("Sprite Render")]
-    private SpriteRenderer sRenderer;
+    [SerializeField] private SpriteRenderer sRenderer;
     [SerializeField] private GameObject hitboxHolder;
 
     [HideInInspector]
@@ -53,6 +53,8 @@ public class StateManager : MonoBehaviour
     [HideInInspector]
     public HandleMovement handleMovement;
     AudioManager audioManager;
+    [HideInInspector]
+    public CombotHitDisplay comboHitSript;
 
     [Header("Grab Reference from others")]
     public GameObject[] movementColliders;
@@ -66,6 +68,7 @@ public class StateManager : MonoBehaviour
         audioManager = GetComponent<AudioManager>();
         sRenderer = GetComponentInChildren<SpriteRenderer>();
         blood = GetComponentInChildren<ParticleSystem>();
+        comboHitSript = GetComponent<CombotHitDisplay>();
     }
 
     private void FixedUpdate()
@@ -153,6 +156,7 @@ public class StateManager : MonoBehaviour
     {
         if (!gettingHit && !guard)
         {
+            comboHitSript.numberOfHit += 1;
             energy += 15;
             health -= damage;
             gettingHit = true;

@@ -34,7 +34,7 @@ public class Dash : MonoBehaviour
         //Player 1???
         if (stateManagerScripts.horizontal != 0 && canDash && inputHandlerScript.playerInput == "") //Press horizontal input twice twice to dash
         {
-            if (keyPressed)
+            if (keyPressed && stateManagerScripts.currentlyAttacking == false && stateManagerScripts.crouch == false && stateManagerScripts.onGround == false)
             {
                 StartCoroutine(Dashing());
                 keyPressed = false;
@@ -48,7 +48,7 @@ public class Dash : MonoBehaviour
         //Player 2???
         else if (stateManagerScripts.horizontal != 0 && canDash && inputHandlerScript.playerInput == "1")
         {
-            if (keyPressed)
+            if (keyPressed && stateManagerScripts.currentlyAttacking == false && stateManagerScripts.crouch == false && stateManagerScripts.onGround == false)
             {
                 StartCoroutine(Dashing2());
                 keyPressed = false;
@@ -84,22 +84,22 @@ public class Dash : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A) && stateManagerScripts.onGround == false) //Check if they in mid air and press backward
             {
-                rb.velocity = new Vector2(-transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.left * dashingPower;
             }
             else //If not then dash foward
             {
-                rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.right * dashingPower;
             }
         }
         else //Same goes to here
         {
             if (Input.GetKey(KeyCode.D) && stateManagerScripts.onGround == false)
             {
-                rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.right * dashingPower;
             }
             else
             {
-                rb.velocity = new Vector2(-transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.left * dashingPower;
             }
         }
         yield return new WaitForSeconds(dashTime);
@@ -119,22 +119,22 @@ public class Dash : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftArrow) && stateManagerScripts.onGround == false) 
             {
-                rb.velocity = new Vector2(-transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.left * dashingPower;
             }
             else 
             {
-                rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.right * dashingPower;
             }
         }
         else 
         {
             if (Input.GetKey(KeyCode.RightArrow) && stateManagerScripts.onGround == false)
             {
-                rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.right * dashingPower;
             }
             else
             {
-                rb.velocity = new Vector2(-transform.localScale.x * dashingPower, 0f);
+                rb.velocity = Vector2.left * dashingPower;
             }
         }
         yield return new WaitForSeconds(dashTime);

@@ -51,7 +51,7 @@ public class HandleDamageColliders : MonoBehaviour
                     StartCoroutine(OpenCollider(damageCollidersLeft, 1, damage, (delay / 60), damageType, (hitStun / 60)));
                     break;
                 case DCtype.fireball:
-                    StartCoroutine(CreateFireball(damageCollidersLeft, 2, (delay / 60), damage, damageType, fireballObject, -3, (hitStun / 60)));
+                    StartCoroutine(CreateFireball(damageCollidersLeft, 2, damage,  (delay / 60), damageType, fireballObject, -3, (hitStun / 60)));
                     break;
                 case DCtype.dp:
                     StartCoroutine(DragonPunch(damageCollidersLeft, 0, damage, (delay / 60), damageType, (hitStun / 60)));
@@ -69,7 +69,7 @@ public class HandleDamageColliders : MonoBehaviour
                     StartCoroutine(OpenCollider(damageCollidersRight, 1, damage, (delay / 60), damageType, (hitStun / 60)));
                     break;
                 case DCtype.fireball:
-                    StartCoroutine(CreateFireball(damageCollidersRight, 2, (delay / 60), damage, damageType, fireballObject, 3, (hitStun / 60)));
+                    StartCoroutine(CreateFireball(damageCollidersRight, 2, damage, (delay / 60), damageType, fireballObject, 3, (hitStun / 60)));
                     break;
                 case DCtype.dp:
                     StartCoroutine(DragonPunch(damageCollidersLeft, 0, damage, (delay / 60), damageType, (hitStun / 60)));

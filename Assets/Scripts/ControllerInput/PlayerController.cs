@@ -1,8 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
-
-
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,10 +18,20 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Speed and Jump")]
     public float speed;
     private float horizontal;
-
     public float jumpForce = 5.0f; // Adjust this value as needed.
+    public bool isJumping = false;
+
+    [Header("Dashing")]
+    public bool canDash = true;
+    public bool keyPressed = false;
+    [SerializeField] bool isDashing;
+    [SerializeField] float dashTime = 0.2f;
+    [SerializeField] float dashingPower = 10f;
+    [SerializeField] float dashCoolDown = 1f;
+
+
+    [Header("Crouch")]
     public bool isCrouch = false;
-    private bool isJumping = false;
 
 
 
@@ -37,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Copy and Paste from HandleMovement Script
-        if (states.onGround && !states.currentlyAttacking && !states.blocking)
+        if (states.onGround && !states.currentlyAttacking && !states.blocking && !isCrouch && !states.dontMove)
         {
             rb.AddForce(new Vector2((horizontal * speed) - rb.velocity.x * handleMovement.acceleration, 0));
             float movement = Mathf.Abs(horizontal);
@@ -74,6 +83,11 @@ public class PlayerController : MonoBehaviour
             states.crouch = false;
             speed = 143f;
         }
+
+        if (isDashing)
+        {
+            return;
+        }
     }
 
     //Call Jumping Method
@@ -104,7 +118,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             states.attackM = true;
-            Debug.Log("ATTACK MEDIUAM!");
+            Debug.Log("ATTACK MEDIUM!");
         }
     }
     public void OnAttackHeavy(InputAction.CallbackContext context)
@@ -120,7 +134,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             states.attackS = true;
-            Debug.Log("ATTACK SPEACIAL!");
+            Debug.Log("ATTACK SPECIAL!");
         }
     }
 
@@ -150,20 +164,75 @@ public class PlayerController : MonoBehaviour
     //Help Jumping and Check if the character hit ground
     private void Jump()
     {
-        if(!isJumping)
+        if(states.onGround)
         {
             Debug.Log("Jumping");
             anim.JumpAnim();
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isJumping = true;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
+        else if (!states.onGround)
         {
             isJumping = false;
         }
+    }
+
+    public void OnDashFoward(InputAction.CallbackContext value)
+    {
+        if (keyPressed && states.currentlyAttacking == false && states.crouch == false && states.onGround == false && canDash == true)
+        {
+            StartCoroutine(DashingFoward());
+        }
+        else
+        {
+            keyPressed = true;
+        }
+    }
+
+    public void OnDashBackward(InputAction.CallbackContext value)
+    {
+        if (keyPressed && states.currentlyAttacking == false && states.crouch == false && states.onGround == false && canDash == true)
+        {
+            StartCoroutine(DashingBackward());
+        }
+        else
+        {
+            keyPressed = true;
+        }
+    }
+
+    IEnumerator DashingFoward() //Call the dash function
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f; //Set character gravity to zero.
+
+        rb.velocity = Vector2.right * dashingPower;
+
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
+        keyPressed = true;
+    }
+
+    IEnumerator DashingBackward() //Call the dash function
+    {
+        keyPressed = false;
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f; //Set character gravity to zero.
+
+        rb.velocity = Vector2.left * dashingPower;
+
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
+        keyPressed = true;
     }
 }
