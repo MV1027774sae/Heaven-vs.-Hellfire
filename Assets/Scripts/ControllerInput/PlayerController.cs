@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Copy and Paste from HandleMovement Script
-        if (states.onGround && !states.currentlyAttacking && !states.blocking && !isCrouch)
+        if (states.onGround && !states.currentlyAttacking && !states.blocking && !isCrouch && !states.dontMove)
         {
             rb.AddForce(new Vector2((horizontal * speed) - rb.velocity.x * handleMovement.acceleration, 0));
             float movement = Mathf.Abs(horizontal);

@@ -77,10 +77,10 @@ public class StateManager : MonoBehaviour
         {
             sRenderer.flipX = lookRight;
 
-            //if (!lookRight)
-            //    hitboxHolder.transform.localScale = new Vector3(-1, 1, 1);
-            //else if (lookRight)
-            //    hitboxHolder.transform.localScale = new Vector3(1, 1, 1);
+            if (!lookRight)
+                hitboxHolder.transform.localScale = new Vector3(-1, 1, 1);
+            else if (lookRight)
+                hitboxHolder.transform.localScale = new Vector3(1, 1, 1);
         }
 
         onGround = isOnGround();
