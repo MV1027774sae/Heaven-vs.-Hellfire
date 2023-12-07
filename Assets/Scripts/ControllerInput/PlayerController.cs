@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] StateManager states;
     [SerializeField] HandleMovement handleMovement;
+    [SerializeField] InputHandler inputHandlerScript;
     private PlayerInputAction playerInput;
 
     [Header("Animation")]
@@ -33,7 +34,8 @@ public class PlayerController : MonoBehaviour
     [Header("Crouch")]
     public bool isCrouch = false;
 
-
+    //public float knockbackForce = 0.5f;
+    //public float knockupForce = 0f;
 
     void Awake()
     {
@@ -88,6 +90,36 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+
+        //if (states.gettingHit == true)
+        //{
+        //    if (rb != null && inputHandlerScript.playerInput == "")
+        //    {
+        //        Debug.Log("Player 1 in!");
+        //        if (states.lookRight)
+        //        {
+        //            // Apply knockback force
+        //            rb.velocity = new Vector2(-knockbackForce, knockupForce);
+        //        }
+        //        else if (!states.lookRight)
+        //        {
+        //            rb.velocity = new Vector2(knockbackForce, knockupForce);
+        //        }
+        //    }
+        //    else if (rb != null && inputHandlerScript.playerInput == "1")
+        //    {
+        //        Debug.Log("Player 2 in!");
+        //        if (states.lookRight)
+        //        {
+        //            // Apply knockback force
+        //            rb.velocity = new Vector2(-knockbackForce, knockupForce);
+        //        }
+        //        else if (!states.lookRight)
+        //        {
+        //            rb.velocity = new Vector2(knockbackForce, knockupForce);
+        //        }
+        //    }
+        //}
     }
 
     //Call Jumping Method
