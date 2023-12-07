@@ -841,7 +841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: players.Array.data[0].inputId
@@ -866,11 +866,11 @@ PrefabInstance:
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[1].icon
       value: 
-      objectReference: {fileID: 587004617, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
+      objectReference: {fileID: 285988534, guid: f7bc11a4cbd75654982f2d236e5e0eb7, type: 3}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[2].icon
       value: 
-      objectReference: {fileID: 587004617, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
+      objectReference: {fileID: 285988534, guid: f7bc11a4cbd75654982f2d236e5e0eb7, type: 3}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[3].icon
       value: 
@@ -905,12 +905,12 @@ PrefabInstance:
       objectReference: {fileID: 126410, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[2].charId
-      value: c1 Draft
+      value: c2 Draft
       objectReference: {fileID: 0}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[2].prefab
       value: 
-      objectReference: {fileID: 126410, guid: f7771afc01d21664da950ce3c56aa91a, type: 3}
+      objectReference: {fileID: 126410, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[3].charId
       value: c1 Draft
@@ -937,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 126410, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: progIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.size
@@ -957,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.data[2]
-      value: level_3
+      value: level_2
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.data[3]

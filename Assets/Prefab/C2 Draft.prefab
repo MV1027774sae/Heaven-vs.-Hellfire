@@ -509,7 +509,19 @@ MonoBehaviour:
     m_ActionId: 75d5fd47-3141-46e1-b9c7-d1d5a4755f2e
     m_ActionName: Player Control/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 126410}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: bbc24e5f-5ec4-4bd4-bc05-7b7a0c11a713
     m_ActionName: Player Control/Crouch[/Keyboard/s]
   - m_PersistentCalls:
