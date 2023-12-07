@@ -43,7 +43,7 @@ public class HandleFireball : MonoBehaviour
     IEnumerator TempDestroySelf()
     {
         //source.PlayOneShot(projectileHitSFX);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.025f);
         DestroySelf();
     }
 

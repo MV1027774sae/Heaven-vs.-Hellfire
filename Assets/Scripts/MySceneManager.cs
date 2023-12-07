@@ -30,7 +30,7 @@ public class MySceneManager : MonoBehaviour
         int playerInt = charM.ReturnCharacterInt(charM.players[0].playerPrefab);
         usedCharacters.Add(playerInt);
 
-        if (progressionStages > charM.characterList.Count -1)
+        if (progressionStages > charM.characterList.Count - 1)
         {
             progressionStages = charM.characterList.Count - 2;
         }
