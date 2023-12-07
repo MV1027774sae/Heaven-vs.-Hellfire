@@ -2288,6 +2288,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c3a794ec357a34d8b9dae4aec31e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &448549104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3122741501040341871, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
+  m_PrefabInstance: {fileID: 1586974453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448549075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9387b77d1bd27e4f8b45ff6299c8faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &448549105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448549075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406955e913650e84bb2a4f28f4312260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 0.5
+  knockupForce: 0
+  stateManagerScript: {fileID: 448549076}
+  inputHandlerScript: {fileID: 448549104}
 --- !u!1 &499431474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4604,6 +4631,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1712898892469279006, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      propertyPath: knockbackForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3653665151043160303, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4683,6 +4714,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 126410, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1842630932}
+    - targetCorrespondingSourceObject: {fileID: 126410, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1842630947}
     - targetCorrespondingSourceObject: {fileID: 190152, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 772729352}
@@ -9405,6 +9439,14 @@ PrefabInstance:
       propertyPath: dashingPower
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4010729596907488183, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
+      propertyPath: knockbackForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010729596907488183, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
+      propertyPath: inputHandlerScript
+      value: 
+      objectReference: {fileID: 448549104}
     - target: {fileID: 4487232534679234226, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
       propertyPath: health
       value: 1e+21
@@ -9820,6 +9862,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 448549088}
+    - targetCorrespondingSourceObject: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 448549105}
     - targetCorrespondingSourceObject: {fileID: 190152, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1666415538}
@@ -12009,6 +12054,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 448549075}
   stateManager: {fileID: 1842630920}
+--- !u!114 &1842630945 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6875337871150722125, guid: e1c74d60603d8eb4cafd4770026b1f6b, type: 3}
+  m_PrefabInstance: {fileID: 884264747}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842630919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9387b77d1bd27e4f8b45ff6299c8faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1842630947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842630919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406955e913650e84bb2a4f28f4312260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 0.5
+  knockupForce: 0
+  stateManagerScript: {fileID: 1842630920}
+  inputHandlerScript: {fileID: 1842630945}
 --- !u!1 &1848167878
 GameObject:
   m_ObjectHideFlags: 0
