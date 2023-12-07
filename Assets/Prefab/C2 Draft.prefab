@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 916470907
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 285988534, guid: f7bc11a4cbd75654982f2d236e5e0eb7, type: 3}
+  m_Sprite: {fileID: 587004617, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 3736969296441133281}
   - component: {fileID: 1673574895726461913}
   m_Layer: 8
-  m_Name: C1 Draft
+  m_Name: C2 Draft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ Animator:
   m_GameObject: {fileID: 126410}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 08cd89257d73ea0429d6024064959127, type: 2}
+  m_Controller: {fileID: 9100000, guid: f3096793123a1464d8b9962160253883, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -824,7 +824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 463930}
-  - component: {fileID: 4780183906801484200}
+  - component: {fileID: 6833546637320656510}
   m_Layer: 8
   m_Name: BottomCollider
   m_TagString: Untagged
@@ -847,7 +847,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 466602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &4780183906801484200
+--- !u!70 &6833546637320656510
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -879,8 +879,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.029863637, y: -0.20048247}
-  m_Size: {x: 0.109303035, y: 0.41001418}
+  m_Offset: {x: -0.06340355, y: -0.22}
+  m_Size: {x: 0.22593045, y: 0.40591732}
   m_Direction: 0
 --- !u!1 &131368
 GameObject:
@@ -891,7 +891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 417222}
-  - component: {fileID: 8489385009912740685}
+  - component: {fileID: 2950440989526212778}
   m_Layer: 8
   m_Name: TopCollider
   m_TagString: Untagged
@@ -914,7 +914,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 466602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &8489385009912740685
+--- !u!70 &2950440989526212778
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -946,8 +946,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.029863637, y: 0.14569093}
-  m_Size: {x: 0.109303035, y: 0.40591732}
+  m_Offset: {x: -0.06340355, y: 0.14569093}
+  m_Size: {x: 0.22593045, y: 0.40591732}
   m_Direction: 0
 --- !u!1 &153274
 GameObject:

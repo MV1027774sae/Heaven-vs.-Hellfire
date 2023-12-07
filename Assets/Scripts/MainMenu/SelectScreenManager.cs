@@ -228,7 +228,7 @@ public class SelectScreenManager : MonoBehaviour
         if (Input.GetButtonUp("Fire1" + playerId))
         {
             //make a reaction on the character to give feedback to the player
-            pl.createdCharacter.GetComponentInChildren<Animator>().Play("Kick");
+            //pl.createdCharacter.GetComponentInChildren<Animator>().Play("Kick");
 
             //pass the character to the character manager so that we know what prefab to create in the level
             pl.playerBase.playerPrefab =
