@@ -122,7 +122,6 @@ public class IntroSceneManager : MonoBehaviour
         }
         else if (activeElement == 3)
         {
-            PlayerPrefs.DeleteAll();
             Application.Quit();
         }
         else
