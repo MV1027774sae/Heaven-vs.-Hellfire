@@ -120,6 +120,11 @@ public class IntroSceneManager : MonoBehaviour
         {
             MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "turtorial_level");
         }
+        else if (activeElement == 3)
+        {
+            PlayerPrefs.DeleteAll();
+            Application.Quit();
+        }
         else
         {
             MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "select");

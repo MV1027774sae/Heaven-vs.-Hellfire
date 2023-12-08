@@ -11,6 +11,10 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] string publicLeaderboardKey = "";
     [SerializeField] string privateLeaderboardKey = "";
 
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     private void Start()
     {
         GetLeaderboard();
