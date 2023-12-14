@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8856d791b580abe45b6c3230b16702c3
+guid: 12d8fd9a2a7d9db4a8948a68e9b0ad35
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 312
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -175,118 +175,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_0
+      name: character1 paper draft spritesheet2_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1002
-        width: 231
-        height: 245
-      alignment: 9
-      pivot: {x: 0.385, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9809bb106510194084b4bb0f1da2ca2
-      internalID: 587004617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 281
-        y: 1004
-        width: 224
-        height: 240
-      alignment: 9
-      pivot: {x: 0.425, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4853ac9f355eff54bb9b35c0668fe0c8
-      internalID: 1841674726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 570
-        y: 994
-        width: 166
-        height: 253
-      alignment: 9
-      pivot: {x: 0.4, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa04a1829654fd147a33bea0750f699a
-      internalID: 918334495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 798
-        y: 998
-        width: 207
-        height: 249
-      alignment: 9
-      pivot: {x: 0.4, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: becff3b2d90dbf74cacb297a5f41f4db
-      internalID: -58417317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1073
-        y: 998
-        width: 208
-        height: 189
-      alignment: 9
-      pivot: {x: 0.385, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6bc47d9f5db7154b945a0f793bbb266
-      internalID: 1860609106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 1314
-        y: 994
-        width: 248
-        height: 293
+        x: 0
+        y: 1094
+        width: 160
+        height: 312
       alignment: 9
       pivot: {x: 0.475, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,83 +189,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 052893069cd74d847a554a1a0448ab06
-      internalID: -1924918534
+      spriteID: 204b61a9cf941c7479f716ee4218bb8d
+      internalID: 1121916993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_6
+      name: character1 paper draft spritesheet2_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 715
-        width: 245
-        height: 163
+        x: 195
+        y: 1094
+        width: 146
+        height: 290
       alignment: 9
-      pivot: {x: 0.45, y: 0}
+      pivot: {x: 0.415, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bc1882f0336e3849baf612b0588ad15
-      internalID: -1008076013
+      spriteID: 5fc6923b5521bb841a8c07ec73327787
+      internalID: 1910490566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_7
+      name: character1 paper draft spritesheet2_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 661
-        width: 228
-        height: 309
+        x: 376
+        y: 1094
+        width: 151
+        height: 290
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.415, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f34546a6c5500d42aa256f7357f16e2
-      internalID: 469528391
+      spriteID: cad8b715ec562254893044d8f1b6a2a2
+      internalID: -669957323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_8
+      name: character1 paper draft spritesheet2_3
       rect:
         serializedVersion: 2
-        x: 549
-        y: 669
-        width: 207
-        height: 209
+        x: 562
+        y: 1094
+        width: 128
+        height: 290
       alignment: 9
-      pivot: {x: 0.4, y: 0}
+      pivot: {x: 0.415, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c031f691e4d5b14ea916d8ee3ba9069
-      internalID: 2067150036
+      spriteID: 9ccaee406f2493240854a11767f4db26
+      internalID: 783745997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_9
+      name: character1 paper draft spritesheet2_4
       rect:
         serializedVersion: 2
-        x: 798
-        y: 669
-        width: 202
-        height: 270
+        x: 727
+        y: 1094
+        width: 168
+        height: 230
       alignment: 9
       pivot: {x: 0.435, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7a686b30ce7b904a839365ffb54bde7
-      internalID: 203801882
+      spriteID: 526ca191131c56c499e4847244ed2a0d
+      internalID: -406989263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_10
+      name: character1 paper draft spritesheet2_5
       rect:
         serializedVersion: 2
-        x: 1054
-        y: 660
-        width: 282
-        height: 267
+        x: 931
+        y: 1094
+        width: 146
+        height: 312
       alignment: 9
       pivot: {x: 0.465, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,41 +294,314 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6527f10a285fbc742b65c760f1ff1442
-      internalID: -2091373287
+      spriteID: 7a22ccaa384bb174488dea197ca1dfb4
+      internalID: -1228097237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_11
+      name: character1 paper draft spritesheet2_6
       rect:
         serializedVersion: 2
-        x: 1359
-        y: 653
-        width: 326
-        height: 294
+        x: 0
+        y: 778
+        width: 143
+        height: 271
       alignment: 9
-      pivot: {x: 0.385, y: 0}
+      pivot: {x: 0.45, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80ae73f2d4e1cac4784601b841e099b1
-      internalID: 842236858
+      spriteID: ffb47cf3789dc394596a1ca7f186ad3b
+      internalID: -383534942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_12
+      name: character1 paper draft spritesheet2_7
       rect:
         serializedVersion: 2
-        x: 13
-        y: 339
-        width: 365
+        x: 178
+        y: 778
+        width: 150
+        height: 250
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab60f6b272f20d4ca29a7deb8f8a3ce
+      internalID: -2066758090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_8
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 778
+        width: 188
+        height: 300
+      alignment: 9
+      pivot: {x: 0.525, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf72086c3bb3dca458456103e4aa1c90
+      internalID: -442787152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_9
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 778
+        width: 188
+        height: 234
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8306e0c652f9d644ba99b3b0830ac2ba
+      internalID: -2108617870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_10
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 779
+        width: 238
+        height: 312
+      alignment: 9
+      pivot: {x: 0.325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e763d765cc3167e48b0ee683eb905528
+      internalID: -1777857300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_11
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 778
+        width: 228
+        height: 312
+      alignment: 9
+      pivot: {x: 0.325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918b2ee46568e5742990948c6ca4de77
+      internalID: 1128868967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 414
+        width: 304
+        height: 298
+      alignment: 9
+      pivot: {x: 0.315, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f6a656b61762e4cb075ce492afdcd8
+      internalID: -1041598490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_13
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 413
+        width: 235
+        height: 243
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43082dbbe847f24687f70421250ade6
+      internalID: 304695639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_14
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 426
+        width: 327
+        height: 195
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb01a5f24bfa58547ad24a2e05d17444
+      internalID: 760330915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_15
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 426
+        width: 214
+        height: 304
+      alignment: 9
+      pivot: {x: 0.425, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5d26bfc8abd1a4a8f0e36907c84357
+      internalID: -220769967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_16
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 426
+        width: 225
+        height: 225
+      alignment: 9
+      pivot: {x: 0.425, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1c0e35b97fe5e47983b6a44168780a
+      internalID: -645252008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_17
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 419
+        width: 295
+        height: 219
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b4e4e51f0a60f408f18437066bc395
+      internalID: -404065048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 182
         height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd48c7dd9d696bb4fa0f87020811abef
+      internalID: -1439286525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 266
+        height: 255
+      alignment: 9
+      pivot: {x: 0.325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776eabb1448013a4397a4719ebaa2a47
+      internalID: -254466578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character1 paper draft spritesheet2_20
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 0
+        width: 274
+        height: 307
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,62 +609,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6e378d23a1ef741a9156a2b39e437b
-      internalID: -580325990
+      spriteID: ce5e1930a986aa746a4de30148d44ff4
+      internalID: 221955948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_13
+      name: character1 paper draft spritesheet2_21
       rect:
         serializedVersion: 2
-        x: 378
-        y: 338
-        width: 344
-        height: 309
-      alignment: 9
-      pivot: {x: 0.34, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 883b8988fa022364e9eed6a6fa81431f
-      internalID: 716976110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 722
-        y: 338
-        width: 242
-        height: 245
-      alignment: 9
-      pivot: {x: 0.365, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c304dba63a17c164481f20c306b988d8
-      internalID: -966360229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 981
-        y: 351
-        width: 281
-        height: 145
+        x: 827
+        y: 0
+        width: 188
+        height: 413
       alignment: 9
       pivot: {x: 0.375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,176 +630,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 877c8952ba7689846839fd3a27039783
-      internalID: -578058705
+      spriteID: 9b6c0199830a55048b2fef41a2fbe6e6
+      internalID: 2018852519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_16
+      name: character1 paper draft spritesheet2_22
       rect:
         serializedVersion: 2
-        x: 1281
-        y: 351
-        width: 250
-        height: 264
+        x: 1050
+        y: 0
+        width: 235
+        height: 281
       alignment: 9
-      pivot: {x: 0.375, y: 0}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 351303c68b071344288373ef6e0cbab0
-      internalID: -753499221
+      spriteID: 54641ee67b3513d4292d6b96734e3553
+      internalID: -1492499317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character2 paper draft spritesheet_17
+      name: character1 paper draft spritesheet2_23
       rect:
         serializedVersion: 2
-        x: 1548
-        y: 338
-        width: 288
-        height: 196
+        x: 1320
+        y: 0
+        width: 282
+        height: 135
       alignment: 9
-      pivot: {x: 0.475, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95ba6f28942525f4da3bb622f7fa9de5
-      internalID: 247215426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 12
-        width: 318
-        height: 295
-      alignment: 9
-      pivot: {x: 0.3, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70f024c3ca1b8da4bafd96cc2e69de3e
-      internalID: 278120002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_19
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 12
-        width: 325
-        height: 269
-      alignment: 9
-      pivot: {x: 0.3, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c6b02aea896cb246b7677e6442761fd
-      internalID: 1300363358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_20
-      rect:
-        serializedVersion: 2
-        x: 708
-        y: 12
-        width: 271
-        height: 237
-      alignment: 9
-      pivot: {x: 0.4, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89ce8f7f2dd77a340a468d775d483e76
-      internalID: 594711055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_21
-      rect:
-        serializedVersion: 2
-        x: 997
-        y: 62
-        width: 317
-        height: 194
-      alignment: 9
-      pivot: {x: 0.35, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f07374d75d1eae44f996e28d5a02e975
-      internalID: 1343229736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_22
-      rect:
-        serializedVersion: 2
-        x: 1332
-        y: 12
-        width: 207
-        height: 273
-      alignment: 9
-      pivot: {x: 0.4, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08829f0248b1cd14bb5c0209d46437b0
-      internalID: 980353422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character2 paper draft spritesheet_23
-      rect:
-        serializedVersion: 2
-        x: 1557
-        y: 32
-        width: 279
-        height: 150
-      alignment: 9
-      pivot: {x: 0.6, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b427adca4d95a7e4ba2824ae720acb7d
-      internalID: 845197123
+      spriteID: 50159976b711dd749a0355ecb920c367
+      internalID: 2034188804
       vertices: []
       indices: 
       edges: []
@@ -681,7 +681,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9f3c072d634898f42bb3e0dac6753c3f
+    spriteID: 1647e0acf8129c2488e850e7858093b4
     internalID: 0
     vertices: []
     indices: 
@@ -689,31 +689,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character2 paper draft spritesheet_0: 587004617
-      character2 paper draft spritesheet_1: 1841674726
-      character2 paper draft spritesheet_10: -2091373287
-      character2 paper draft spritesheet_11: 842236858
-      character2 paper draft spritesheet_12: -580325990
-      character2 paper draft spritesheet_13: 716976110
-      character2 paper draft spritesheet_14: -966360229
-      character2 paper draft spritesheet_15: -578058705
-      character2 paper draft spritesheet_16: -753499221
-      character2 paper draft spritesheet_17: 247215426
-      character2 paper draft spritesheet_18: 278120002
-      character2 paper draft spritesheet_19: 1300363358
-      character2 paper draft spritesheet_2: 918334495
-      character2 paper draft spritesheet_20: 594711055
-      character2 paper draft spritesheet_21: 1343229736
-      character2 paper draft spritesheet_22: 980353422
-      character2 paper draft spritesheet_23: 845197123
-      character2 paper draft spritesheet_24: -225259816
-      character2 paper draft spritesheet_3: -58417317
-      character2 paper draft spritesheet_4: 1860609106
-      character2 paper draft spritesheet_5: -1924918534
-      character2 paper draft spritesheet_6: -1008076013
-      character2 paper draft spritesheet_7: 469528391
-      character2 paper draft spritesheet_8: 2067150036
-      character2 paper draft spritesheet_9: 203801882
+      character1 paper draft spritesheet2_0: 1121916993
+      character1 paper draft spritesheet2_1: 1910490566
+      character1 paper draft spritesheet2_10: -1777857300
+      character1 paper draft spritesheet2_11: 1128868967
+      character1 paper draft spritesheet2_12: -1041598490
+      character1 paper draft spritesheet2_13: 304695639
+      character1 paper draft spritesheet2_14: 760330915
+      character1 paper draft spritesheet2_15: -220769967
+      character1 paper draft spritesheet2_16: -645252008
+      character1 paper draft spritesheet2_17: -404065048
+      character1 paper draft spritesheet2_18: -1439286525
+      character1 paper draft spritesheet2_19: -254466578
+      character1 paper draft spritesheet2_2: -669957323
+      character1 paper draft spritesheet2_20: 221955948
+      character1 paper draft spritesheet2_21: 2018852519
+      character1 paper draft spritesheet2_22: -1492499317
+      character1 paper draft spritesheet2_23: 2034188804
+      character1 paper draft spritesheet2_3: 783745997
+      character1 paper draft spritesheet2_4: -406989263
+      character1 paper draft spritesheet2_5: -1228097237
+      character1 paper draft spritesheet2_6: -383534942
+      character1 paper draft spritesheet2_7: -2066758090
+      character1 paper draft spritesheet2_8: -442787152
+      character1 paper draft spritesheet2_9: -2108617870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

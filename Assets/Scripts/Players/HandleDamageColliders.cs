@@ -9,6 +9,7 @@ public class HandleDamageColliders : MonoBehaviour
     public GameObject[] damageCollidersLeft;
     public GameObject[] damageCollidersRight;
     [SerializeField] private GameObject fireballObject;
+    [SerializeField] private float fireballVelocity = 3;
     [SerializeField] private float dpVelocityX = 0.5f;
     [SerializeField] private float dpVelocityY = 4.5f;
 
@@ -51,7 +52,7 @@ public class HandleDamageColliders : MonoBehaviour
                     StartCoroutine(OpenCollider(damageCollidersLeft, 1, damage, (delay / 60), damageType, (hitStun / 60)));
                     break;
                 case DCtype.fireball:
-                    StartCoroutine(CreateFireball(damageCollidersLeft, 2, damage,  (delay / 60), damageType, fireballObject, -3, (hitStun / 60)));
+                    StartCoroutine(CreateFireball(damageCollidersLeft, 2, damage,  (delay / 60), damageType, fireballObject, -fireballVelocity, (hitStun / 60)));
                     break;
                 case DCtype.dp:
                     StartCoroutine(DragonPunch(damageCollidersLeft, 0, damage, (delay / 60), damageType, (hitStun / 60)));
@@ -69,7 +70,7 @@ public class HandleDamageColliders : MonoBehaviour
                     StartCoroutine(OpenCollider(damageCollidersRight, 1, damage, (delay / 60), damageType, (hitStun / 60)));
                     break;
                 case DCtype.fireball:
-                    StartCoroutine(CreateFireball(damageCollidersRight, 2, damage, (delay / 60), damageType, fireballObject, 3, (hitStun / 60)));
+                    StartCoroutine(CreateFireball(damageCollidersRight, 2, damage, (delay / 60), damageType, fireballObject, fireballVelocity, (hitStun / 60)));
                     break;
                 case DCtype.dp:
                     StartCoroutine(DragonPunch(damageCollidersLeft, 0, damage, (delay / 60), damageType, (hitStun / 60)));
