@@ -832,7 +832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &463930
 Transform:
   m_ObjectHideFlags: 0
@@ -855,7 +855,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -882,7 +882,7 @@ CapsuleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.17948383}
   m_Size: {x: 0.2, y: 0.3680169}
-  m_Direction: 0
+  m_Direction: 1
 --- !u!1 &131368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,10 +1653,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.1999707, y: -0.112500004}
-      - {x: 0.1999707, y: 0.112500004}
-      - {x: 0, y: 0.1124707}
-      - {x: 0.000029300001, y: -0.112500004}
+    - - {x: 0.3049707, y: -0.155}
+      - {x: 0.3049707, y: 0.155}
+      - {x: 0.015000001, y: 0.1549707}
+      - {x: 0.0150293, y: -0.155}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
