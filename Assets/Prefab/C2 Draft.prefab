@@ -164,7 +164,6 @@ Transform:
   m_Children:
   - {fileID: 410318}
   - {fileID: 7650360853193469000}
-  - {fileID: 7845143512911561184}
   - {fileID: 466602}
   - {fileID: 432358}
   - {fileID: 5216481572104322088}
@@ -195,7 +194,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!95 &8223186444551543523
 Animator:
@@ -348,9 +347,10 @@ MonoBehaviour:
   - {fileID: 5345070992298493943}
   - {fileID: 199000}
   - {fileID: 4298979370160194036}
-  fireballObject: {fileID: 7271635010030940169, guid: 6098e3a1c00d0d3469d4ad10991f7246, type: 3}
-  dpVelocityX: 0.5
-  dpVelocityY: 4.5
+  fireballObject: {fileID: 8141945593160086134, guid: 62943fb68089659448700a45782420cb, type: 3}
+  fireballVelocity: 2
+  dpVelocityX: 3.5
+  dpVelocityY: 3.5
 --- !u!114 &4106399419613270158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,12 +827,12 @@ GameObject:
   - component: {fileID: 463930}
   - component: {fileID: 6833546637320656510}
   m_Layer: 8
-  m_Name: BottomCollider
+  m_Name: ExtendedCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &463930
 Transform:
   m_ObjectHideFlags: 0
@@ -855,9 +855,9 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ea7846aab311b8645bea35bc8c2449e1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -880,9 +880,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06340355, y: -0.18047926}
-  m_Size: {x: 0.22593045, y: 0.37502885}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.0001, y: 0.0001}
+  m_Direction: 1
 --- !u!1 &131368
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 417222}
   - component: {fileID: 2950440989526212778}
   m_Layer: 8
-  m_Name: TopCollider
+  m_Name: BodyCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,7 +924,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 131368}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ea7846aab311b8645bea35bc8c2449e1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -947,8 +947,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.054151595, y: -0.00916031}
-  m_Size: {x: 0.3300128, y: 0.71561974}
+  m_Offset: {x: 0.045, y: 0.375}
+  m_Size: {x: 0.325, y: 0.75}
   m_Direction: 0
 --- !u!1 &153274
 GameObject:
@@ -1153,7 +1153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466602}
   m_Layer: 8
-  m_Name: MovementColliders
+  m_Name: HurtboxHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1168,7 +1168,7 @@ Transform:
   m_GameObject: {fileID: 190152}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.368, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1480,7 +1480,7 @@ Transform:
   m_GameObject: {fileID: 1318118745823031731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.65, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1511,7 +1511,7 @@ Transform:
   m_GameObject: {fileID: 4298979370160194036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.65, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1653,10 +1653,14 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.29997072, y: -0.27499992}
-      - {x: 0.29997072, y: 0.075}
-      - {x: 0, y: 0.0749707}
-      - {x: 0.000029300001, y: -0.27499992}
+    - - {x: 0.2499707, y: 0.0199999}
+      - {x: 0.2500294, y: 0.107499905}
+      - {x: 0.65000004, y: 0.1075292}
+      - {x: 0.6499707, y: 0.2824999}
+      - {x: 0.15, y: 0.2824706}
+      - {x: 0.1499706, y: 0.1799999}
+      - {x: 0.05, y: 0.1799706}
+      - {x: 0.0500293, y: 0.0199999}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1907,55 +1911,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &8971775110980303949
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7845143512911561184}
-  - component: {fileID: 7193062072135593453}
-  m_Layer: 8
-  m_Name: FireballManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7845143512911561184
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8971775110980303949}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.368, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 412580}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7193062072135593453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8971775110980303949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c3ed478a8714d468dd2825770ca4f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 0
-  source: {fileID: 0}
-  projectileHitSFX: {fileID: 0}
-  projectileMissSFX: {fileID: 0}
-  triggerFireball: 0
 --- !u!1001 &5080396941627063614
 PrefabInstance:
   m_ObjectHideFlags: 0
