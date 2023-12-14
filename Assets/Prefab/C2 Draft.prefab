@@ -855,7 +855,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130414}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -947,8 +947,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06340355, y: 0.14569093}
-  m_Size: {x: 0.22593045, y: 0.40591732}
+  m_Offset: {x: 0.054151595, y: -0.00916031}
+  m_Size: {x: 0.3300128, y: 0.71561974}
   m_Direction: 0
 --- !u!1 &153274
 GameObject:
