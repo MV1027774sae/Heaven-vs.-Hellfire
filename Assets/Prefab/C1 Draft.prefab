@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489992}
   - component: {fileID: 21216862}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 410318}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: SpriteRendererHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 1378092439662807880}
   - component: {fileID: 3736969296441133281}
   - component: {fileID: 1673574895726461913}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: C1 Draft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,9 +827,9 @@ GameObject:
   m_Component:
   - component: {fileID: 463930}
   - component: {fileID: 4780183906801484200}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: BottomCollider
-  m_TagString: Untagged
+  m_TagString: Hurtbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -894,9 +894,9 @@ GameObject:
   m_Component:
   - component: {fileID: 417222}
   - component: {fileID: 8489385009912740685}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: TopCollider
-  m_TagString: Untagged
+  m_TagString: Hurtbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,9 +960,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432358}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: DamageColliders
-  m_TagString: Untagged
+  m_TagString: Attackbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 471642}
   - component: {fileID: 6189766}
   - component: {fileID: 11439184}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432954}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447760}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,9 +1153,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466602}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: MovementColliders
-  m_TagString: Untagged
+  m_TagString: Hurtbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 449092}
   - component: {fileID: 6171920}
   - component: {fileID: 11434882}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 439678}
   - component: {fileID: 6137816}
   - component: {fileID: 11415928}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 442388}
   - component: {fileID: 6114922}
   - component: {fileID: 11474734}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,7 +1465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6867330455679518247}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftFireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1496,7 +1496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5580552191428958444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightFireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,7 +1527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9162232781417474483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireballShootPositionHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,9 +1563,9 @@ GameObject:
   - component: {fileID: 6048263908080257369}
   - component: {fileID: 4945517025767606800}
   - component: {fileID: 5023258881864504715}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: HitboxHolder
-  m_TagString: Untagged
+  m_TagString: Attackbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1645,7 +1645,7 @@ CompositeCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
@@ -1654,10 +1654,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.3049707, y: -0.155}
-      - {x: 0.3049707, y: 0.155}
-      - {x: 0.015000001, y: 0.1549707}
-      - {x: 0.0150293, y: -0.155}
+    - - {x: 0.48497072, y: 0.3125}
+      - {x: 0.48497072, y: 0.4375}
+      - {x: 0.084999904, y: 0.4374707}
+      - {x: 0.0850292, y: 0.3125}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1687,9 +1687,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5477939663060671282}
   - component: {fileID: 8265840267409105436}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Hitbox1
-  m_TagString: Untagged
+  m_TagString: Attackbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1764,9 +1764,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1446787718536831808}
   - component: {fileID: 1311750394247993322}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Hitbox2
-  m_TagString: Untagged
+  m_TagString: Attackbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,9 +1841,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3935704439552262534}
   - component: {fileID: 841836591730659258}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Hitbox3
-  m_TagString: Untagged
+  m_TagString: Attackbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1918,7 +1918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7845143512911561184}
   - component: {fileID: 7193062072135593453}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: FireballManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2036,6 +2036,10 @@ PrefabInstance:
     - target: {fileID: 6952141005031502698, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
       propertyPath: m_Name
       value: BloodPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952141005031502698, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
