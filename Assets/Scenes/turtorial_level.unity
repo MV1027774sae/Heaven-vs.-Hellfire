@@ -368,6 +368,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: C2 Draft (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 126410, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 131368, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.95
@@ -406,6 +414,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080066, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3122741501040341871, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
@@ -4003,6 +4015,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   leaderboardPanel: {fileID: 1661344145}
+  isOpen: 0
+  panel: {fileID: 771294807}
+  keyboardPanel: {fileID: 15733652}
+  controlPanel: {fileID: 499431474}
+  detectController: {fileID: 11400000, guid: 824dace6701cfea4babaab1b1ca639bf, type: 2}
 --- !u!1 &795397920
 GameObject:
   m_ObjectHideFlags: 0
@@ -7821,7 +7838,6 @@ GameObject:
   - component: {fileID: 1429342935}
   - component: {fileID: 1429342934}
   - component: {fileID: 1429342933}
-  - component: {fileID: 1429342937}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7922,23 +7938,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1429342937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429342932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 555db4837cbf49c48ab62ebb208213fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOpen: 0
-  panel: {fileID: 771294807}
-  keyboardPanel: {fileID: 15733652}
-  controlPanel: {fileID: 499431474}
-  detectController: {fileID: 11400000, guid: 824dace6701cfea4babaab1b1ca639bf, type: 2}
 --- !u!1001 &1433913577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7950,6 +7949,14 @@ PrefabInstance:
     - target: {fileID: 126410, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
       propertyPath: m_Name
       value: C2 Draft
+      objectReference: {fileID: 0}
+    - target: {fileID: 126410, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 131368, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7989,6 +7996,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412580, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080066, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3122741501040341871, guid: b9df68ffe2731c545a5956a9ce5d92df, type: 3}

@@ -5,35 +5,30 @@ using UnityEngine;
 public class CheckWhenAnimEnd : MonoBehaviour
 {
     private Animator myAnimator;
+    [SerializeField] private GameObject mainMenu;
 
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
-        StartCoroutine(PlaySequentialAnimations());
     }
 
-    private IEnumerator PlaySequentialAnimations()
+    private void Update()
     {
-        yield return StartCoroutine(PlayAnimation("title"));
+        // Get the current state information
+        AnimatorStateInfo stateInfo = myAnimator.GetCurrentAnimatorStateInfo(0);
 
-        yield return StartCoroutine(PlayAnimation("title2"));
-
-        yield return StartCoroutine(PlayAnimation("title3"));
-
-        Debug.Log("All animations finished playing.");
-    }
-
-    private IEnumerator PlayAnimation(string animationName)
-    {
-        myAnimator.Play(animationName);
-
-        // Wait until the current animation is finished playing
-        while (myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1.0f)
+        // Check if the animation is finished playing
+        if (stateInfo.normalizedTime >= 1.0f)
         {
-            yield return null;
+            // Animation has finished playing
+            Debug.Log("Animation finished playing");
+            StartCoroutine(TurnOnTheMenu());
         }
+    }
 
-        // Optionally wait for an additional delay if needed
-        yield return new WaitForSeconds(0.5f); // Adjust the delay as needed
+    private IEnumerator TurnOnTheMenu()
+    {
+        yield return new WaitForSeconds(2.0f);
+        mainMenu.SetActive(true);
     }
 }
