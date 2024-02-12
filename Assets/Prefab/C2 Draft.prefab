@@ -1188,20 +1188,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 123891905991777191}
     m_ColliderPaths:
-    - - X: 2500000
-        Y: 4125000
-      - X: -2500000
-        Y: 4125000
-      - X: -2500000
-        Y: -4125000
-      - X: 2500000
-        Y: -4125000
+    - - X: 6500000
+        Y: 6000000
+      - X: -3999999
+        Y: 6000000
+      - X: -3999999
+        Y: 0
+      - X: 6500000
+        Y: 0
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.2499707, y: -0.4125}
-      - {x: 0.2499707, y: 0.4125}
-      - {x: -0.25, y: 0.4124707}
-      - {x: -0.2499707, y: -0.4125}
+    - - {x: 0.6499707, y: 0}
+      - {x: 0.6499707, y: 0.6}
+      - {x: -0.39999992, y: 0.5999707}
+      - {x: -0.3999706, y: 0}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1859,10 +1859,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.4499707, y: 0.0125}
-      - {x: 0.4499707, y: 0.38750002}
-      - {x: 0.15, y: 0.3874707}
-      - {x: 0.1500293, y: 0.0125}
+    - - {x: 0.62497073, y: -0.22500001}
+      - {x: 0.62497073, y: 0.025}
+      - {x: 0.175, y: 0.024970701}
+      - {x: 0.17502931, y: -0.22500001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
