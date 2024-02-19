@@ -89,6 +89,8 @@ public class HandleMovement : MonoBehaviour
                     rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
                     jmpTimer = 0;
                     canVariableJump = true;
+
+                    gameObject.GetComponentInChildren<CapsuleCollider2D>().excludeLayers = states.characterCollision;
                 }
             }
             else

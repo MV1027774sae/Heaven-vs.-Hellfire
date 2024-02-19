@@ -245,9 +245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   energy: 100
-  hitInvulTimeL: 0.1
-  hitInvulTimeM: 0.15
-  hitInvulTimeH: 0.1
   hitPushBack: 1
   hitVerticalLaunch: 0.5
   horizontal: 0
@@ -278,6 +275,9 @@ MonoBehaviour:
   movementColliders:
   - {fileID: 0}
   - {fileID: 131368}
+  characterCollision:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &6686616553206487278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,7 +1130,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190152}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1178,7 +1178,7 @@ CompositeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1699,7 +1699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8864530273456551877}
   - component: {fileID: 7129532378842740020}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Main Collisionbox
   m_TagString: Collisionbox
   m_Icon: {fileID: 0}
