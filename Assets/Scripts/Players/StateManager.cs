@@ -9,9 +9,9 @@ public class StateManager : MonoBehaviour
     public float health = 100;
     public float energy = 100;
     
-    [SerializeField] private float hitInvulTimeL = 0.1f;
-    [SerializeField] private float hitInvulTimeM = 0.15f;
-    [SerializeField] private float hitInvulTimeH = 0.2f;
+    //[SerializeField] private float hitInvulTimeL = 0.1f;
+    //[SerializeField] private float hitInvulTimeM = 0.15f;
+    //[SerializeField] private float hitInvulTimeH = 0.2f;
     [SerializeField] private float hitPushBack = 1f;
     [SerializeField] private float hitVerticalLaunch = 0.5f;
 

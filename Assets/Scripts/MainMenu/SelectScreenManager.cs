@@ -215,7 +215,7 @@ public class SelectScreenManager : MonoBehaviour
         {
             pl.timerToReset += Time.deltaTime;
 
-            if (pl.timerToReset > 0.8f)
+            if (pl.timerToReset > 0.2f)
             {
                 pl.hitInputOnce = false;
                 pl.timerToReset = 0;

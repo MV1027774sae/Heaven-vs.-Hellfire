@@ -36,7 +36,7 @@ public class HandleDamageColliders : MonoBehaviour
     {
         states = GetComponent<StateManager>();
         audioManager = GetComponent<AudioManager>();
-        CloseColliders();
+        //CloseColliders();
     }
 
     public void OpenCollider(DCtype type, float damage, float delay, DamageType damageType, float hitStun)
@@ -88,14 +88,14 @@ public class HandleDamageColliders : MonoBehaviour
         array[index].GetComponent<DoDamage>().hitStun = hitStun;
     }
 
-    public void CloseColliders()
-    {
-        for (int i = 0; i <damageCollidersLeft.Length; i++)
-        {
-            damageCollidersLeft[i].SetActive(false);
-            damageCollidersRight[i].SetActive(false);
-        }
-    }
+    //public void CloseColliders()
+    //{
+    //    for (int i = 0; i <damageCollidersLeft.Length; i++)
+    //    {
+    //        damageCollidersLeft[i].SetActive(false);
+    //        damageCollidersRight[i].SetActive(false);
+    //    }
+    //}
 
     IEnumerator CreateFireball(GameObject[] array, int index, float damage, float delay, DamageType damageType, GameObject fireball, float velocity, float hitStun)
     {

@@ -37,7 +37,7 @@ public class OpenDamageCollider : StateMachineBehaviour
         }
 
         states.currentlyAttacking = false;
-        states.handleDC.CloseColliders();
+        //states.handleDC.CloseColliders();
     }
 
     //OnStateMove is called right after Animator.OnAnimatorMove(). code that processes and affects root motion should be implemented here

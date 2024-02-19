@@ -20,7 +20,7 @@ public class DoDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<StateManager>() && collision.tag == "Hurtbox")
+        if (collision.GetComponentInParent<StateManager>() /*&& collision.tag == "Hurtbox"*/)
         {
             StateManager oState = collision.GetComponentInParent<StateManager>();
 
