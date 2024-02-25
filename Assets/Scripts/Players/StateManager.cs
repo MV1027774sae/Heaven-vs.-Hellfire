@@ -60,9 +60,6 @@ public class StateManager : MonoBehaviour
     public GameObject[] movementColliders;
     private ParticleSystem blood;
 
-    [Header("Layermasks")]
-    public LayerMask characterCollision;
-
     void Start()
     {
         handleDC = GetComponent<HandleDamageColliders>();
@@ -125,8 +122,6 @@ public class StateManager : MonoBehaviour
 
         LayerMask layer = ~(1 << gameObject.layer | 1 << 3);
         retVal = Physics2D.Raycast(transform.position, -Vector2.up, 0.1f, layer);
-
-        //gameObject.GetComponentInChildren<CapsuleCollider2D>().includeLayers = characterCollision;
         return retVal;
     }
 
