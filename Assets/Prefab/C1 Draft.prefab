@@ -276,9 +276,6 @@ MonoBehaviour:
   movementColliders:
   - {fileID: 0}
   - {fileID: 0}
-  characterCollision:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &6686616553206487278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1441,7 +1438,7 @@ GameObject:
   - component: {fileID: 1805799337858974535}
   - component: {fileID: 2066936452872648466}
   - component: {fileID: 8484820882053679960}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Main Collisionbox
   m_TagString: Collisionbox
   m_Icon: {fileID: 0}
@@ -1670,9 +1667,9 @@ GameObject:
   - component: {fileID: 6048263908080257369}
   - component: {fileID: 4945517025767606800}
   - component: {fileID: 5023258881864504715}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HitboxHolder
-  m_TagString: Attackbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1720,7 +1717,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!66 &4945517025767606800
 CompositeCollider2D:
@@ -1752,7 +1749,7 @@ CompositeCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
@@ -1761,10 +1758,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.4949707, y: 0.05}
-      - {x: 0.4949707, y: 0.23}
-      - {x: 0.125, y: 0.22997071}
-      - {x: 0.1250293, y: 0.05}
+    - - {x: 0.4999707, y: -0.5}
+      - {x: 0.4999707, y: 0.5}
+      - {x: -0.5, y: 0.4999707}
+      - {x: -0.4999707, y: -0.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1794,9 +1791,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5477939663060671282}
   - component: {fileID: 8265840267409105436}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Hitbox1
-  m_TagString: Attackbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1990,9 +1987,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1446787718536831808}
   - component: {fileID: 1311750394247993322}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Hitbox2
-  m_TagString: Attackbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2067,9 +2064,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3935704439552262534}
   - component: {fileID: 841836591730659258}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Hitbox3
-  m_TagString: Attackbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

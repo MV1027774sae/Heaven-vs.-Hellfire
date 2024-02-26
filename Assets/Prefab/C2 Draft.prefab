@@ -275,9 +275,6 @@ MonoBehaviour:
   movementColliders:
   - {fileID: 0}
   - {fileID: 131368}
-  characterCollision:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &6686616553206487278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,7 +1697,7 @@ GameObject:
   - component: {fileID: 8864530273456551877}
   - component: {fileID: 7129532378842740020}
   - component: {fileID: 6097108476884728958}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Main Collisionbox
   m_TagString: Collisionbox
   m_Icon: {fileID: 0}
@@ -1879,10 +1876,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.62497073, y: -0.22500001}
-      - {x: 0.62497073, y: 0.025}
-      - {x: 0.175, y: 0.024970701}
-      - {x: 0.17502931, y: -0.22500001}
+    - - {x: 0.4999707, y: -0.5}
+      - {x: 0.4999707, y: 0.5}
+      - {x: -0.5, y: 0.4999707}
+      - {x: -0.4999707, y: -0.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0

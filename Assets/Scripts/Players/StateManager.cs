@@ -123,6 +123,8 @@ public class StateManager : MonoBehaviour
         LayerMask layer = ~(1 << gameObject.layer | 1 << 3);
         retVal = Physics2D.Raycast(transform.position, -Vector2.up, 0.1f, layer);
         return retVal;
+
+        Debug.Log("isOnGround()");
     }
 
     public void ResetStateInputs()

@@ -20,12 +20,14 @@ public class DoDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("1");
         if (collision.GetComponentInParent<StateManager>() /*&& collision.tag == "Hurtbox"*/)
         {
             StateManager oState = collision.GetComponentInParent<StateManager>();
-
+            Debug.Log("2");
             if (oState != states)
             {
+                Debug.Log("3");
                 oState.TakeDamage(damage, damageType, hitStun);
 
                 switch (damageType)

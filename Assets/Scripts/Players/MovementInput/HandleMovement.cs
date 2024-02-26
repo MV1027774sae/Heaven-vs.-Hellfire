@@ -107,6 +107,7 @@ public class HandleMovement : MonoBehaviour
         else
         {
             justJumped = false;
+            Debug.Log("justJumped = false");
         }
     }
 
