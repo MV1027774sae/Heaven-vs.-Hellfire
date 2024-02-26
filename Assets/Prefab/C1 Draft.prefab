@@ -278,6 +278,7 @@ MonoBehaviour:
   movementColliders:
   - {fileID: 130414}
   - {fileID: 131368}
+  levelUI: {fileID: 0}
 --- !u!114 &6686616553206487278
 MonoBehaviour:
   m_ObjectHideFlags: 0

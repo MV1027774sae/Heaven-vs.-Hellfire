@@ -2134,6 +2134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430234031}
   - component: {fileID: 430234032}
+  - component: {fileID: 430234033}
   m_Layer: 5
   m_Name: Player 2
   m_TagString: Untagged
@@ -2213,6 +2214,23 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &430234033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430234030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5905ade85d3a3fc45b443531719373fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 430234032}
+  changeColor: {fileID: 1987155227}
+  isShake: 0
+  positionShakeSpeed: 200
+  positionShakeRange: {x: 10, y: 0.1, z: 0.1}
 --- !u!1 &437484978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,7 +3485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607413567}
   m_Layer: 5
-  m_Name: Sliders
+  m_Name: Health Sliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6146,7 +6164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.50980395, g: 0.003921569, b: 0.003921569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8877,7 +8895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.699997, y: 0.000012397766}
+  m_AnchoredPosition: {x: 4.6999817, y: 0.000012397766}
   m_SizeDelta: {x: 0.1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669816032
@@ -10785,6 +10803,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   leaderboardPanel: {fileID: 2042136724}
+  isPanelOpen: 0
+  isLeaderboardOpen: 0
+  panel: {fileID: 0}
+  keyboardPanel: {fileID: 0}
+  controlPanel: {fileID: 0}
+  detectController: {fileID: 0}
 --- !u!1 &2094866944
 GameObject:
   m_ObjectHideFlags: 0
@@ -10883,7 +10907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.50980395, g: 0.003921569, b: 0.003921569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10918,6 +10942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107418110}
   - component: {fileID: 2107418111}
+  - component: {fileID: 2107418112}
   m_Layer: 5
   m_Name: Player 1
   m_TagString: Untagged
@@ -10997,6 +11022,23 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2107418112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107418109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5905ade85d3a3fc45b443531719373fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 2107418111}
+  changeColor: {fileID: 1669816032}
+  isShake: 0
+  positionShakeSpeed: 200
+  positionShakeRange: {x: 10, y: 0.1, z: 0.1}
 --- !u!1 &2108405563
 GameObject:
   m_ObjectHideFlags: 0

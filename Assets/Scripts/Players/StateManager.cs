@@ -59,6 +59,7 @@ public class StateManager : MonoBehaviour
     [Header("Grab Reference from others")]
     public GameObject[] movementColliders;
     private ParticleSystem blood;
+    [SerializeField] private LevelUI levelUI;
 
     void Start()
     {
