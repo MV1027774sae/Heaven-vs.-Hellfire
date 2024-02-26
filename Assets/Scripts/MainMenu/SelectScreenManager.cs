@@ -215,7 +215,7 @@ public class SelectScreenManager : MonoBehaviour
         {
             pl.timerToReset += Time.deltaTime;
 
-            if (pl.timerToReset > 0.2f)
+            if (pl.timerToReset > 0.325f)
             {
                 pl.hitInputOnce = false;
                 pl.timerToReset = 0;
@@ -306,6 +306,7 @@ public class SelectScreenManager : MonoBehaviour
                 CharacterManager.GetInstance().returnCharacterWithID(pl.activePortrait.characterId).prefab,
                 pl.charVisPos.position, Quaternion.identity) as GameObject;
             pl.createdCharacter = go;
+            pl.createdCharacter.GetComponent<StateManager>().lookRight = true;
 
             pl.previewPortrait = pl.activePortrait;
 
