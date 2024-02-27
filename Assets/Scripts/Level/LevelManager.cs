@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
 
     //variables for the countdown timer
     public bool countdown;
-    public int maxTurnTimer = 99;
+    public int maxTurnTimer = 60;
     private int currentTimer;
     private float internalTimer;
 
@@ -155,13 +155,13 @@ public class LevelManager : MonoBehaviour
         //change the UI text and color every second that passes
         levelUI.AnnouncerTextLine1.text = "3";
         levelUI.AnnouncerTextLine1.color = Color.green;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.75f);
         levelUI.AnnouncerTextLine1.text = "2";
         levelUI.AnnouncerTextLine1.color = Color.yellow;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.75f);
         levelUI.AnnouncerTextLine1.text = "1";
         levelUI.AnnouncerTextLine1.color = Color.red;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.75f);
         levelUI.AnnouncerTextLine1.text = "FIGHT!";
         levelUI.AnnouncerTextLine1.color = Color.red;
 

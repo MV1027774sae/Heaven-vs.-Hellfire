@@ -343,7 +343,7 @@ MonoBehaviour:
   - {fileID: 1481926437}
   maxTurns: 2
   countdown: 0
-  maxTurnTimer: 99
+  maxTurnTimer: 60
 --- !u!4 &80108104
 Transform:
   m_ObjectHideFlags: 0
