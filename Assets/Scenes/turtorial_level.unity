@@ -4014,7 +4014,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
-  leaderboardPanel: {fileID: 1661344145}
   isPanelOpen: 0
   isLeaderboardOpen: 0
   panel: {fileID: 771294807}
@@ -9176,7 +9175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '(I) Toggle Controls panel
+  m_text: '
 
     (P) To Pause
 

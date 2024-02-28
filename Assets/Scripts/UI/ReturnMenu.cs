@@ -14,13 +14,13 @@ public class ReturnMenu : MonoBehaviour
             SceneManager.LoadScene("intro");
         }
 
-        if(Input.GetKeyDown(KeyCode.End) && detectControllerScript.isConnect == false)
-        {
-            detectControllerScript.isConnect = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.End) && detectControllerScript.isConnect == true)
-        {
-            detectControllerScript.isConnect = false;
-        }
+        //if(Input.GetKeyDown(KeyCode.End) && detectControllerScript.isConnect == false)
+        //{
+        //    detectControllerScript.isConnect = true;
+        //}
+        //else if (Input.GetKeyDown(KeyCode.End) && detectControllerScript.isConnect == true)
+        //{
+        //    detectControllerScript.isConnect = false;
+        //}
     }
 }
