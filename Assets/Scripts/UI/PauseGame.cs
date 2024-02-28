@@ -6,7 +6,7 @@ public class PauseGame : MonoBehaviour
 {
     [SerializeField] bool isPaused = false;
 
-    [SerializeField] GameObject leaderboardPanel;
+    //[SerializeField] GameObject leaderboardPanel;
     [SerializeField] bool isPanelOpen = false;
     [SerializeField] bool isLeaderboardOpen = false;
 
@@ -19,25 +19,11 @@ public class PauseGame : MonoBehaviour
 
     void Update()
     {
-        //Open leaderboard
-        if (Input.GetKeyDown(KeyCode.P)) isLeaderboardOpen = !isLeaderboardOpen;
-        if(isLeaderboardOpen)
-        {
-            leaderboardPanel.SetActive(true);
-            isPaused = true;
-        }
-        else
-        {
-            leaderboardPanel.SetActive(false);
-            isPaused = false;
-        }
-
         //Open panel
-        if (Input.GetKeyDown(KeyCode.I)) isPanelOpen = !isPanelOpen;
+        if (Input.GetKeyDown(KeyCode.P)) isPanelOpen = !isPanelOpen; isPaused = true;
         if (isPanelOpen)
         {
             panel.SetActive(true);
-            isPaused = true;
         }
         else
         {
