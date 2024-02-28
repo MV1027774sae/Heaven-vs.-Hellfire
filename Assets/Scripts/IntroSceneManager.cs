@@ -102,9 +102,6 @@ public class IntroSceneManager : MonoBehaviour
         switch (activeElement)
         {
             case 0:
-                CharacterManager.GetInstance().numberOfUsers = 1;
-                break;
-            case 1:
                 CharacterManager.GetInstance().numberOfUsers = 2;
                 CharacterManager.GetInstance().players[1].playerType = PlayerBase.PlayerType.user;
                 break;
@@ -116,9 +113,13 @@ public class IntroSceneManager : MonoBehaviour
         HandleSelectedOption();
         yield return new WaitForSeconds(0.6f);
 
-        if (activeElement == 2)
+        if (activeElement == 1)
         {
             MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "turtorial_level");
+        }
+        else if (activeElement == 2)
+        {
+            Debug.Log("Credit Scene");
         }
         else if (activeElement == 3)
         {
