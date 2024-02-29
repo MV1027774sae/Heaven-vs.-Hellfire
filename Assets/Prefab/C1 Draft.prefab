@@ -736,6 +736,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a5179104e206c5d4a9bf434b3ab6af6f, type: 3}
   - {fileID: 8300000, guid: 0b37ec8960b2349459642bc65bbe5644, type: 3}
   - {fileID: 8300000, guid: 0d5a481ef93e22b46b17a664b958e7c3, type: 3}
+  fireballCastSFX:
+  - {fileID: 8300000, guid: 6b012c0ea2295f24982ebc09488c6b48, type: 3}
 --- !u!114 &1378092439662807880
 MonoBehaviour:
   m_ObjectHideFlags: 0

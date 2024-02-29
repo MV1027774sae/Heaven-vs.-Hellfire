@@ -106,6 +106,7 @@ public class HandleDamageColliders : MonoBehaviour
         fball.GetComponentInChildren<DoDamage>().damageType = damageType;
         fball.GetComponentInChildren<DoDamage>().hitStun = hitStun;
         fball.velocity = new Vector2(velocity, 0);
+        audioManager.PlayFireballCastSFX();
     }
 
     IEnumerator DragonPunch(GameObject[] array, int index, float damage, float delay, DamageType damageType, float hitStun)
