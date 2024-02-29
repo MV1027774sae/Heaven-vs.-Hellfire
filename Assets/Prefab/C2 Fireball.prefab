@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 0.5
   source: {fileID: 6633834739889837582}
+  projectileCastSFX: {fileID: 8300000, guid: b2ae0f1914a04754c829e22961f78a88, type: 3}
   projectileHitSFX: {fileID: 8300000, guid: 4a0598541e9721445bcf80c180477c7b, type: 3}
   projectileMissSFX: {fileID: 8300000, guid: bd2d8fb0dd4b4f94e9b70e79c0fe02b9, type: 3}
   triggerFireball: 0

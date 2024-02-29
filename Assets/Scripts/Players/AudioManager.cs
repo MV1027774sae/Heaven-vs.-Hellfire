@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] lightHitSFX;
     public AudioClip[] heavyHitSFX;
     public AudioClip[] gruntSFX;
+    public AudioClip[] fireballCastSFX;
 
     public void PlayAttackSFX(int index)
     {
@@ -24,6 +25,11 @@ public class AudioManager : MonoBehaviour
     public void PlayHeavyHitSFX()
     {
         source.PlayOneShot(heavyHitSFX[Random.Range(0, heavyHitSFX.Length)]);
+    }
+
+    public void PlayFireballCastSFX()
+    {
+        source.PlayOneShot(fireballCastSFX[0]);
     }
 
     public void PlayGruntSFX()
