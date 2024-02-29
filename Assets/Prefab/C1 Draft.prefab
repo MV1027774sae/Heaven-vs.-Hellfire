@@ -276,6 +276,7 @@ MonoBehaviour:
   movementColliders:
   - {fileID: 0}
   - {fileID: 0}
+  levelUI: {fileID: 0}
 --- !u!114 &6686616553206487278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,7 +743,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9215393f5ac2da4c9e7192d7f411140, type: 3}
   m_Name: 

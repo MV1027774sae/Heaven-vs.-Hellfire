@@ -16,6 +16,10 @@ public class IntroSceneManager : MonoBehaviour
 
     [SerializeField] bool checkIfTheObjectHaveBoolean;
 
+    [SerializeField] GameObject image1;
+    [SerializeField] GameObject image2;
+    [SerializeField] GameObject image3;
+
     void Start()
     {
         menuObj.SetActive(false);
@@ -77,6 +81,32 @@ public class IntroSceneManager : MonoBehaviour
                     }
                 }
 
+                //Change Image that showcase what each mode provide
+                if(activeElement == 0)
+                {
+                    image1.SetActive(true);
+                    image2.SetActive(false);
+                    image3.SetActive(false);
+                }
+                else if (activeElement == 1)
+                {
+                    image1.SetActive(false);
+                    image2.SetActive(true);
+                    image3.SetActive(false);
+                }
+                else if (activeElement == 2)
+                {
+                    image1.SetActive(false);
+                    image2.SetActive(false);
+                    image3.SetActive(true);
+                }
+                else
+                {
+                    image1.SetActive(false);
+                    image2.SetActive(false);
+                    image3.SetActive(false);
+                }
+
                 //and if we hit space again
                 if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
                 {
@@ -102,9 +132,6 @@ public class IntroSceneManager : MonoBehaviour
         switch (activeElement)
         {
             case 0:
-                CharacterManager.GetInstance().numberOfUsers = 1;
-                break;
-            case 1:
                 CharacterManager.GetInstance().numberOfUsers = 2;
                 CharacterManager.GetInstance().players[1].playerType = PlayerBase.PlayerType.user;
                 break;
@@ -116,9 +143,14 @@ public class IntroSceneManager : MonoBehaviour
         HandleSelectedOption();
         yield return new WaitForSeconds(0.6f);
 
-        if (activeElement == 2)
+        if (activeElement == 1)
         {
             MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "turtorial_level");
+        }
+        else if (activeElement == 2)
+        {
+            Debug.Log("Credit Scene");
+            MySceneManager.GetInstance().RequestLevelLoad(SceneType.main, "credit");
         }
         else if (activeElement == 3)
         {
