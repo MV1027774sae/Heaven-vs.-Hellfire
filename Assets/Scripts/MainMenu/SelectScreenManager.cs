@@ -92,6 +92,7 @@ public class SelectScreenManager : MonoBehaviour
             CharacterBase c = charM.characterList[i];
 
             GameObject go = Instantiate(portraitPrefab) as GameObject;
+            go.GetComponentInChildren<Image>().sprite = c.icon;
             go.transform.SetParent(portraitCanvas.transform);
 
             PortraitInfo p = go.GetComponent<PortraitInfo>();
@@ -228,7 +229,7 @@ public class SelectScreenManager : MonoBehaviour
         if (Input.GetButtonUp("Fire1" + playerId))
         {
             //make a reaction on the character to give feedback to the player
-            //pl.createdCharacter.GetComponentInChildren<Animator>().Play("Kick");
+            pl.createdCharacter.GetComponentInChildren<Animator>().Play("Ready");
 
             //pass the character to the character manager so that we know what prefab to create in the level
             pl.playerBase.playerPrefab =

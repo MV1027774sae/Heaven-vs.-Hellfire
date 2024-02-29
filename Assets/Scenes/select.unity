@@ -1334,6 +1334,7 @@ MonoBehaviour:
       score: 0
   portraitPrefabs:
   - {fileID: 11419268, guid: d2837edd2266e924d8b89ca52587309b, type: 3}
+  - {fileID: 11419268, guid: d2837edd2266e924d8b89ca52587309b, type: 3}
   maxX: 2
   maxY: 3
   portraitCanvas: {fileID: 1661704812}
