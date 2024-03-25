@@ -81,32 +81,6 @@ public class IntroSceneManager : MonoBehaviour
                     }
                 }
 
-                //Change Image that showcase what each mode provide
-                if(activeElement == 0)
-                {
-                    image1.SetActive(true);
-                    image2.SetActive(false);
-                    image3.SetActive(false);
-                }
-                else if (activeElement == 1)
-                {
-                    image1.SetActive(false);
-                    image2.SetActive(true);
-                    image3.SetActive(false);
-                }
-                else if (activeElement == 2)
-                {
-                    image1.SetActive(false);
-                    image2.SetActive(false);
-                    image3.SetActive(true);
-                }
-                else
-                {
-                    image1.SetActive(false);
-                    image2.SetActive(false);
-                    image3.SetActive(false);
-                }
-
                 //and if we hit space again
                 if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
                 {
@@ -122,6 +96,32 @@ public class IntroSceneManager : MonoBehaviour
 
                     //and based on our selection
                     //TODO: 2 - players
+                }
+
+                //checking if what option the player currently on = change image
+                if(activeElement == 0)
+                {
+                    image1.SetActive(true);
+                    image2.SetActive(false);
+                    image3.SetActive(false);
+                }
+                else if(activeElement == 1)
+                {
+                    image1.SetActive(false);
+                    image2.SetActive(true);
+                    image3.SetActive(false);
+                }
+                else if(activeElement == 2)
+                {
+                    image1.SetActive(false);
+                    image2.SetActive(false);
+                    image3.SetActive(true);
+                }
+                else
+                {
+                    image1.SetActive(false);
+                    image2.SetActive(false);
+                    image3.SetActive(false);
                 }
             }
         }

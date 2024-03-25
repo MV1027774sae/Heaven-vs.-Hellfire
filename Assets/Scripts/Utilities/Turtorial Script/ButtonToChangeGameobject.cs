@@ -7,9 +7,13 @@ public class ButtonToChangeGameobject : MonoBehaviour
     public GameObject player1Panel;
     public GameObject player2Panel;
 
-    public bool isPlayer1 = true;
+    public bool isPlayer1;
 
     // Update is called once per frame
+    private void Start()
+    {
+        isPlayer1 = true;
+    }
     void Update()
     {
         if(isPlayer1 == true)
