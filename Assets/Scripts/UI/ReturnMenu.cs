@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ReturnMenu : MonoBehaviour
 {
-    [SerializeField] DetectController detectControllerScript;
-    // Update is called once per frame
+    private void Awake()
+    {
+        Time.timeScale= 1f;
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Home))

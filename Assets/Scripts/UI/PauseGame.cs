@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PauseGame : MonoBehaviour
 {
-    [SerializeField] bool isPaused = false;
+    public bool isPaused = false;
 
     //[SerializeField] GameObject leaderboardPanel;
     [SerializeField] bool isPanelOpen = false;

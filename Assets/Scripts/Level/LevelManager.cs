@@ -209,6 +209,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    //End turn function
     public void EndTurnFunction(bool timeOut = false)
     {
         //we calll this function everytime we want end the turn but we need to know if we do so by a timeout or not
