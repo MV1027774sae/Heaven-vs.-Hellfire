@@ -20,6 +20,10 @@ public class LevelManager : MonoBehaviour
     private int currentTimer;
     private float internalTimer;
 
+    //Voice Announcer
+    [SerializeField] AudioSource audioVoiceAnnounceSource;
+    [SerializeField] AnnouncerManager announcerManagerScript;
+
     void Start()
     {
         //get the references from the singletons
@@ -164,6 +168,8 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(0.75f);
         levelUI.AnnouncerTextLine1.text = "FIGHT!";
         levelUI.AnnouncerTextLine1.color = Color.red;
+        audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 0];
+        audioVoiceAnnounceSource.Play();
 
         //and for every player enable what they need to have open to be controlled
         for (int i = 0; i < charM.players.Count; i++)
@@ -258,6 +264,18 @@ public class LevelManager : MonoBehaviour
             //else that player is the winner
             levelUI.AnnouncerTextLine1.text = vPlayer.playerId + " Wins!";
             levelUI.AnnouncerTextLine1.color = Color.yellow;
+            if(vPlayer.inputId == "0")
+            {
+                Debug.Log("1 WIN!");
+            }
+            else if(vPlayer.inputId == "1")
+            {
+                Debug.Log("2 WIN!");
+            }
+            else
+            {
+                Debug.Log("DRAW");
+            }
         }
 
         yield return new WaitForSeconds(3);
