@@ -152,6 +152,21 @@ public class LevelManager : MonoBehaviour
 
         levelUI.AnnouncerTextLine1.gameObject.SetActive(true);
         levelUI.AnnouncerTextLine1.text = "Round " + currentTurn;
+        if(currentTurn == 1)
+        {
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 2];
+            audioVoiceAnnounceSource.Play();
+        }
+        else if (currentTurn == 2)
+        {
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 3];
+            audioVoiceAnnounceSource.Play();
+        }
+        else if (currentTurn == 3)
+        {
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 4];
+            audioVoiceAnnounceSource.Play();
+        }
         levelUI.AnnouncerTextLine1.color = Color.white;
 
         yield return new WaitForSeconds(2);
@@ -236,6 +251,9 @@ public class LevelManager : MonoBehaviour
             levelUI.AnnouncerTextLine1.gameObject.SetActive(true);
             levelUI.AnnouncerTextLine1.text = "K.O.";
             levelUI.AnnouncerTextLine1.color = Color.red;
+            camM.ShakeAndSlowMotion();
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 1];
+            audioVoiceAnnounceSource.Play();
         }
 
         //disable the controls
@@ -264,13 +282,17 @@ public class LevelManager : MonoBehaviour
             //else that player is the winner
             levelUI.AnnouncerTextLine1.text = vPlayer.playerId + " Wins!";
             levelUI.AnnouncerTextLine1.color = Color.yellow;
-            if(vPlayer.inputId == "0")
+            if(vPlayer.inputId == "")
             {
                 Debug.Log("1 WIN!");
+                audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 5];
+                audioVoiceAnnounceSource.Play();
             }
             else if(vPlayer.inputId == "1")
             {
                 Debug.Log("2 WIN!");
+                audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 6];
+                audioVoiceAnnounceSource.Play();
             }
             else
             {

@@ -5079,7 +5079,11 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 3d90bd0e9f56eca47b04dd65c02e1522, type: 3}
   - {fileID: 8300000, guid: 95742684986b52f4ba042a79197e03b1, type: 3}
-  - {fileID: 8300000, guid: 840268c1fda9ccd4c92f8c23307444cc, type: 3}
+  - {fileID: 8300000, guid: 120df8f3a74e71f4fba1e705eced08c4, type: 3}
+  - {fileID: 8300000, guid: df3421fceab8d5f4bba85c145b3c52f3, type: 3}
+  - {fileID: 8300000, guid: ac1ef664a6cc8704ca0c9075186cb4f4, type: 3}
+  - {fileID: 8300000, guid: 9a4701ca95866784fbab827897484edb, type: 3}
+  - {fileID: 8300000, guid: bc5a427729fc42c4ab9f757ecdecc876, type: 3}
   clipIndex: 0
 --- !u!82 &868688364
 AudioSource:
