@@ -96,7 +96,6 @@ public class SelectScreenManager : MonoBehaviour
             go.transform.SetParent(portraitCanvas.transform);
 
             PortraitInfo p = go.GetComponent<PortraitInfo>();
-            //p.img.sprite = c.icon; //TODO: creates error, find a fix
             p.characterId = c.charId;
             p.posX = x;
             p.posY = y;
@@ -229,7 +228,7 @@ public class SelectScreenManager : MonoBehaviour
         if (Input.GetButtonUp("Fire1" + playerId))
         {
             //make a reaction on the character to give feedback to the player
-            pl.createdCharacter.GetComponentInChildren<Animator>().Play("Ready");
+            pl.createdCharacter.GetComponentInChildren<Animator>().Play("S_Medium Attack");
 
             //pass the character to the character manager so that we know what prefab to create in the level
             pl.playerBase.playerPrefab =
@@ -258,7 +257,7 @@ public class SelectScreenManager : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(2); //after 2 seconds load the level
+        yield return new WaitForSeconds(1); //after 1 second load the level
         //SceneManager.LoadSceneAsync("level", LoadSceneMode.Single);
 
         if (charM.solo)
