@@ -38,7 +38,7 @@ public class DoDamage : MonoBehaviour
                         break;
                     case HandleDamageColliders.DamageType.medium:
                         oState.gameObject.GetComponentInParent<AudioSource>().
-                            PlayOneShot(audioManager.lightHitSFX[Random.Range(0, audioManager.lightHitSFX.Length)]);
+                            PlayOneShot(audioManager.lightHitSFX[Random.Range(0, audioManager.heavyHitSFX.Length)]);
                         break;
                     case HandleDamageColliders.DamageType.heavy:
                         oState.gameObject.GetComponentInParent<AudioSource>().
