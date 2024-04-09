@@ -20,6 +20,10 @@ public class IntroSceneManager : MonoBehaviour
     [SerializeField] GameObject image2;
     [SerializeField] GameObject image3;
 
+    //SelectSound Manager
+    [SerializeField] AudioSource selectSoundSource;
+    [SerializeField] AnnouncerManager announcerManagerScript;
+
     void Start()
     {
         menuObj.SetActive(false);
@@ -43,6 +47,8 @@ public class IntroSceneManager : MonoBehaviour
                 init = true;
                 startText.SetActive(false);
                 menuObj.SetActive(true); //closes the text and opens the menu
+                selectSoundSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 2];
+                selectSoundSource.Play();
             }
         }
         else
@@ -56,7 +62,8 @@ public class IntroSceneManager : MonoBehaviour
                 if (Input.GetKeyUp(KeyCode.UpArrow))
                 {
                     menuOptions[activeElement].selected = false;
-
+                    selectSoundSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 0];
+                    selectSoundSource.Play();
                     if (activeElement > 0)
                     {
                         activeElement--;
@@ -70,7 +77,8 @@ public class IntroSceneManager : MonoBehaviour
                 if (Input.GetKeyUp(KeyCode.DownArrow))
                 {
                     menuOptions[activeElement].selected = false;
-
+                    selectSoundSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 1];
+                    selectSoundSource.Play();
                     if (activeElement < menuOptions.Length - 1)
                     {
                         activeElement++;
@@ -84,7 +92,9 @@ public class IntroSceneManager : MonoBehaviour
                 //and if we hit space again
                 if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
                 {
-                    if(activeElement == 2)
+                    selectSoundSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 2];
+                    selectSoundSource.Play();
+                    if (activeElement == 2)
                     {
                         Debug.Log("TUrtorial!");
                     }
