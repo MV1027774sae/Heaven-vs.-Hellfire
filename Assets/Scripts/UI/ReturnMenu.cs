@@ -12,7 +12,7 @@ public class ReturnMenu : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Home))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("intro");
         }
