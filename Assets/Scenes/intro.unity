@@ -1073,7 +1073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.data[0]
-      value: level_4
+      value: level_2
       objectReference: {fileID: 0}
     - target: {fileID: 8724457887665813747, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: levels.Array.data[1]
