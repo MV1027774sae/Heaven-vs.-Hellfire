@@ -134,12 +134,12 @@ TextureImporter:
       name: Dagon Sprite Sheet 1_1
       rect:
         serializedVersion: 2
-        x: 418
+        x: 423
         y: 692
-        width: 360
+        width: 355
         height: 422
       alignment: 9
-      pivot: {x: 0.375, y: 0}
+      pivot: {x: 0.425, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: Dagon Sprite Sheet 1_2
       rect:
         serializedVersion: 2
-        x: 823
-        y: 693
+        x: 829
+        y: 688
         width: 315
-        height: 413
+        height: 411
       alignment: 9
       pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,9 +198,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 232
+        y: 250
         width: 371
-        height: 361
+        height: 320
       alignment: 9
       pivot: {x: 0.45, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 433
-        y: 161
+        y: 177
         width: 342
-        height: 488
+        height: 472
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
