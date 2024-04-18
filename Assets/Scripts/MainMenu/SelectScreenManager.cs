@@ -21,6 +21,9 @@ public class SelectScreenManager : MonoBehaviour
 
     private bool loadLevel; //if we are loading the level
     public bool bothPlayersSelected;
+    public Animator playAnim1;
+    public Animator playAnim2;
+
 
     CharacterManager charM;
 
@@ -229,12 +232,19 @@ public class SelectScreenManager : MonoBehaviour
         {
             //make a reaction on the character to give feedback to the player
             pl.createdCharacter.GetComponentInChildren<Animator>().Play("S_Medium Attack");
-
             //pass the character to the character manager so that we know what prefab to create in the level
             pl.playerBase.playerPrefab =
                 charM.returnCharacterWithID(pl.activePortrait.characterId).prefab;
 
             pl.playerBase.hasCharacter = true;
+        }
+        if(Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            playAnim2.Play("select_flash2");
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            playAnim1.Play("select_flash");
         }
     }
 
