@@ -137,23 +137,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1841674726, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - time: 0.16666667
-      value: {fileID: 918334495, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - time: 0.33333334
-      value: {fileID: -58417317, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - time: 0.5
-      value: {fileID: 918334495, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - time: 0.6666667
-<<<<<<< HEAD
-<<<<<<< HEAD
-      value: {fileID: -365570890, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
-=======
       value: {fileID: -853976506, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
->>>>>>> 3abf8eff849486a4e361e3fc8c8480651e6c81fb
-=======
-      value: {fileID: 1841674726, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
->>>>>>> parent of 3abf8ef (review and minor changes)
+    - time: 0.16666667
+      value: {fileID: 2132215026, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
+    - time: 0.33333334
+      value: {fileID: -365570890, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
+    - time: 0.5
+      value: {fileID: 2132215026, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
+    - time: 0.6666667
+      value: {fileID: -365570890, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
     attribute: m_Sprite
     path: SpriteRendererHolder/SpriteRenderer
     classID: 212
@@ -230,23 +222,11 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-<<<<<<< HEAD
     - {fileID: -853976506, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
     - {fileID: 2132215026, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
     - {fileID: -365570890, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
     - {fileID: 2132215026, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
-<<<<<<< HEAD
     - {fileID: -365570890, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
-=======
-    - {fileID: -853976506, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
->>>>>>> 3abf8eff849486a4e361e3fc8c8480651e6c81fb
-=======
-    - {fileID: 1841674726, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - {fileID: 918334495, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - {fileID: -58417317, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - {fileID: 918334495, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
-    - {fileID: 1841674726, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
->>>>>>> parent of 3abf8ef (review and minor changes)
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
