@@ -20,6 +20,10 @@ public class LevelManager : MonoBehaviour
     private int currentTimer;
     private float internalTimer;
 
+    //Voice Announcer
+    [SerializeField] AudioSource audioVoiceAnnounceSource;
+    [SerializeField] AnnouncerManager announcerManagerScript;
+
     void Start()
     {
         //get the references from the singletons
@@ -148,6 +152,21 @@ public class LevelManager : MonoBehaviour
 
         levelUI.AnnouncerTextLine1.gameObject.SetActive(true);
         levelUI.AnnouncerTextLine1.text = "Round " + currentTurn;
+        if(currentTurn == 1)
+        {
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 2];
+            audioVoiceAnnounceSource.Play();
+        }
+        else if (currentTurn == 2)
+        {
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 3];
+            audioVoiceAnnounceSource.Play();
+        }
+        else if (currentTurn == 3)
+        {
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 4];
+            audioVoiceAnnounceSource.Play();
+        }
         levelUI.AnnouncerTextLine1.color = Color.white;
 
         yield return new WaitForSeconds(2);
@@ -164,6 +183,8 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(0.75f);
         levelUI.AnnouncerTextLine1.text = "FIGHT!";
         levelUI.AnnouncerTextLine1.color = Color.red;
+        audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 0];
+        audioVoiceAnnounceSource.Play();
 
         //and for every player enable what they need to have open to be controlled
         for (int i = 0; i < charM.players.Count; i++)
@@ -209,6 +230,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    //End turn function
     public void EndTurnFunction(bool timeOut = false)
     {
         //we calll this function everytime we want end the turn but we need to know if we do so by a timeout or not
@@ -229,6 +251,9 @@ public class LevelManager : MonoBehaviour
             levelUI.AnnouncerTextLine1.gameObject.SetActive(true);
             levelUI.AnnouncerTextLine1.text = "K.O.";
             levelUI.AnnouncerTextLine1.color = Color.red;
+            camM.ShakeAndSlowMotion();
+            audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 1];
+            audioVoiceAnnounceSource.Play();
         }
 
         //disable the controls
@@ -257,6 +282,22 @@ public class LevelManager : MonoBehaviour
             //else that player is the winner
             levelUI.AnnouncerTextLine1.text = vPlayer.playerId + " Wins!";
             levelUI.AnnouncerTextLine1.color = Color.yellow;
+            if(vPlayer.inputId == "")
+            {
+                Debug.Log("1 WIN!");
+                audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 5];
+                audioVoiceAnnounceSource.Play();
+            }
+            else if(vPlayer.inputId == "1")
+            {
+                Debug.Log("2 WIN!");
+                audioVoiceAnnounceSource.clip = announcerManagerScript.audioClips[announcerManagerScript.clipIndex = 6];
+                audioVoiceAnnounceSource.Play();
+            }
+            else
+            {
+                Debug.Log("DRAW");
+            }
         }
 
         yield return new WaitForSeconds(3);

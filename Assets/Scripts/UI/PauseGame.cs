@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PauseGame : MonoBehaviour
 {
-    [SerializeField] bool isPaused = false;
+    public bool isPaused = false;
 
     //[SerializeField] GameObject leaderboardPanel;
     [SerializeField] bool isPanelOpen = false;
@@ -20,7 +20,7 @@ public class PauseGame : MonoBehaviour
     void Update()
     {
         //Open panel
-        if (Input.GetKeyDown(KeyCode.P)) isPanelOpen = !isPanelOpen; isPaused = true;
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.P)) isPanelOpen = !isPanelOpen; isPaused = true;
         if (isPanelOpen)
         {
             panel.SetActive(true);
@@ -31,16 +31,16 @@ public class PauseGame : MonoBehaviour
             isPaused = false;
         }
 
-        if (detectController.isConnect)
-        {
-            keyboardPanel.SetActive(false);
-            controlPanel.SetActive(true);
-        }
-        else
-        {
-            keyboardPanel.SetActive(true);
-            controlPanel.SetActive(false);
-        }
+        //if (detectController.isConnect)
+        //{
+        //    keyboardPanel.SetActive(false);
+        //    controlPanel.SetActive(true);
+        //}
+        //else
+        //{
+        //    keyboardPanel.SetActive(true);
+        //    controlPanel.SetActive(false);
+        //}
 
         //Lock and Unlock mouse cursoe
         if (isPaused)

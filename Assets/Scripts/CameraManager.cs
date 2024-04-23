@@ -22,6 +22,13 @@ public class CameraManager : MonoBehaviour
 
     private Camera cam;
 
+    public float shakeDuration = 0.2f;
+    public float shakeMagnitude = 0.5f;
+    public float slowDownFactor = 0.5f;
+
+    private float originalTimeScale;
+    public bool doShake;
+
     public CameraType cType;
 
     public enum CameraType
@@ -90,5 +97,33 @@ public class CameraManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+
+    //This function make the camera shake and time maybe slow down
+    public void ShakeAndSlowMotion()
+    {
+        StartCoroutine(ShakeAndSlowMotionCoroutine());
+    }
+
+    IEnumerator ShakeAndSlowMotionCoroutine()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < shakeDuration)
+        {
+            Vector3 randomPoint = middlePoint + Random.insideUnitSphere * shakeMagnitude;
+            cameraHolder.localPosition = randomPoint;
+
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+
+        cameraHolder.localPosition = middlePoint;
+
+        Time.timeScale = slowDownFactor;
+        yield return new WaitForSecondsRealtime(shakeDuration * slowDownFactor);
+
+        Time.timeScale = originalTimeScale;
     }
 }
