@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 916470907
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 587004617, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
+  m_Sprite: {fileID: 1554431588, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1188,20 +1188,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 123891905991777191}
     m_ColliderPaths:
-    - - X: 6500000
-        Y: 6000000
-      - X: -3999999
-        Y: 6000000
-      - X: -3999999
-        Y: 0
-      - X: 6500000
-        Y: 0
+    - - X: 2500000
+        Y: 4125000
+      - X: -2500000
+        Y: 4125000
+      - X: -2500000
+        Y: -4125000
+      - X: 2500000
+        Y: -4125000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.6499707, y: 0}
-      - {x: 0.6499707, y: 0.6}
-      - {x: -0.39999992, y: 0.5999707}
-      - {x: -0.3999706, y: 0}
+    - - {x: 0.2499707, y: -0.4125}
+      - {x: 0.2499707, y: 0.4125}
+      - {x: -0.25, y: 0.4124707}
+      - {x: -0.2499707, y: -0.4125}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
