@@ -52,7 +52,7 @@ public class HandleDamageColliders : MonoBehaviour
                     StartCoroutine(OpenCollider(damageCollidersLeft, 1, damage, (delay / 60), damageType, (hitStun / 60)));
                     break;
                 case DCtype.fireball:
-                    StartCoroutine(CreateFireball(damageCollidersLeft, 2, damage,  (delay / 60), damageType, fireballObject, -fireballVelocity, (hitStun / 60)));
+                    StartCoroutine(CreateFireball(damageCollidersLeft, 2, damage,  (delay / 60), damageType, fireballObject, fireballVelocity, (hitStun / 60)));
                     break;
                 case DCtype.dp:
                     StartCoroutine(DragonPunch(damageCollidersLeft, 0, damage, (delay / 60), damageType, (hitStun / 60)));
@@ -105,7 +105,15 @@ public class HandleDamageColliders : MonoBehaviour
         fball.GetComponentInChildren<DoDamage>().damage = damage;
         fball.GetComponentInChildren<DoDamage>().damageType = damageType;
         fball.GetComponentInChildren<DoDamage>().hitStun = hitStun;
-        fball.velocity = new Vector2(velocity, 0);
+        if (states.lookRight)
+        {
+            fball.GetComponent<Rigidbody2D>().velocity = new Vector2(fireballVelocity, 0);
+        }
+        else if (!states.lookRight)
+        {
+            fball.GetComponent<Rigidbody2D>().velocity = new Vector2(-3, 0);
+            fball.GetComponent<SpriteRenderer>().flipX = true;
+        }
         audioManager.PlayFireballCastSFX();
     }
 

@@ -46,9 +46,4 @@ public class HandleFireball : MonoBehaviour
         yield return new WaitForSeconds(0.025f);
         DestroySelf();
     }
-
-    public void CreateFireball()
-    {
-        
-    }
 }
