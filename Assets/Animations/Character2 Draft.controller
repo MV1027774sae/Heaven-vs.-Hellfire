@@ -344,7 +344,7 @@ MonoBehaviour:
   damageType: 2
   dcType: 3
   damage: 10
-  hitStunFrames: 0
+  hitStunFrames: 30
   attackStartUpFrames: 0
 --- !u!1102 &-5158040530005375164
 AnimatorState:

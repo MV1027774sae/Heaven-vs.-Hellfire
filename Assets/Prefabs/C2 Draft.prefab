@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 916470907
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 587004617, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
+  m_Sprite: {fileID: 1554431588, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0566666, y: 0.64666665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -737,6 +737,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d5a481ef93e22b46b17a664b958e7c3, type: 3}
   fireballCastSFX:
   - {fileID: 8300000, guid: b2ae0f1914a04754c829e22961f78a88, type: 3}
+  introVoiceLine:
+  - {fileID: 8300000, guid: 70d7b138bf155e94d88145bf538a39bc, type: 3}
+  - {fileID: 8300000, guid: 9f720f4be57b96847bd6f9a48d9969a9, type: 3}
+  - {fileID: 8300000, guid: 63bb46b1f8f5fb24e9f6ded55d42c51b, type: 3}
 --- !u!114 &1378092439662807880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,20 +1192,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 123891905991777191}
     m_ColliderPaths:
-    - - X: 6500000
-        Y: 6000000
-      - X: -3999999
-        Y: 6000000
-      - X: -3999999
-        Y: 0
-      - X: 6500000
-        Y: 0
+    - - X: 2500000
+        Y: 4125000
+      - X: -2500000
+        Y: 4125000
+      - X: -2500000
+        Y: -4125000
+      - X: 2500000
+        Y: -4125000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.6499707, y: 0}
-      - {x: 0.6499707, y: 0.6}
-      - {x: -0.39999992, y: 0.5999707}
-      - {x: -0.3999706, y: 0}
+    - - {x: 0.2499707, y: -0.4125}
+      - {x: 0.2499707, y: 0.4125}
+      - {x: -0.25, y: 0.4124707}
+      - {x: -0.2499707, y: -0.4125}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1879,10 +1883,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.4999707, y: -0.5}
-      - {x: 0.4999707, y: 0.5}
-      - {x: -0.5, y: 0.4999707}
-      - {x: -0.4999707, y: -0.5}
+    - - {x: 0.62497073, y: -0.22500001}
+      - {x: 0.62497073, y: 0.025}
+      - {x: 0.175, y: 0.024970701}
+      - {x: 0.17502931, y: -0.22500001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -2143,7 +2147,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1073431503570944278, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1073431503570944278, guid: 1fd4036927904824c9546a3e7fc24afb, type: 3}
       propertyPath: m_LocalPosition.y

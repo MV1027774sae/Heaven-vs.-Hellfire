@@ -15,12 +15,15 @@ public class SelectScreenManager : MonoBehaviour
     PortraitInfo[,] charGrid; //the grid we are making to select entries
     private int maxRow;
     private int maxCollum;
-    List<PortraitInfo> portraitList = new List<PortraitInfo>();
+    public List<PortraitInfo> portraitList = new List<PortraitInfo>();
 
     public GameObject portraitCanvas; //the canvas that holds all the portraits
 
     private bool loadLevel; //if we are loading the level
     public bool bothPlayersSelected;
+    public Animator playAnim1;
+    public Animator playAnim2;
+
 
     CharacterManager charM;
 
@@ -229,13 +232,21 @@ public class SelectScreenManager : MonoBehaviour
         {
             //make a reaction on the character to give feedback to the player
             pl.createdCharacter.GetComponentInChildren<Animator>().Play("S_Medium Attack");
-
+            pl.createdCharacter.GetComponent<AudioManager>().PlayIntroVoice();
             //pass the character to the character manager so that we know what prefab to create in the level
             pl.playerBase.playerPrefab =
                 charM.returnCharacterWithID(pl.activePortrait.characterId).prefab;
 
             pl.playerBase.hasCharacter = true;
         }
+        //if(Input.GetKeyDown(KeyCode.Keypad5))
+        //{
+        //    playAnim2.Play("select_flash2");
+        //}
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    playAnim1.Play("select_flash");
+        //}
     }
 
     IEnumerator LoadLevel()
@@ -257,7 +268,7 @@ public class SelectScreenManager : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(1); //after 1 second load the level
+        yield return new WaitForSeconds(3); //after 3 second load the level
         //SceneManager.LoadSceneAsync("level", LoadSceneMode.Single);
 
         if (charM.solo)
