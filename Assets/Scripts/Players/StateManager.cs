@@ -186,7 +186,7 @@ public class StateManager : MonoBehaviour
                 blood.Emit(30);
             }
 
-            audioManager.PlayGruntSFX();
+            //audioManager.PlayGruntSFX();
         }
         else if (!gettingHit && guard)
         {

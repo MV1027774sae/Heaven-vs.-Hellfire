@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Designer
+  m_Text: Game Design
 --- !u!222 &130308423
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Programmer
+  m_Text: Programming
 --- !u!222 &300012442
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -398,7 +398,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -800}
-  m_SizeDelta: {x: 475.7927, y: 51.8815}
+  m_SizeDelta: {x: 660.4824, y: 51.8815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623462000
 MonoBehaviour:
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Text: 'Max Valentine
 
 
-    Miako'
+    Miako Alat'
 --- !u!222 &927652512
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -732,8 +732,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -91.78967}
-  m_SizeDelta: {x: 475.7927, y: 129.4608}
+  m_AnchoredPosition: {x: 0, y: -102.91467}
+  m_SizeDelta: {x: 475.7927, y: 151.7108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283542977
 MonoBehaviour:
@@ -768,10 +768,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Harry Hayes
+  m_Text: 'Harrison Hayes
 
 
-    Harri'
+    Harrison Sarina
+
+
+    Marshal YOUNG'
 --- !u!222 &1283542978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1197,7 +1200,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 631}
-  m_SizeDelta: {x: 980.2167, y: 109.5162}
+  m_SizeDelta: {x: 1345.2164, y: 109.5162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606564880
 MonoBehaviour:
@@ -1232,7 +1235,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: studio name
+  m_Text: Hellfire Studios
 --- !u!222 &1606564881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1394,7 +1397,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: animator
+  m_Text: animation
 --- !u!222 &1779677127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1807,9 +1810,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MIAKO
-
-'
+  m_Text: Miako Alat
 --- !u!222 &1981324427
 CanvasRenderer:
   m_ObjectHideFlags: 0

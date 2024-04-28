@@ -444,17 +444,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 338110927}
   m_VersionIndex: 1854
   m_IsSelectable: 1
-  m_SelectedFaces: 04000000
-  m_SelectedEdges:
-  - a: 16
-    b: 17
-  - a: 18
-    b: 16
-  - a: 17
-    b: 19
-  - a: 19
-    b: 18
-  m_SelectedVertices: 10000000110000001200000013000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!1 &38832796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,10 +1926,10 @@ AudioSource:
   m_GameObject: {fileID: 242659358}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d7e5902094cdf5d4db2f18f5ab7a2d26, type: 3}
+  OutputAudioMixerGroup: {fileID: 2647530712147918078, guid: d108015b10961ad4ab7a4f3186cd0886, type: 2}
+  m_audioClip: {fileID: 8300000, guid: cd8b0af94475753488a3261a28f7184a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2942,6 +2934,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4487232534679234226, guid: f7771afc01d21664da950ce3c56aa91a, type: 3}
+      propertyPath: comboCounter
+      value: 
+      objectReference: {fileID: 1951226210}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

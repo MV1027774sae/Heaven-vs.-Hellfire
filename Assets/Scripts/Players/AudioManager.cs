@@ -33,11 +33,6 @@ public class AudioManager : MonoBehaviour
         source.PlayOneShot(fireballCastSFX[0]);
     }
 
-    public void PlayGruntSFX()
-    {
-        source.PlayOneShot(gruntSFX[Random.Range(0, gruntSFX.Length)]);
-    }
-
     public void PlayIntroVoice()
     {
         source.PlayOneShot(introVoiceLine[Random.Range(0, introVoiceLine.Length)]);

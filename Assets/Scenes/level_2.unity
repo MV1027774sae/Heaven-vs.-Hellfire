@@ -4850,8 +4850,8 @@ Transform:
   m_GameObject: {fileID: 811461369}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: 0}
-  m_LocalScale: {x: -0.8, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: -0.175, y: -2.066, z: 0}
+  m_LocalScale: {x: -0.5, y: 0.9, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 479248305}
@@ -4896,13 +4896,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 351bfc047d7dd984cab027a11a6a32e8, type: 3}
   m_Color: {r: 0.3962264, g: 0.005606967, b: 0.13965926, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 6.5, y: 10}
+  m_Size: {x: 6.5, y: 11.333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13043,9 +13043,9 @@ Transform:
   m_GameObject: {fileID: 1851624081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0.175, y: -2.0669, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.9, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1113827363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13089,13 +13089,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 351bfc047d7dd984cab027a11a6a32e8, type: 3}
   m_Color: {r: 0.3962264, g: 0.005606967, b: 0.13965926, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 6.5, y: 10}
+  m_Size: {x: 6.5, y: 11.212074}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13454,7 +13454,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 496c081ca42f2cd4a855207f5af6b51e, type: 3}
   m_Color: {r: 1, g: 0, b: 0.25666952, a: 1}
   m_FlipX: 0
