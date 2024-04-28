@@ -654,6 +654,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d5a481ef93e22b46b17a664b958e7c3, type: 3}
   fireballCastSFX:
   - {fileID: 8300000, guid: 6b012c0ea2295f24982ebc09488c6b48, type: 3}
+  introVoiceLine:
+  - {fileID: 8300000, guid: 6c2f301a132e4c14cabb9c2d047679b5, type: 3}
+  - {fileID: 8300000, guid: d583a38a8b02ce0458fbe375b4d140cb, type: 3}
+  - {fileID: 8300000, guid: 895d55306e67a234ca0243a7a8b917f8, type: 3}
 --- !u!114 &1378092439662807880
 MonoBehaviour:
   m_ObjectHideFlags: 0

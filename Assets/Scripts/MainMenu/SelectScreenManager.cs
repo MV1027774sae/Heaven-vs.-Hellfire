@@ -239,14 +239,14 @@ public class SelectScreenManager : MonoBehaviour
 
             pl.playerBase.hasCharacter = true;
         }
-        if(Input.GetKeyDown(KeyCode.Keypad5))
-        {
-            playAnim2.Play("select_flash2");
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            playAnim1.Play("select_flash");
-        }
+        //if(Input.GetKeyDown(KeyCode.Keypad5))
+        //{
+        //    playAnim2.Play("select_flash2");
+        //}
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    playAnim1.Play("select_flash");
+        //}
     }
 
     IEnumerator LoadLevel()
