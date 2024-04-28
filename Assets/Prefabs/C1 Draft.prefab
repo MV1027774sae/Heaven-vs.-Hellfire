@@ -1252,7 +1252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7742112241582042449}
   - component: {fileID: 1498171132695274120}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Hurtbox1
   m_TagString: Hurtbox
   m_Icon: {fileID: 0}
@@ -1289,7 +1289,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1482,7 +1482,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1595,7 +1595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8044204803443880312}
   - component: {fileID: 4308131364214438736}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Hurtbox2
   m_TagString: Hurtbox
   m_Icon: {fileID: 0}
@@ -1632,7 +1632,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1876,7 +1876,7 @@ GameObject:
   - component: {fileID: 3195915828719270550}
   - component: {fileID: 2514471056074280469}
   - component: {fileID: 1300424612371466518}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: HurtboxHolder
   m_TagString: Hurtbox
   m_Icon: {fileID: 0}

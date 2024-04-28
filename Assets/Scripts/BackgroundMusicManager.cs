@@ -16,6 +16,7 @@ public class BackgroundMusicManager : MonoBehaviour
 
     private void PlayRandomMusic()
     {
-        source.PlayOneShot(musicList[Random.Range(0, musicList.Length)]);
+        source.clip = (musicList[Random.Range(0, musicList.Length)]);
+        source.Play();
     }
 }
