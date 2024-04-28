@@ -738,9 +738,9 @@ MonoBehaviour:
   fireballCastSFX:
   - {fileID: 8300000, guid: b2ae0f1914a04754c829e22961f78a88, type: 3}
   introVoiceLine:
-  - {fileID: 8300000, guid: 6c2f301a132e4c14cabb9c2d047679b5, type: 3}
-  - {fileID: 8300000, guid: d583a38a8b02ce0458fbe375b4d140cb, type: 3}
-  - {fileID: 8300000, guid: 895d55306e67a234ca0243a7a8b917f8, type: 3}
+  - {fileID: 8300000, guid: 70d7b138bf155e94d88145bf538a39bc, type: 3}
+  - {fileID: 8300000, guid: 9f720f4be57b96847bd6f9a48d9969a9, type: 3}
+  - {fileID: 8300000, guid: 63bb46b1f8f5fb24e9f6ded55d42c51b, type: 3}
 --- !u!114 &1378092439662807880
 MonoBehaviour:
   m_ObjectHideFlags: 0
