@@ -10346,7 +10346,7 @@ PrefabInstance:
     - target: {fileID: -1879869307654642396, guid: 9eedd0b80547dfb46a5b58b2420d3c5b, type: 3}
       propertyPath: musicList.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: f5d68e34f4b31564493dc8c69c3d9c50, type: 3}
+      objectReference: {fileID: 8300000, guid: ab74690f24b91964cabbbd9c39d20430, type: 3}
     - target: {fileID: 4315632961834242660, guid: 9eedd0b80547dfb46a5b58b2420d3c5b, type: 3}
       propertyPath: m_Name
       value: BGMManager
@@ -11840,6 +11840,7 @@ MonoBehaviour:
   - {fileID: 11419268, guid: d2837edd2266e924d8b89ca52587309b, type: 3}
   maxX: 2
   maxY: 3
+  portraitList: []
   portraitCanvas: {fileID: 1661704812}
   bothPlayersSelected: 0
   playAnim1: {fileID: 0}
