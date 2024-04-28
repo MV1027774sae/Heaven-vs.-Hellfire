@@ -1244,11 +1244,11 @@ PrefabInstance:
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[0].icon
       value: 
-      objectReference: {fileID: 1121916993, guid: 12d8fd9a2a7d9db4a8948a68e9b0ad35, type: 3}
+      objectReference: {fileID: 1701043446, guid: ed93f1017d53034448c8a453790427ad, type: 3}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[1].icon
       value: 
-      objectReference: {fileID: 587004617, guid: 8856d791b580abe45b6c3230b16702c3, type: 3}
+      objectReference: {fileID: 1554431588, guid: ec7b5fa94f3886940a23ae007424cd85, type: 3}
     - target: {fileID: 5101147043215692425, guid: cd7178b38f9baf047b66ccbf8a509bd2, type: 3}
       propertyPath: characterList.Array.data[2].icon
       value: 
